@@ -1,0 +1,14 @@
+1) open cmd
+
+2) cd C:\Users\Makeyev\Desktop\shared\JMeter\apache-jmeter-5.3\bin
+
+3) jmeter -f -n -t C:\Users\Makeyev\Desktop\shared\JMeter\apache-jmeter-5.3\bin\TESTS\EXAMPLE\scripts\HTTP-Requests.jmx -l C:\Users\Makeyev\Desktop\shared\JMeter\apache-jmeter-5.3\bin\TESTS\EXAMPLE\results\results.csv -e -o C:\Users\Makeyev\Desktop\shared\JMeter\apache-jmeter-5.3\bin\TESTS\EXAMPLE\reports
+
+4) open multiple results in the report html open devtools and paste in the console:
+
+const arrows = document.getElementsByClassName('fa fa-chevron-down').length
+for (let x = 0; x < arrows; x++) {
+ document.getElementsByClassName('fa fa-chevron-down')[x].click() 
+}
+
+

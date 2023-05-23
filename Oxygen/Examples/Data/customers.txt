@@ -1,0 +1,4 @@
+name, email, age
+Estabon, Esta@gmail.com, 17
+Izikiel, ziki@live.com, 27
+Brolav, olav@mail.ru, 40

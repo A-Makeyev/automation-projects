@@ -1,0 +1,12 @@
+Username,PASS
+Usertrain50@alphacrm.trainall,Aa123456!
+Usertrain51@alphacrm.trainall,Aa123456!
+Usertrain52@alphacrm.trainall,Aa123456!
+Usertrain53@alphacrm.trainall,Aa123456!
+Usertrain54@alphacrm.trainall,Aa123456!
+Usertrain55@alphacrm.trainall,Aa123456!
+Usertrain56@alphacrm.trainall,Aa123456!
+Usertrain57@alphacrm.trainall,Aa123456!
+Usertrain58@alphacrm.trainall,Aa123456!
+Usertrain59@alphacrm.trainall,Aa123456!
+Usertrain60@alphacrm.trainall,Aa123456!

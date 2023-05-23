@@ -1,0 +1,189 @@
+/* HTML */
+
+<div id='wrapper'>
+<div><img src='images/makeyka.png' id='logo'></div>
+<div id='title'>CREATE A MAKEYKA ACCOUNT</div>
+
+<form method='post'>
+<label for='first-name'>First Name</label>
+<div class='inputs'>
+<input type='text' name='first-name' id='first-name' placeholder='Enter your name..'  onfocus="this.placeholder=''" onblur="this.placeholder='Enter your name..'" required> <br> </div>
+
+<label for='last-name'>Last Name</label>
+<div class='inputs'>
+<input type='text' name='last-name' id='last-name' placeholder='Enter your last name..' onfocus="this.placeholder=''" onblur="this.placeholder='Enter your last name..'" required> <br>
+</div>
+
+<label for='email'>Email Address</label>
+<div class='inputs'>
+<input type='email' name='email' id='email' placeholder='Enter your email..' onfocus="this.placeholder=''" onblur="this.placeholder='Enter your email..'" required> <br>
+</div>
+
+<label for='pass'>Password</label>
+<div class='inputs'>
+<input type='password' name='pass' id='pass' placeholder='Enter your password..' onfocus="this.placeholder=''" onblur="this.placeholder='Enter your password..'" required> <br> </div>
+
+<label for='confirm'>Confirm Password</label>
+<div class='inputs'>
+<input type='password' name='confirm' id='confirm' placeholder='Confirm password' onfocus="this.placeholder=''" onblur="this.placeholder='Confirm password'" required> <br>
+</div>
+
+<input type='submit' id='submit' value='SIGN UP'>
+</form>
+</div>
+
+
+/* CSS */
+
+html {
+     background-color: skyblue;
+}
+
+#logo {
+     width: 100px;
+     height: 75px;
+     margin-left: -5px;
+     animation: spin 6s infinite;
+}
+
+#wrapper {
+     color: rgb(30, 30, 30);
+     font-family: verdana;
+     font-size: 1.1em;
+     text-align: center;
+     margin: 35px 0 0 15px;
+     background-color: lightgray;
+     padding: 30px;
+     width: 20%;
+     height: 76%;
+     border: 1px solid black;
+     border-radius: 5px;
+}
+
+#title {
+     margin-top: 10px;
+     color: #3995BF;
+}
+
+input {
+     outline: 0;
+     padding: 5px;
+     margin: 10px 0 20px 0;
+     border: 1px solid skyblue;
+     text-align: center;
+     cursor: pointer;
+}
+
+label {
+     margin: 0;
+}
+
+form {
+     margin-top: 30px;
+}
+
+@keyframes spin {
+     0% {
+     transform: rotate(0deg);
+     }
+     50% {
+     transform: rotate(360deg);
+     }
+     100% {
+     transform: rotate(-360deg);
+     }
+}
+
+
+/* JS */
+
+document.getElementById("submit").onmouseover = function() {
+
+this.style.background = "lightgreen";
+
+}
+
+document.getElementById("submit").onmouseleave =
+function() {
+
+this.style.background="#EBEBEB";
+
+}
+
+document.getElementById('submit').onclick = function() {
+
+document.getElementById('wrapper').innerHTML = 'Signed Up Successfully!';
+
+document.getElementById('wrapper').style.color = 'green';
+
+document.getElementById('wrapper').style.height = '20px';
+
+document.getElementById('wrapper').style.border = 'green';
+
+document.getElementById('wrapper').style.background = 'skyblue';
+
+}
+
+
+/* Filling the new form */
+
+
+var firstName_input = document.getElementById('first-name');
+var lastName_input = document.getElementById('last-name');
+var email_input = document.getElementById('email');
+var pass_input = document.getElementById('pass');
+var confirm_input = document.getElementById('confirm');
+
+var index_firstName = 0;
+var index_lastName = 0;
+var index_email = 0;
+var index_pass = 0;
+
+var type_firstName = "Anatoly";
+var type_lastName = "Makeyev";
+var type_email = "anatoly.makeyev@gmail.com";
+var type_pass = "password";
+
+window.set_firstName = function() {
+    if (index_firstName <= type_firstName.length) {
+        firstName_input.value = type_firstName.substr(0, index_firstName++);
+        setTimeout("set_firstName()", 50);
+    }
+}
+set_firstName();
+
+window.set_lastName = function() {
+    if (index_lastName <= type_lastName.length) {
+        lastName_input.value = type_lastName.substr(0, index_lastName++);
+        setTimeout("set_lastName()", 50);
+    }
+}
+set_lastName();
+
+window.set_email = function() {
+    if (index_email <= type_email.length) {
+        email_input.value = type_email.substr(0, index_email++);
+        setTimeout("set_email()", 50);
+    }
+}
+set_email();
+
+window.set_pass = function() {
+    if (index_pass <= type_pass.length) {
+        pass_input.value = type_pass.substr(0, index_pass++);
+        setTimeout("set_pass()", 50);
+    }
+}
+set_pass();
+
+window.set_confirm = function() {
+    if (index_pass <= type_pass.length) {
+        confirm_input.value = type_pass.substr(0, index_pass++);
+        setTimeout("set_confirm()", 50);
+    }
+}
+set_confirm();
+
+document.getElementById('submit').click();
+
+alert(' \n\n                THANKS FOR WATCHING! \n\n <~~ Click on Makeyka for more details');

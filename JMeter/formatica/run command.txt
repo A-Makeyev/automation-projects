@@ -1,0 +1,8 @@
+1) open cmd and enter the bin folder:
+
+cd C:\JMETER\apache-jmeter-5.2.1\bin
+
+2) run test:
+
+jmeter -f -n -t C:\JMETER\apache-jmeter-5.2.1\bin\tests\formi-pref-test\wsh-services.jmx -l C:\JMETER\apache-jmeter-5.2.1\bin\tests\formi-pref-test\results.csv -e -o C:\JMETER\apache-jmeter-5.2.1\bin\tests\formi-pref-test\report
+

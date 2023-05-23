@@ -1,0 +1,9 @@
+open bin folder:
+
+cd C:\Users\Makeyev\Desktop\JMeter\apache-jmeter-5.1.1\bin
+
+
+run test:
+
+jmeter -n -t C:\Users\Makeyev\Desktop\JMeter\apache-jmeter-5.1.1\bin\TESTS\wizard\soap-request.jmx -f -l C:\Users\Makeyev\Desktop\JMeter\apache-jmeter-5.1.1\bin\TESTS\wizard\results.csv -e -o C:\Users\Makeyev\Desktop\JMeter\apache-jmeter-5.1.1\bin\TESTS\wizard\report
+

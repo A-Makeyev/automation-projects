@@ -1,0 +1,11 @@
+Username,PASS
+usertrain101@alphacrm.trainall,Aa123456
+usertrain102@alphacrm.trainall,Aa123456
+usertrain103@alphacrm.trainall,Aa123456
+usertrain104@alphacrm.trainall,Aa123456
+usertrain105@alphacrm.trainall,Aa123456
+usertrain106@alphacrm.trainall,Aa123456
+usertrain107@alphacrm.trainall,Aa123456
+usertrain108@alphacrm.trainall,Aa123456
+usertrain109@alphacrm.trainall,Aa123456
+usertrain110@alphacrm.trainall,Aa123456

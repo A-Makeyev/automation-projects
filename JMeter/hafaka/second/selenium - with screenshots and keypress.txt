@@ -1,0 +1,946 @@
+
+
+Script 1
+~~~~~~~~~
+
+//Clear cache and cookies in case the script runs several iterations
+//WDS.browser.getLocalStorage().clear();
+//WDS.browser.manage().deleteAllCookies();
+
+// WDS.browser.executeScript()
+
+var URL = 'https://hafaka-frontend-npcqa.menora.co.il'
+
+var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = JavaImporter(org.openqa.selenium.support.ui.ExpectedConditions)
+var wait = new support_ui.WebDriverWait(WDS.browser, 15)
+
+var robota = new java.awt.Robot()
+var keyEvent = java.awt.event.KeyEvent
+
+// Generate screenshot on error
+var selenium = JavaImporter(org.openqa.selenium)
+
+
+function pressTAB() {
+	robota.keyPress(keyEvent.VK_TAB)
+	robota.keyRelease(keyEvent.VK_TAB)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressENTER() {
+	robota.keyPress(keyEvent.VK_ENTER)
+	robota.keyRelease(keyEvent.VK_ENTER)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressDOWN() {
+	robota.keyPress(keyEvent.VK_DOWN)
+	robota.keyRelease(keyEvent.VK_DOWN)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressF4() {
+	robota.keyPress(keyEvent.VK_F4)
+	robota.keyRelease(keyEvent.VK_F4)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressF8() {
+	robota.keyPress(keyEvent.VK_F8)
+	robota.keyRelease(keyEvent.VK_F8)
+	java.lang.Thread.sleep(2500)
+}
+
+// Login Page
+var startTime = new Date().getTime()
+
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Login Page')
+WDS.browser.get(URL + '/login')
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-user")))
+var usernameField = WDS.browser.findElement(pkg.By.id("input-login-user"))
+usernameField.sendKeys(["k90fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-password")))
+var passwordField = WDS.browser.findElement(pkg.By.id("input-login-password"))
+passwordField.sendKeys(["fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'התחברות')]")))
+var loginButton = WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'התחברות')]"))
+loginButton.click()
+
+
+var finishTime = new Date().getTime()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Login time: ' + (finishTime - startTime) + ' ms <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Policy Page
+startTime = new Date().getTime()
+WDS.sampleResult.setResponseMessage('Policy Page')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("action")))
+var selectAction = WDS.browser.findElement(pkg.By.id("action"))
+var select = new org.openqa.selenium.support.ui.Select(selectAction)
+select.selectByIndex(1)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("search-branch-by-number")))
+var selectBranch = WDS.browser.findElement(pkg.By.id("search-branch-by-number"))
+selectBranch.click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//ngb-highlight[contains(text(), '33 - רכב פרטי ומסחרי')]")))
+var privateCar = WDS.browser.findElement(pkg.By.xpath("//ngb-highlight[contains(text(), '33 - רכב פרטי ומסחרי')]"))
+privateCar.click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("startDate")))
+var startDate = WDS.browser.findElement(pkg.By.id("startDate"))
+startDate.sendKeys(["01052020"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("paymentMethod")))
+var paymentMethod = WDS.browser.findElement(pkg.By.id("paymentMethod"))
+var select = new org.openqa.selenium.support.ui.Select(paymentMethod)
+select.selectByVisibleText(" 5 - אשראית ")
+
+//wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("search-agent-by-number")))
+//var searchAgent = WDS.browser.findElement(pkg.By.id("search-agent-by-number"))
+//searchAgent.sendKeys(["591090"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("openAgentSearchBtn")))
+WDS.browser.findElement(pkg.By.id("openAgentSearchBtn")).click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//label[contains(text(), " איתור לפי מספר סוכן ")]')))
+WDS.browser.findElement(pkg.By.xpath('//label[contains(text(), " איתור לפי מספר סוכן ")]')).click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("inputAgentCode")))
+WDS.browser.findElement(pkg.By.id("inputAgentCode")).sendKeys(["591090"])
+
+java.lang.Thread.sleep(1000)
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//td[text()="591090"]')))
+WDS.browser.findElement(pkg.By.xpath('//td[text()="591090"]')).click()
+java.lang.Thread.sleep(1000)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("underwritingBtn")))
+WDS.browser.findElement(pkg.By.id("underwritingBtn")).click()
+
+java.lang.Thread.sleep(1000)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//label[@for='approvedDisclaimerControl']")))
+var approveButton = WDS.browser.findElement(pkg.By.xpath("//label[@for='approvedDisclaimerControl']"))
+approveButton.click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("approveUnderWritingDisclaimerBtnId")))
+WDS.browser.findElement(pkg.By.id("approveUnderWritingDisclaimerBtnId")).click()
+java.lang.Thread.sleep(2500)
+
+finishTime = new Date().getTime()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Policy page time: ' + (finishTime - startTime) + ' ms <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+// Personal Page
+startTime = new Date().getTime()
+WDS.sampleResult.setResponseMessage('Personal Page')	
+
+//wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDInsTypeId")))
+//var first_idType = WDS.browser.findElement(pkg.By.id("PDInsTypeId"))
+//var select = new org.openqa.selenium.support.ui.Select(first_idType)
+//select.selectByVisibleText(' 1 - תעודת זהות ')
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDInsId")))
+WDS.browser.findElement(pkg.By.id("PDInsId")).sendKeys(["304804990"])
+java.lang.Thread.sleep(1000)
+
+//wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDAddInsTypeId")))
+//var second_idType = WDS.browser.findElement(pkg.By.id("PDAddInsTypeId"))
+//var select = new org.openqa.selenium.support.ui.Select(second_idType)
+//select.selectByVisibleText(' 1 - תעודת זהות ')
+
+//wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//input[@id='PDAddInsId']")))
+//WDS.browser.findElement(pkg.By.xpath("//input[@id='PDAddInsId']")).sendKeys(["304804990"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDAddInsBirthDate")))
+WDS.browser.findElement(pkg.By.id("PDAddInsBirthDate")).sendKeys(["01011989"])
+
+//wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//label[@for='PDAddInsInsuredIsDriver']")))
+//WDS.browser.findElement(pkg.By.xpath("//label[@for='PDAddInsInsuredIsDriver']")).click() 
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//label[@for='PDAddInsInsuredIsYoungestDriver']")))
+WDS.browser.findElement(pkg.By.xpath("//label[@for='PDAddInsInsuredIsYoungestDriver']")).click() 
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDAddInsLicenseDate")))
+WDS.browser.findElement(pkg.By.id("PDAddInsLicenseDate")).sendKeys(["01012009"]) 
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDVhclLicenseNo")))
+WDS.browser.findElement(pkg.By.id("PDVhclLicenseNo")).sendKeys(["4552313"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDVhclManufactureYear")))
+WDS.browser.findElement(pkg.By.id("PDVhclManufactureYear")).sendKeys(["2012"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("PDVhclVehicletype")))
+var select = new org.openqa.selenium.support.ui.Select(WDS.browser.findElement(pkg.By.id("PDVhclVehicletype")))
+select.selectByVisibleText(' 1 - פרטי ')
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//label[@for='isInsConfirm']")))
+WDS.browser.findElement(pkg.By.xpath("//label[@for='isInsConfirm']")).click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), ' הבא ')]")))
+WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), ' הבא ')]")).click()
+java.lang.Thread.sleep(2500)
+
+finishTime = new Date().getTime()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Personal page time: ' + (finishTime - startTime) + ' ms <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Personal Page - Continute
+startTime = new Date().getTime()
+WDS.sampleResult.setResponseMessage('Personal Page - Continute')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDInsLastName")))
+WDS.browser.findElement(pkg.By.id("UDInsLastName")).sendKeys(["שלום"])
+java.lang.Thread.sleep(500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDInsFirstName")))
+WDS.browser.findElement(pkg.By.id("UDInsFirstName")).sendKeys(["ישראל"])
+java.lang.Thread.sleep(500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDAddInsStreet")))
+WDS.browser.findElement(pkg.By.id("UDAddInsStreet")).sendKeys(["אשששששש"])
+java.lang.Thread.sleep(500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDAddInsCity")))
+WDS.browser.findElement(pkg.By.id("UDAddInsCity")).sendKeys(["קורונה"])
+java.lang.Thread.sleep(500)
+
+pressTAB()
+java.lang.Thread.sleep(500)
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), " סגור ")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), " סגור ")]')).click()
+java.lang.Thread.sleep(500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDAddInsZipCode")))
+WDS.browser.findElement(pkg.By.id("UDAddInsZipCode")).sendKeys(["55555"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("UDAddInsMobilePhoneNo")))
+WDS.browser.findElement(pkg.By.id("UDAddInsMobilePhoneNo")).sendKeys(["0545555555"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//label[@for="confirmation"]')))
+WDS.browser.findElement(pkg.By.xpath('//label[@for="confirmation"]')).click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), ' הבא ')]")))
+WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), ' הבא ')]")).click()
+java.lang.Thread.sleep(1500)
+
+finishTime = new Date().getTime()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Personal page - Continute time: ' + (finishTime - startTime) + ' ms <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Sections Page
+startTime = new Date().getTime()
+
+for (var x = 0; x < 5; x++) {
+	pressENTER()
+}
+
+for (var x = 0; x < 2; x++) {
+	pressTAB()
+}
+
+// Choose car
+pressF4()
+var carTypeNumber = '588330'
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("description")))
+WDS.browser.findElement(pkg.By.id("description")).sendKeys(["מ"])
+java.lang.Thread.sleep(1000)
+WDS.browser.findElement(pkg.By.id("description")).clear()
+java.lang.Thread.sleep(1000)
+WDS.browser.findElement(pkg.By.id("description")).sendKeys(["מאזדה 3"])
+
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//td[text()="' + carTypeNumber + '"]')))
+WDS.browser.findElement(pkg.By.xpath('//td[text()="' + carTypeNumber + '"]')).click()
+
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[50]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[50]')).click()
+
+pressF4()
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//td[contains(text(), "מעל  30 שנה ")]')))
+WDS.browser.findElement(pkg.By.xpath('//td[contains(text(), "מעל  30 שנה ")]')).click()
+
+pressTAB()
+pressF8()
+pressENTER()
+
+// 01-00109
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[31]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[31]')).sendKeys(['2'])
+
+for (var x = 0; x < 2; x++) { pressTAB() }
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[33]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[33]')).sendKeys(['2'])
+
+for (var x = 0; x < 2; x++) { pressTAB() }
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[35]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[35]')).sendKeys(['2'])
+
+pressTAB()
+pressF8()
+
+for (var x = 0; x < 2; x++) { pressENTER() }
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//span[contains(text(), "מספר מפעילי הרכב ")]//..//..//input')))
+WDS.browser.findElement(pkg.By.xpath('//span[contains(text(), "מספר מפעילי הרכב ")]//..//..//input')).sendKeys(['5'])
+
+pressTAB()
+pressF8()
+pressENTER()
+pressTAB()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//span[contains(text(), "הוא הנהג העיקרי ")]//..//..//input')))
+WDS.browser.findElement(pkg.By.xpath('//span[contains(text(), "הוא הנהג העיקרי ")]//..//..//input')).sendKeys(['1'])
+
+pressTAB()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//span[contains(text(), "מצב משפחתי : ")]//..//..//input)[1]')))
+WDS.browser.findElement(pkg.By.xpath('(//span[contains(text(), "מצב משפחתי : ")]//..//..//input)[1]')).sendKeys(['1'])
+
+pressTAB()
+pressF8()
+
+
+WDS.sampleResult.sampleEnd()
+finishTime = new Date().getTime()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Sections page time: ' + (finishTime - startTime) + ' ms <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Logout
+var startTime = new Date().getTime()
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Logout')
+
+
+java.lang.Thread.sleep(5000)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), " יציאה ")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), " יציאה ")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[@id="logoff"]')))
+WDS.browser.findElement(pkg.By.xpath('//button[@id="logoff"]')).click()
+
+
+WDS.sampleResult.sampleEnd()
+var endTime = new Date().getTime()
+WDS.log.info('>>> Logout time: ' + (endTime - startTime) + ' ms')
+
+java.lang.Thread.sleep(5000)
+
+} catch (err) {
+	//WDS.sampleResult.sampleEnd()
+   	WDS.log.error('>>> Login failed: ' + err.message)
+   	
+   	var ts = (new Date()).getTime()
+   	var screenshot = WDS.browser.getScreenshotAs(selenium.OutputType.FILE)
+   	var filePath = 'D:\\LoadTest\\Hafaka\\Results\\Screenshots\\scen1-' + ts + '.png'
+   	screenshot.renameTo(new java.io.File(filePath))
+	//FileUtils.copy(screenshot, new File(filePath))
+	throw err;
+} 
+
+
+Script 2
+~~~~~~~~~
+
+//Clear cache and cookies in case the script runs several iterations
+//WDS.browser.getLocalStorage().clear();
+//WDS.browser.manage().deleteAllCookies();
+
+// WDS.browser.executeScript()
+
+var URL = 'https://hafaka-frontend-npcqa.menora.co.il'
+
+var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = JavaImporter(org.openqa.selenium.support.ui.ExpectedConditions)
+var wait = new support_ui.WebDriverWait(WDS.browser, 15)
+
+var robota = new java.awt.Robot()
+var keyEvent = java.awt.event.KeyEvent
+
+// Generate screenshot on error
+var selenium = JavaImporter(org.openqa.selenium)
+
+function pressTAB() {
+	robota.keyPress(keyEvent.VK_TAB)
+	robota.keyRelease(keyEvent.VK_TAB)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressENTER() {
+	robota.keyPress(keyEvent.VK_ENTER)
+	robota.keyRelease(keyEvent.VK_ENTER)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressDOWN() {
+	robota.keyPress(keyEvent.VK_DOWN)
+	robota.keyRelease(keyEvent.VK_DOWN)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressF4() {
+	robota.keyPress(keyEvent.VK_F4)
+	robota.keyRelease(keyEvent.VK_F4)
+	java.lang.Thread.sleep(2500)
+}
+
+function pressF8() {
+	robota.keyPress(keyEvent.VK_F8)
+	robota.keyRelease(keyEvent.VK_F8)
+	java.lang.Thread.sleep(2500)
+}
+
+
+// Login Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Login Page')
+WDS.browser.get(URL + '/login')
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-user")))
+var usernameField = WDS.browser.findElement(pkg.By.id("input-login-user"))
+usernameField.sendKeys(["k90fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-password")))
+var passwordField = WDS.browser.findElement(pkg.By.id("input-login-password"))
+passwordField.sendKeys(["fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'התחברות')]")))
+var loginButton = WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'התחברות')]"))
+loginButton.click()
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Logged in successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Policy Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Policy Page')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("action")))
+var selectAction = WDS.browser.findElement(pkg.By.id("action"))
+var select = new org.openqa.selenium.support.ui.Select(selectAction)
+select.selectByIndex(3)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("policyId")))
+var searchAgent = WDS.browser.findElement(pkg.By.id("policyId"))
+searchAgent.sendKeys(["032200652119500"])
+
+var x = 0;
+while(x < 2) {
+	pressTAB()
+	x++
+}
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("underwritingBtn")))
+WDS.browser.findElement(pkg.By.id("underwritingBtn")).click()
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), ' הבא ')]")))
+WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), ' הבא ')]")).click()
+java.lang.Thread.sleep(1500)
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Policy Page passed <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Sections Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Sections Page')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("collapseAllClausesBtn")))
+WDS.browser.findElement(pkg.By.id("collapseAllClausesBtn")).click()
+java.lang.Thread.sleep(2500)
+
+pressDOWN()
+
+pressENTER()
+
+pressTAB()
+
+pressF4()
+
+
+// 1-00085
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//td[contains(text(), "תכולה ומבנה ")]')))
+WDS.browser.findElement(pkg.By.xpath('//td[contains(text(), "תכולה ומבנה ")]')).click()
+java.lang.Thread.sleep(1500)
+
+var y = 0;
+while(y < 2) {
+	pressENTER()
+	y++
+}
+
+// 1-00090
+// building
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[11]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[11]')).sendKeys(["950000"])
+java.lang.Thread.sleep(1500)
+
+// Photo volti
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[24]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).sendKeys(["כן"])
+java.lang.Thread.sleep(1500)
+
+// lang value
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[25]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[25]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[25]')).sendKeys(["כן"])
+java.lang.Thread.sleep(1500)
+
+pressTAB()
+
+pressF8()
+
+pressENTER()
+
+// 1-00200
+// volume
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[11]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[11]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[11]')).sendKeys(["250000"])
+java.lang.Thread.sleep(1500)
+
+// jewlery
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[14]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[14]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[14]')).sendKeys(["5000"])
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[15]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).sendKeys(["5000"])
+java.lang.Thread.sleep(1500)
+
+// free text
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[24]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).sendKeys(["1"])
+java.lang.Thread.sleep(1500)
+
+
+pressTAB()
+
+pressF8()
+
+pressENTER()
+
+
+// 2-00220 
+// S.B
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id('clauseInsuranceSum2002200000')))
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum2002200000')).click()
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum2002200000')).sendKeys(["950000"])
+java.lang.Thread.sleep(1500)
+
+pressENTER()
+
+pressF8()
+
+
+// 2-00291
+var z = 0;
+while(z < 2) {
+	pressENTER()
+	z++
+}
+
+// 2-00296
+pressDOWN()
+
+pressENTER()
+
+//textarea[@class="freeTextArea ng-pristine ng-valid ng-touched"]
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//textarea')))
+WDS.browser.findElement(pkg.By.xpath('//textarea')).click()
+WDS.browser.findElement(pkg.By.xpath('//textarea')).sendKeys(["שלום לכולם בדיקת הוספת מלל"])
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), " אשר ")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), " אשר ")]')).click()
+
+pressF8()
+
+pressDOWN()
+
+pressENTER()
+
+pressENTER()
+
+
+// S.B
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id('clauseInsuranceSum2003100000')))
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum2003100000')).click()
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum2003100000')).sendKeys(["200000"])
+java.lang.Thread.sleep(1500)
+
+pressENTER()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id('finishClausesBtn')))
+WDS.browser.findElement(pkg.By.id('finishClausesBtn')).click()
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Sections Page passed <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+
+// Logout
+var startTime = new Date().getTime()
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Logout')
+
+
+java.lang.Thread.sleep(5000)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), " יציאה ")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), " יציאה ")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[@id="logoff"]')))
+WDS.browser.findElement(pkg.By.xpath('//button[@id="logoff"]')).click()
+
+
+WDS.sampleResult.sampleEnd()
+var endTime = new Date().getTime()
+WDS.log.info('>>> Logout time: ' + (endTime - startTime) + ' ms')
+
+java.lang.Thread.sleep(5000)
+
+} catch (err) {
+	//WDS.sampleResult.sampleEnd()
+   	WDS.log.error('>>> Login failed: ' + err.message)
+   	
+   	var ts = (new Date()).getTime()
+   	var screenshot = WDS.browser.getScreenshotAs(selenium.OutputType.FILE)
+   	var filePath = 'D:\\LoadTest\\Hafaka\\Results\\Screenshots\\scen2-' + ts + '.png'
+   	screenshot.renameTo(new java.io.File(filePath))
+	//FileUtils.copy(screenshot, new File(filePath))
+	throw err;
+} 
+
+
+Script 3
+~~~~~~~~
+
+//Clear cache and cookies in case the script runs several iterations
+//WDS.browser.getLocalStorage().clear();
+//WDS.browser.manage().deleteAllCookies();
+
+// WDS.browser.executeScript()
+
+var URL = 'https://hafaka-frontend-npcqa.menora.co.il'
+
+var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = JavaImporter(org.openqa.selenium.support.ui.ExpectedConditions)
+var wait = new support_ui.WebDriverWait(WDS.browser, 15)
+
+var robota = new java.awt.Robot()
+var keyEvent = java.awt.event.KeyEvent
+
+// Generate screenshot on error
+var selenium = JavaImporter(org.openqa.selenium)
+
+function pressTAB() {
+	robota.keyPress(keyEvent.VK_TAB)
+	robota.keyRelease(keyEvent.VK_TAB)
+	java.lang.Thread.sleep(1500)
+}
+
+function pressENTER() {
+	robota.keyPress(keyEvent.VK_ENTER)
+	robota.keyRelease(keyEvent.VK_ENTER)
+	java.lang.Thread.sleep(1500)
+}
+
+function pressDOWN() {
+	robota.keyPress(keyEvent.VK_DOWN)
+	robota.keyRelease(keyEvent.VK_DOWN)
+	java.lang.Thread.sleep(1500)
+}
+
+function pressF4() {
+	robota.keyPress(keyEvent.VK_F4)
+	robota.keyRelease(keyEvent.VK_F4)
+	java.lang.Thread.sleep(1500)
+}
+
+function pressF8() {
+	robota.keyPress(keyEvent.VK_F8)
+	robota.keyRelease(keyEvent.VK_F8)
+	java.lang.Thread.sleep(1500)
+}
+
+// Login Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Login Page')
+WDS.browser.get(URL + '/login')
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-user")))
+var usernameField = WDS.browser.findElement(pkg.By.id("input-login-user"))
+usernameField.sendKeys(["k90fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-password")))
+var passwordField = WDS.browser.findElement(pkg.By.id("input-login-password"))
+passwordField.sendKeys(["fis1"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'התחברות')]")))
+var loginButton = WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'התחברות')]"))
+
+loginButton.click()
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Logged in successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Policy Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Policy Page')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("action")))
+var selectAction = WDS.browser.findElement(pkg.By.id("action"))
+var select = new org.openqa.selenium.support.ui.Select(selectAction)
+select.selectByIndex(3)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("policyId")))
+var searchAgent = WDS.browser.findElement(pkg.By.id("policyId"))
+searchAgent.sendKeys(["040800354119700"])
+
+for (var x = 0; x < 2; x++) {
+	pressTAB()
+}
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("startDate")))
+var startDate = WDS.browser.findElement(pkg.By.id("startDate"))
+startDate.sendKeys(["01052020"])
+
+pressTAB()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("underwritingBtn")))
+WDS.browser.findElement(pkg.By.id("underwritingBtn")).click()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), ' הבא ')]")))
+WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), ' הבא ')]")).click()
+java.lang.Thread.sleep(1500)
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Policy Page passed <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Sections Page
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Sections Page')	
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("collapseAllClausesBtn")))
+WDS.browser.findElement(pkg.By.id("collapseAllClausesBtn")).click()
+java.lang.Thread.sleep(2500)
+
+
+for (var x = 0; x < 10; x++) {
+	pressDOWN()
+}
+
+var open_0100100 = '//span[contains(text(), " 01-00100 / ")]//..//..//img[@id="dropdownClauses"]'
+var enter_0100100 = '(//button[contains(text(), " כניסה לסעיף")])[11]'
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(open_0100100)))
+WDS.browser.findElement(pkg.By.xpath(open_0100100)).click()
+java.lang.Thread.sleep(1500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(enter_0100100)))
+WDS.browser.findElement(pkg.By.xpath(enter_0100100)).click()
+java.lang.Thread.sleep(1500)
+
+// employers
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[6]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[6]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[6]')).sendKeys(['1'])
+
+// goods at work
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[10]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[10]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[10]')).sendKeys(['1'])
+
+// injuries
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[12]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[12]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[12]')).sendKeys(['1'])
+
+pressTAB()
+pressF8()
+pressENTER()
+
+// 02-05001
+pressTAB()
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[1]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[1]')).sendKeys(["211789"])
+
+for (var x = 0; x < 3; x++) {
+	pressENTER()
+}
+
+// workers
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[15]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).sendKeys(["5"])
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[16]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[16]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[16]')).sendKeys(["5"])
+
+pressTAB()
+pressF8()
+pressENTER()
+
+// description
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[13]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[13]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[13]')).sendKeys(["אין תאור"])
+
+// number of cars
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[14]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[14]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[14]')).sendKeys(["1"])
+
+// policy price
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[15]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[15]')).sendKeys(["50000"])
+
+// S.B
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id('clauseInsuranceSum5002020000')))
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum5002020000')).click()
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum5002020000')).sendKeys(["50000"])
+
+pressF8()
+pressENTER()
+pressENTER()
+
+// 05-02200
+// car number
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[24]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[24]')).sendKeys(["123456"])
+
+// car brand
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[25]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[25]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[25]')).sendKeys(["למבורגיני"])
+
+pressENTER()
+pressDOWN()
+pressENTER()
+pressENTER()
+
+// 06-00100
+// name
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[27]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[27]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[27]')).sendKeys(["שלום"])
+
+// car brand
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('(//input[@name="lname"])[29]')))
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[29]')).click()
+WDS.browser.findElement(pkg.By.xpath('(//input[@name="lname"])[29]')).sendKeys(["01011950"])
+
+pressTAB()
+pressF4()
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//td[contains(text(), "(בעל חנות )כולל מכירה")]')))
+WDS.browser.findElement(pkg.By.xpath('//td[contains(text(), "(בעל חנות )כולל מכירה")]')).click()
+
+pressTAB()
+
+// S.B
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id('clauseInsuranceSum6001000000')))
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum6001000000')).click()
+WDS.browser.findElement(pkg.By.id('clauseInsuranceSum6001000000')).sendKeys(["250000"])
+
+pressTAB()
+pressENTER()
+pressENTER()
+pressF8()
+
+
+WDS.sampleResult.sampleEnd()
+WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Sections Page passed <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+
+// Logout
+var startTime = new Date().getTime()
+WDS.sampleResult.sampleStart()
+WDS.sampleResult.setResponseMessage('Logout')
+
+
+java.lang.Thread.sleep(5000)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), "K90FIS1")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[contains(text(), " יציאה ")]')))
+WDS.browser.findElement(pkg.By.xpath('//button[contains(text(), " יציאה ")]')).click()
+
+java.lang.Thread.sleep(2500)
+
+wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath('//button[@id="logoff"]')))
+WDS.browser.findElement(pkg.By.xpath('//button[@id="logoff"]')).click()
+
+
+WDS.sampleResult.sampleEnd()
+var endTime = new Date().getTime()
+WDS.log.info('>>> Logout time: ' + (endTime - startTime) + ' ms')
+
+java.lang.Thread.sleep(5000)
+
+} catch (err) {
+	//WDS.sampleResult.sampleEnd()
+   	WDS.log.error('>>> Login failed: ' + err.message)
+   	
+   	var ts = (new Date()).getTime()
+   	var screenshot = WDS.browser.getScreenshotAs(selenium.OutputType.FILE)
+   	var filePath = 'D:\\LoadTest\\Hafaka\\Results\\Screenshots\\scen2-' + ts + '.png'
+   	screenshot.renameTo(new java.io.File(filePath))
+	//FileUtils.copy(screenshot, new File(filePath))
+	throw err;
+} 
+
+
+//WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> DEBUG <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+//java.lang.Thread.sleep(999999)
+
+
+
+

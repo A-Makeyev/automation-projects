@@ -1,0 +1,60 @@
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.csprojAssemblyReference.cache
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfoInputs.cache
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfo.cs
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\TestProject.deps.json
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.json
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.dev.json
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.pdb
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.pdb
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CopyComplete
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\cb-dotnet-binary-example-master\TestProject\obj\Debug\netcoreapp2.1\TestProject.genruntimeconfig.cache
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\TestProject.deps.json
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.json
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.dev.json
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.pdb
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.pdb
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.csprojAssemblyReference.cache
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfoInputs.cache
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfo.cs
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CopyComplete
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\cb dotnet\TestProject\obj\Debug\netcoreapp2.1\TestProject.genruntimeconfig.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\TestProject.deps.json
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.json
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.dev.json
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.Common.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\bin\Debug\netcoreapp2.1\CloudBeat.Frameworks.MSTest.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.csprojAssemblyReference.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfoInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfo.cs
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CopyComplete
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\TestProject\obj\Debug\netcoreapp2.1\TestProject.genruntimeconfig.cache

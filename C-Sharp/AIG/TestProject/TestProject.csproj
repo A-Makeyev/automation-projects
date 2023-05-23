@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+
+        <RootNamespace>TestProject</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+        <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+        <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+        <PackageReference Include="Selenium.Chrome.WebDriver" Version="77.0.0" />
+        <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.24.0" />
+        <PackageReference Include="Selenium.InternetExplorer.WebDriver" Version="3.141.5" />
+        <PackageReference Include="Selenium.Support" Version="3.141.0" />
+        <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\CloudBeat.Frameworks.Common.csproj" />
+      <ProjectReference Include="..\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\CloudBeat.Frameworks.MSTest.csproj" />
+    </ItemGroup>
+
+</Project>

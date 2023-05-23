@@ -1,0 +1,12 @@
+1) open cmd
+
+2) cd C:\JMETER\apache-jmeter-5.1.1\bin
+
+3) jmeter -f -n -t C:\JMETER\apache-jmeter-5.1.1\bin\tests\HAFAKA\hafaka-test.jmx -l C:\JMETER\apache-jmeter-5.1.1\bin\tests\HAFAKA\results.csv -e -o C:\JMETER\apache-jmeter-5.1.1\bin\tests\HAFAKA\report
+
+4) open multiple results in the report html open devtools and paste in the console:
+
+const arrows = document.getElementsByClassName('fa fa-chevron-down').length
+for (let x = 0; x < arrows; x++) {
+ document.getElementsByClassName('fa fa-chevron-down')[x].click() 
+}
