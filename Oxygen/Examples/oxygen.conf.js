@@ -19,7 +19,7 @@ module.exports = {
 
     modules: [
         'web', 'log', 'assert', 'http',
-        'db', 'email', 'mob', 'date', 'pdf'
+        'db', 'email', 'mob', 'date', 'pdf', 'win'
     ],
 
     reporting: {

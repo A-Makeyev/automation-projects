@@ -19,7 +19,7 @@ var capabilities = {
 
 mob.init(capabilities)
 mob.setTimeout(120 * 1000)
-// utils.getAppSource()
+utils.getAppSource()
 
 mob.transaction(`02. Choose ${env.name} Environment`)
 loginScreen.chooseEnv(env.name)

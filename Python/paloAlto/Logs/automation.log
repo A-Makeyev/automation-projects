@@ -1,0 +1,53 @@
+2023-06-18 00:43:25,808 - selenium.webdriver.common.selenium_manager - INFO - Applicable driver not found; attempting to install with Selenium Manager (Beta)
+06/18/2023 12:48:39 AM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+06/18/2023 11:51:06 AM: INFO: ====== WebDriver manager ======
+06/18/2023 11:51:07 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "114.0.5735" in cache
+06/18/2023 11:51:07 AM: INFO: Get LATEST chromedriver version for google-chrome
+06/18/2023 11:51:08 AM: INFO: About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_win32.zip
+06/18/2023 11:51:08 AM: INFO: Driver has been saved in cache [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90]
+06/18/2023 11:51:12 AM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+
+06/25/2023 11:18:40 PM: INFO: ====== WebDriver manager ======
+06/25/2023 11:18:40 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90\chromedriver.exe] found in cache
+06/25/2023 11:18:41 PM: INFO: 🛈 Verifying Contact Us Page Title
+06/25/2023 11:18:46 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+06/25/2023 11:18:46 PM: INFO: ====== WebDriver manager ======
+06/25/2023 11:18:46 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90\chromedriver.exe] found in cache
+06/25/2023 11:18:47 PM: INFO: 🛈 Verifying Contact Us Form
+06/25/2023 11:18:57 PM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+
+====================================================================================================================================
+
+08/08/2023 11:36:00 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:36:00 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:36:01 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:36:01 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:36:01 AM: INFO: Get LATEST chromedriver version for google-chrome
+08/08/2023 11:36:01 AM: INFO: Get LATEST chromedriver version for google-chrome
+08/08/2023 11:36:34 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:36:34 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:36:35 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:36:35 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:36:35 AM: INFO: Get LATEST chromedriver version for google-chrome
+08/08/2023 11:36:35 AM: INFO: Get LATEST chromedriver version for google-chrome
+08/08/2023 11:41:40 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:41:40 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:41:47 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:41:47 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:42:07 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:42:07 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:42:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:42:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:46:53 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:46:53 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:46:53 AM: INFO: Get LATEST chromedriver version for google-chrome
+08/08/2023 11:47:04 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:47:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:48:19 AM: INFO: 🛈 Verifying Contact Us Page Title
+08/08/2023 11:48:21 AM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+08/08/2023 11:48:23 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:48:30 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+08/08/2023 11:48:46 AM: INFO: 🛈 Verifying Contact Us Page Title
+08/08/2023 11:48:48 AM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+08/08/2023 11:48:49 AM: INFO: 🛈 Verifying Contact Us Form
+08/08/2023 11:48:53 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present

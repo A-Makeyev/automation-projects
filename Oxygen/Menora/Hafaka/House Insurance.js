@@ -47,7 +47,7 @@ function getHours() {
 log.info(getDate())
 
 function getTime() {
-    return (new Date()).getTime();
+    return (new Date()).getTime()
 }
 
 var agent = '509067'

@@ -1,6 +1,6 @@
 var capabilities = {
-  "deviceName": "Nexus 5 API 30",
-  "platformVersion": "11.0",
+  "deviceName": "Nexus 5X API 31",
+  "platformVersion": "12.0",
   "platformName": "Android",
   "appPackage": "com.sonol.mobileapp",
   "appActivity": "com.sonol.mobileapp.MainActivity",
@@ -20,23 +20,33 @@ mob.transaction('02. Choose Environment')
 lg.chooseEnv('staging')
 
 mob.transaction('03. Type Login Details')
-mob.waitForVisible('//android.view.View[@text="התחברות"]')
-
 lg.enterNumber(phoneNumber)
-mob.click('//android.widget.Button[contains(@content-desc, "להמשך")]')
+mob.type('(//android.widget.EditText)[1]', '0')
+mob.type('(//android.widget.EditText)[2]', '0')
+mob.type('(//android.widget.EditText)[3]', '0')
+mob.type('(//android.widget.EditText)[4]', '0')
 
-mob.type('//android.widget.EditText[contains(@text, "שם פרטי")]')
-mob.type('//android.widget.EditText[contains(@text, "שם משפחה")]')
-mob.type('//android.widget.EditText[contains(@text, "מייל")]')
-mob.type('//android.widget.EditText[contains(@text, "מספר רכב")]')
+if (!mob.isVisible('text=הבא', utils.longWait)) {
+  mob.type('//android.widget.EditText[contains(@content-desc, "שם פרטי")]', 'אנטולי')
+  mob.type('//android.widget.EditText[contains(@content-desc, "שם משפחה")]', 'מקייב')
+  mob.click('//android.widget.CheckBox[contains(@content-desc, "מאשר/ת בזאת את התקנון ומדיניות הפרטיות בחירה")]')
+  mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
+  mob.type('//android.widget.EditText[contains(@content-desc, "מספר רכב")]', '6922258')
+  mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
+  mob.click('(//android.view.ViewGroup[@content-desc="כפתור רדיו"])[1]') // 95
+  mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
 
-mob.click('//android.widget.TextView[contains(@text, "יש לבחור סוג דלק")]')
-mob.click('//android.widget.Button[@content-desc=" גולד 95"]')
-mob.click('(//android.widget.Button[@content-desc=" גולד 95"]//..//android.widget.ImageView)[1]')
-mob.click('//android.widget.TextView[contains(@text, "יש לי דלקן")]//..//android.widget.TextView[@text="לא"]')
-mob.click('//android.widget.TextView[@text="זכר"]')
-mob.click('//android.view.ViewGroup[@content-desc="בחירה undefined  לא נבחר"]') // מאשר/ת בזאת את תנאי השימוש
-mob.click('//android.widget.Button[contains(@content-desc,"סיום")]/android.view.ViewGroup')
+  mob.transaction('04. Add Payment Details')
+  // close image
+  mob.click('(//android.widget.ImageView//..//android.view.ViewGroup)[1]')
+  // press skip
+  mob.click('text=אולי אחר כך')
+  mob.click('text=הבא')
+  mob.click('text=לדף הבית')
+} else {
+  mob.click('text=הבא')
+  mob.click('text=לדף הבית')
+}
 
 mob.transaction('04. Login')
 if (mob.isVisible(`//android.widget.TextView[@text="הקוד נשלח אל  ${phoneNumber}"]`)) {

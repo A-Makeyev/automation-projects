@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
+
 class ContactUs:
     contactSales_form_xpath = '//form[@name="contact_sales"]'
     firstName_input_id = 'field0'
@@ -46,7 +47,6 @@ class ContactUs:
         submit_button = self.driver.find_element(By.XPATH, self.submitRequest_button_xpath)
 
         if captcha_iframe.is_displayed():
-            print('reCAPTCHA is present!')
             if submit_button.is_enabled():
                 self.driver.execute_script('arguments[0].scrollIntoView();', contact_sales_form)
                 time.sleep(1)
@@ -59,7 +59,8 @@ class ContactUs:
             else:
                 assert True
 
-    def wait(self, driver, findBy, locator):
+    @staticmethod
+    def wait(driver, findBy, locator):
         return WebDriverWait(driver, 25).until(
             expected_conditions.presence_of_element_located((
                 By.ID if findBy == 'ID' else By.XPATH if findBy == 'XPATH' else By.CSS_SELECTOR, locator)
