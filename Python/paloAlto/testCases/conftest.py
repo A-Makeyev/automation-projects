@@ -1,40 +1,65 @@
+# %userprofile%/PycharmProjects/paloAlto
+# https://googlechromelabs.github.io/chrome-for-testing
+# run a single test ~> pytest -v -s testCases/test_contactUs.py --browser chrome
+# run parallel tests (use backup browser) ~> pytest -v -s -n=4 testCases/test_contactUs.py
+# Generate HTML reports ~> pytest -v -s --html=Reports\report.html testCases/test_createAccount.py
+# run sanity and regression tests ~> pytest -v -s -m "sanity and regression" testCases/
+# run sanity tests ~> pytest -v -s -m "sanity" testCases/ --browser chrome
+
+
 import os
 import pytest
 from selenium import webdriver
-from selenium.common import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-path = '\\BackUpDriver\\chromedriver.exe'
-path = '..' + path if 'testCases' in os.getcwd() else '.' + path
+# https://googlechromelabs.github.io/chrome-for-testing/
+backupDriverPath = '\\BackUpDriver\\chromedriver.exe'
+backupDriverPath = '..' + backupDriverPath if 'testCases' in os.getcwd() else '.' + backupDriverPath
 
 
 @pytest.fixture()
 def setup(browser):
-    chrome_options = Options()
-    chrome_options.add_argument('--incognito')
-    chrome_options.add_argument('--disable-notifications')
-
     try:
         if browser == 'firefox':
             driver = webdriver.Firefox()
-        elif browser == 'chrome':
-            service = Service(executable_path=ChromeDriverManager().install())
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-        elif browser is None:
-            driver = webdriver.Chrome(options=chrome_options, executable_path=path)
-    except TimeoutException as ex:
-        print(f'✖️️ Failed To Open Browser - {ex.msg}')
+        elif browser == 'chrome' or browser is None:
+            chrome_options = Options()
+            chrome_options.add_argument('--incognito')
+            chrome_options.add_argument('--disable-notifications')
+            executable_path = Service(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=executable_path, options=chrome_options)
+    except:  # except TimeoutException as ex:
+        driver = webdriver.Chrome(service=Service(backupDriverPath))
+        print(f'⚠️ Used backup driver from: {backupDriverPath}')
 
-    driver.set_window_size(1735, 1350)
+    window_width = driver.execute_script('return window.innerWidth')
+    if window_width > 1920:
+        driver.set_window_size(1735, 1350)
+    else:
+        driver.maximize_window()
     return driver
+
 
 # get values from CLI / hooks
 def pytest_addoption(parser):
     parser.addoption('--browser')
 
+
 # return browser value to setup method
 @pytest.fixture()
 def browser(request):
     return request.config.getoption('--browser')
+
+
+# a hook to add environment info in HTML report
+def pytest_configure(config):
+    config._metadata['Project Name'] = 'Palo Alto'
+
+
+# a hook to delete / modify environment info in HTML report
+@pytest.hookimpl(optionalhook=True)
+def pytest_metadata(metadata):
+    metadata.pop('JAVA_HOME', None)
+    metadata.pop('Plugins', None)

@@ -2,37 +2,21 @@
 // cc -> 4580080113180576  01/24  237
 // id -> 000966424
 
-mob.transaction('01. Initialize App')
 const utils = po.utils
 const loginScreen = po.loginScreen
 const phoneNumber = '0589999999'
 
-var capabilities = {
-  "deviceName": "Nexus 5X API 31",
-  "platformVersion": "12.0",
-  "platformName": "Android",
-  "appPackage": "com.sonol.mobileapp",
-  "appActivity": "com.sonol.mobileapp.MainActivity",
-  "automationName": "UIAutomator2",
-  "autoGrantPermissions": true
-}
-
-mob.init(capabilities)
-mob.setTimeout(120 * 1000)
-utils.getAppSource()
-
-mob.transaction(`02. Choose ${env.name} Environment`)
-loginScreen.chooseEnv(env.name)
-mob.waitForVisible(loginScreen.headingText)
+po.init(env.name)
+//utils.getAppSource()
 
 mob.transaction('03. Type Phone Number')
 loginScreen.enterNumber(phoneNumber)
 
 mob.transaction('04. Continue To Send OTP')
-utils.click(loginScreen.continueButton)
-mob.waitForVisible(`//android.widget.TextView[@text="הקוד נשלח אל  ${phoneNumber}"]`)
+// utils.click(loginScreen.continueButton)
+// mob.waitForVisible(`//android.widget.TextView[@text="הקוד נשלח אל  ${phoneNumber}"]`)
 
-mob.transaction('05. Type OTP')
+// mob.transaction('05. Type OTP')
 loginScreen.enterNumber('1234')
 
 mob.transaction('06. Continue')
@@ -144,6 +128,7 @@ if (mob.isVisible('//android.widget.TextView[contains(@text, "הסיסמה עו�
 
 mob.transaction('13. ')
 mob.pause(utils.shortWait)
+if (mob.isVisible(loginScreen.homePageButton)) mob.click(loginScreen.homePageButton)
 utils.click('(//android.widget.Button[contains(@content-desc, "חנות נוחות")]//..//android.view.ViewGroup)[1]')
 
 mob.scrollIntoElement(

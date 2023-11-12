@@ -1,23 +1,9 @@
-var capabilities = {
-  "deviceName": "Nexus 5X API 31",
-  "platformVersion": "12.0",
-  "platformName": "Android",
-  "appPackage": "com.sonol.mobileapp",
-  "appActivity": "com.sonol.mobileapp.MainActivity",
-  "automationName": "UIAutomator2",
-  "autoGrantPermissions": true
-}
-
-mob.transaction('01. Initialize App')
 const utils = po.utils
 const lg = po.loginScreen
 const phoneNumber = '0589999999'
 
-mob.init(capabilities)
-// utils.getAppSource()
-
-mob.transaction('02. Choose Environment')
-lg.chooseEnv('staging')
+po.init(env.name)
+//utils.getAppSource()
 
 mob.transaction('03. Type Login Details')
 lg.enterNumber(phoneNumber)

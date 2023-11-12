@@ -19,35 +19,27 @@
 ====================================================================================================================================
 
 08/08/2023 11:36:00 AM: INFO: ====== WebDriver manager ======
-08/08/2023 11:36:00 AM: INFO: ====== WebDriver manager ======
-08/08/2023 11:36:01 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
 08/08/2023 11:36:01 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
 08/08/2023 11:36:01 AM: INFO: Get LATEST chromedriver version for google-chrome
-08/08/2023 11:36:01 AM: INFO: Get LATEST chromedriver version for google-chrome
-08/08/2023 11:36:34 AM: INFO: ====== WebDriver manager ======
-08/08/2023 11:36:34 AM: INFO: ====== WebDriver manager ======
-08/08/2023 11:36:35 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
-08/08/2023 11:36:35 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
-08/08/2023 11:36:35 AM: INFO: Get LATEST chromedriver version for google-chrome
-08/08/2023 11:36:35 AM: INFO: Get LATEST chromedriver version for google-chrome
-08/08/2023 11:41:40 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:41:40 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:41:47 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:41:47 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:42:07 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:42:07 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:42:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:42:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:46:53 AM: INFO: ====== WebDriver manager ======
-08/08/2023 11:46:53 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
-08/08/2023 11:46:53 AM: INFO: Get LATEST chromedriver version for google-chrome
-08/08/2023 11:47:04 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:47:11 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:48:19 AM: INFO: 🛈 Verifying Contact Us Page Title
-08/08/2023 11:48:21 AM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
-08/08/2023 11:48:23 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:48:30 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
-08/08/2023 11:48:46 AM: INFO: 🛈 Verifying Contact Us Page Title
-08/08/2023 11:48:48 AM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
-08/08/2023 11:48:49 AM: INFO: 🛈 Verifying Contact Us Form
-08/08/2023 11:48:53 AM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+
+====================================================================================================================================
+
+08/27/2023 01:48:25 PM: INFO: 🛈 Verifying Contact Us Page Title
+08/27/2023 01:48:27 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+08/27/2023 01:48:28 PM: INFO: 🛈 Verifying Contact Us Form
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 1 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 2 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 3 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+
+====================================================================================================================================
+
+10/18/2023 02:53:23 PM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 118. Retrying with chromedriver 117 (attempt 1/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 117. Retrying with chromedriver 116 (attempt 2/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 116. Retrying with chromedriver 115 (attempt 3/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 115. Retrying with chromedriver 114 (attempt 4/5)
+10/18/2023 02:53:28 PM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)a
+
+====================================================================================================================================
+
