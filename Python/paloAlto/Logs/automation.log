@@ -43,3 +43,14 @@
 
 ====================================================================================================================================
 
+11/12/2023 04:41:34 PM: INFO: ====== WebDriver manager ======
+11/12/2023 04:41:35 PM: INFO: Get LATEST chromedriver version for google-chrome
+11/12/2023 04:41:35 PM: INFO: Get LATEST chromedriver version for google-chrome
+11/12/2023 04:41:35 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\119.0.6045.105\chromedriver-win32/chromedriver.exe] found in cache
+11/12/2023 04:41:43 PM: INFO: 🛈 Verifying Sign Up Page Title
+11/12/2023 04:41:43 PM: INFO: ✔️ Contact Us Page Title Equals to Login - Palo Alto Networks
+11/12/2023 04:41:43 PM: INFO: 🛈 Verifying Sign Up Form
+11/12/2023 04:41:47 PM: INFO: ✔️ Sign Up Form Success - reCAPTCHA is present after trying to send form
+
+====================================================================================================================================
+
