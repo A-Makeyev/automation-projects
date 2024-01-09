@@ -18,8 +18,8 @@ if (cloudbeat) {
   }
 }
 
-var username = 'will@ds.com'
-var password = 's1s2s3s4'
+var username = 'xxxxxxxx'
+var password = 'xxxxxxxx'
 var shortWait = 5000
 
 function closeRandomAttentionPopUp() {
