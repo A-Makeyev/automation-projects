@@ -1,8 +1,8 @@
-const username = 'newk1'
-const password = 'KVgk-5269'
+const username = 'XXXX'
+const password = 'XXXX-9999'
 const startDate = params.startDate ? params.startDate : currentDateTime().split('_')[0].replace(/-/g, '/')
 const manufactureYear = params.manufactureYear ? params.manufactureYear : '2022'
-const carCode = params.carCode ? params.carCode : '588292'
+const carCode = params.carCode ? params.carCode : '555555'
 const roadYear = params.roadYear ? params.roadYear : '01/2022'
 const allowedToDriver = params.allowedToDriver ? params.allowedToDriver : 'כל נהג'
 const youngDriverAge = params.youngDriverAge ? params.youngDriverAge : '24'
@@ -202,29 +202,29 @@ if (web.isVisible('//div[contains(text(), "מציג") and contains(text(), "תו
             let comments = web.getText(`(${companyDataCells})[9]`).trim().replace(',', '')
             let message = web.getText(`(${companyDataCells})[10]`).trim().replace(',', '')
 
-            // data.push({
-            //     'companyTitle': companyTitle,
-            //     'kaskoHova': kaskoHova,
-            //     'finalBase': finalBase,
-            //     'hova': hova,
-            //     'base': base,
-            //     'discounts': discounts,
-            //     'additions': additions,
-            //     'migun': migun,
-            //     'comments': comments,
-            //     'message': message
-            // })
+            data.push({
+                'companyTitle': companyTitle,
+                'kaskoHova': kaskoHova,
+                'finalBase': finalBase,
+                'hova': hova,
+                'base': base,
+                'discounts': discounts,
+                'additions': additions,
+                'migun': migun,
+                'comments': comments,
+                'message': message
+            })
 
-            // for (let x = 0; x < data.length; x++) {
-            //     let row = ''
-            //     for (let y = 0; y <= data.length; y++) {
-            //         let key = Object.keys(data[x])[y]
-            //         let value = data[x][key]
-            //         row += value + '\t'        
-            //     }
-            //     row += '\n'
-            //     writeStream.write(row)
-            // }
+            for (let x = 0; x < data.length; x++) {
+                let row = ''
+                for (let y = 0; y <= data.length; y++) {
+                    let key = Object.keys(data[x])[y]
+                    let value = data[x][key]
+                    row += value + '\t'        
+                }
+                row += '\n'
+                writeStream.write(row)
+            }
             
             let row = companyTitle + '\t' + kaskoHova + '\t' + finalBase + '\t' + hova + '\t' + base + '\t' + discounts + '\t' + additions + '\t' + migun + '\t' + comments + '\t' + message + '\n'
             let rowUTF16 = Buffer.from(`\ufeff${row}`, 'utf16le')

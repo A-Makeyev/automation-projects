@@ -2,12 +2,12 @@ module.exports = {
     
     PROD: {
         name: 'PROD',
-        host: 'pazgas-api.azure-api.net',
+        host: 'azure-api.net',
         contentType: 'application/json',
-        authorization: 'Basic Y3JtOkNybTIwMjAh',
-        baseUrl: 'https://pazgas-api.azure-api.net/PazgasGetSiteRequests/prod/manual/paths/invoke',
-        baseUrlLeads: 'https://pazgas-api.azure-api.net/PazgasGetLeadsFromSiteRequestProd/prod/manual/paths/invoke',
-        ocpApimsubScriptionKey: '396bd22a735846e5b7e432f67768c322',
+        authorization: 'Basic XXXXXXXXX',
+        baseUrl: 'https://azure-api.net/',
+        baseUrlLeads: 'https://azure-api.net/prod/manual/paths/invoke',
+        ocpApimsubScriptionKey: 'XXXXXXXXXXXXXXXXXXXXXXXX',
         ocpApimtrace: 'true',
 
         url: 'https://www.pazgas.co.il/he/',
@@ -22,13 +22,13 @@ module.exports = {
 
     TEST: {
         name: 'TEST',
-        host: 'pazgas-api.azure-api.net',
+        host: 'azure-api.net',
         contentType: 'application/json',
-        authorization: 'Basic Y3JtOjEyMzQ1Ng==',
-        baseUrl : 'https://pazgas-api.azure-api.net/PazgasGetSiteRequests/test/manual/paths/invoke',
-        baseUrlLeads : 'https://pazgas-api.azure-api.net/PazgasGetLeadsFromSiteRequest/test/manual/paths/invoke',
-        ocpApimsubScriptionKey: '396bd22a735846e5b7e432f67768c322',
-        ocpApimsubScriptionKeyLeads: '396bd22a735846e5b7e432f67768c322',
+        authorization: 'Basic XXXXXXX==',
+        baseUrl : 'https://azure-api.net/',
+        baseUrlLeads : 'https://azure-api.net/test/manual/paths/invoke',
+        ocpApimsubScriptionKey: 'XXXXXXXXXXXXXXXXXXXX',
+        ocpApimsubScriptionKeyLeads: 'XXXXXXXXXXXXXXX',
         ocpApimtrace: 'true',
         
         url: 'https://test.pazgas.co.il/he/',

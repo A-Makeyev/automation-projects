@@ -4,23 +4,14 @@ const cases = obj.cases
 const utils = obj.utils
 const fun = obj.functions
 const manager = obj.ribbonManager
-const companyNumber = '510719230'
-const companyPniya = '13949'
-const ID = '315995019'
+const companyNumber = '999999999'
+const companyPniya = '999999999'
+const ID = '999999999'
 
 
 function savePniya() {
     web.selectWindow('title=פניה: פריט פניה חדש')
     obj.click(manager.cases._save)
-    // web.execute(() => {
-    //     document.evaluate(
-    //         '//span[@command="incident|NoRelationship|Form|Mscrm.SavePrimary"]',
-    //         document,
-    //         null,
-    //         XPathResult.FIRST_ORDERED_NODE_TYPE,
-    //         null
-    //     ).singleNodeValue.click()
-    // })
 }
 
 function createNewCase(id, type, team, subject, unit, process) {
@@ -93,9 +84,9 @@ function createNewCase(id, type, team, subject, unit, process) {
     // unit
     if (web.isVisible(cases.unitField)) {
         obj.click(cases.unitField)
-        // web.execute(() => {
-        //     document.getElementById('el_id_businessunit_status').click()
-        // })
+        web.execute(() => {
+            document.getElementById('el_id_businessunit_status').click()
+        })
     
         obj.type(cases.unitInput, unit)
         fun.pressTAB()

@@ -4,8 +4,8 @@ web.setTimeout(75 * 1000)
 const utils = po.utils
 const general = po.general
 
-const customerNumber = '30587721'
-const invoiceNumber = 'IN19B0680403'
+const customerNumber = '9999999999'
+const invoiceNumber = '9999999999'
 const phoneNumber = '052-7729974'
 
 web.transaction('04. Enter Customer Details')

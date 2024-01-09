@@ -13,7 +13,7 @@ web.open(pageObjects.drivePageUrl)
 next()
 
 web.transaction('מילוי פרטים')
-//web.type(pageObjects.form.slider, '7000')
+web.type(pageObjects.form.slider, '7000')
 next()
 
 var checkBoxes = web.getElementCount('//span[@class="MuiIconButton-label"]')
@@ -26,10 +26,10 @@ function firstActions() {
     next()
 
     web.type(pageObjects.form.firstName, 'אנטולי')
-    web.type(pageObjects.form.phoneNumber, '0529927794')
+    web.type(pageObjects.form.phoneNumber, '05555555555')
     next()
 
-    web.type(pageObjects.form.carPlate, '3195211')
+    web.type(pageObjects.form.carPlate, '55555555')
     next()
 
     web.waitForExist('//span[@class="MuiButton-label" and contains(text(), "אפשר להמשיך")]')

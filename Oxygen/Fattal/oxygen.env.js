@@ -3,8 +3,8 @@ module.exports = {
     TEST: {
         name: 'TEST',
         url: 'https://test.fattal.co.il/',
-        user: 'webtest',
-        pass: 'fattal@test10'
+        user: 'XXXXXXXXX',
+        pass: 'XXXXX@XXXX'
     },
 
     PROD: {

@@ -1,22 +1,18 @@
-// cc -> 4580 0801 1318 0592  01/24  151
-// cc -> 4580080113180576  01/24  237
-// id -> 000966424
-
 const utils = po.utils
 const loginScreen = po.loginScreen
-const phoneNumber = '0589999999'
+const phoneNumber = '9999999999'
 
 po.init(env.name)
-//utils.getAppSource()
+utils.getAppSource()
 
 mob.transaction('03. Type Phone Number')
 loginScreen.enterNumber(phoneNumber)
 
 mob.transaction('04. Continue To Send OTP')
-// utils.click(loginScreen.continueButton)
-// mob.waitForVisible(`//android.widget.TextView[@text="הקוד נשלח אל  ${phoneNumber}"]`)
+utils.click(loginScreen.continueButton)
+mob.waitForVisible(`//android.widget.TextView[@text="הקוד נשלח אל  ${phoneNumber}"]`)
 
-// mob.transaction('05. Type OTP')
+mob.transaction('05. Type OTP')
 loginScreen.enterNumber('1234')
 
 mob.transaction('06. Continue')
@@ -27,7 +23,7 @@ if (mob.isVisible('//android.widget.TextView[@text="שדות המסומנים ב
     mob.type('//android.widget.EditText[contains(@text, "שם פרטי")]', 'אנטולי')
     mob.type('//android.widget.EditText[contains(@text, "שם משפחה")]', 'מקייב')
     mob.type('//android.widget.EditText[contains(@text, "מייל")]', 'anatoly.makeyev@cloudbeat.io')
-    mob.type('//android.widget.EditText[contains(@text, "מספר רכב")]', '6922258')
+    mob.type('//android.widget.EditText[contains(@text, "מספר רכב")]', '6666666')
 
     mob.scrollIntoElement(
         '//android.widget.TextView[@text="סוג דלק"]',
@@ -50,7 +46,6 @@ if (mob.isVisible('//android.widget.TextView[@text="שדות המסומנים ב
     }
 } 
 
-mob.transaction('08. ')
 mob.pause(utils.shortWait)
 if (mob.isVisible('//android.widget.Button/android.widget.TextView[@text="הבא"]')) {
     utils.click('//android.widget.Button/android.widget.TextView[@text="הבא"]')
@@ -60,7 +55,6 @@ if (mob.isVisible('//android.widget.Button/android.widget.TextView[@text="הבא
 
 mob.pause(utils.shortWait)
 if (mob.isVisible(`//android.widget.TextView[contains(@text, "בוקר טוב, אנטולי")]`, utils.longWait)) {
-    mob.transaction('13. ')
     utils.click('(//android.widget.Button[contains(@content-desc, "חנות נוחות")]//..//android.view.ViewGroup)[1]')
 
     mob.scrollIntoElement(
@@ -76,7 +70,6 @@ if (mob.isVisible(`//android.widget.TextView[contains(@text, "בוקר טוב, �
     assert.pass()
 }
 
-mob.transaction('09. ')
 mob.pause(utils.shortWait)
 if (mob.isVisible('//android.widget.TextView[contains(@text, "פרטי האשראי")]', utils.longWait)) {
     utils.click('//android.widget.Button[contains(@content-desc, "הוספת כרטיס חדש - ידני")]')
@@ -97,16 +90,13 @@ if (mob.isVisible('//android.widget.TextView[contains(@text, "פרטי האשר�
 
 mob.pause(utils.shortWait)
 if (mob.isVisible('//android.widget.TextView[contains(@text, "הסיסמה עודכנה בהצלחה")]', utils.longWait)) {
-    mob.transaction('10. ')
     utils.click('//android.widget.TextView[contains(@text, "אישור")]')
 
-    mob.transaction('11. ')
     mob.type('//android.widget.EditText[contains(@text, "תעודת זהות")]', '000966424')
     mob.type('//android.widget.EditText[contains(@text, "כרטיס אשראי")]', '4580080113180592')
     mob.type('//android.widget.EditText[contains(@text, "תוקף")]', '0124')
     mob.type('//android.widget.EditText[contains(@text, "קוד אבטחה")]', '151')
 
-    mob.transaction('12. ')
     utils.click('//android.widget.TextView[contains(@text,"אימות אשראי")]')
 
     if (mob.isVisible('//android.widget.TextView[contains(@text,"הזנת קוד אימות")]', utils.longWait)) {
@@ -126,7 +116,6 @@ if (mob.isVisible('//android.widget.TextView[contains(@text, "הסיסמה עו�
     }
 }
 
-mob.transaction('13. ')
 mob.pause(utils.shortWait)
 if (mob.isVisible(loginScreen.homePageButton)) mob.click(loginScreen.homePageButton)
 utils.click('(//android.widget.Button[contains(@content-desc, "חנות נוחות")]//..//android.view.ViewGroup)[1]')

@@ -1,7 +1,7 @@
 // in gmail, allow less secure apps & enable imap
 // https://myaccount.google.com/u/2/lesssecureapps
-var assertEmail = true
 
+var assertEmail = true
 var date_12_daysAgo = new Date()
 date_12_daysAgo.setDate(date_12_daysAgo.getDate() - 12)
 
@@ -110,49 +110,3 @@ if (web.isVisible('//span[@class="ui-dialog-title" and contains(text(), "הטו�
 } else {
     assert.fail('הייתה תקלה בעת שליחת הטופס')
 }
-
-
-// po.type('id=PersonCountAtHome', '1')
-// po.type('id=RoomsCountAtHome', '2')
-
-// po.type('id=passportNumber', passport)
-// chooseOption('id=passportCountry', 'קפריסין')
-
-// chooseOption('id=QuarantineReason', 'מידע')
-
-// po.type('id=ExposureCountry', 'ישראל')
-// po.click('//div[@class="ui-menu-item-wrapper" and text()="ישראל"]')
-// web.waitForNotExist('//input[@id="ExposeeCity" and @disabled="disabled"]')
-
-// po.type('id=ExposeeCity', 'ירושלים')
-// po.click('//div[@class="ui-menu-item-wrapper" and text()="ירושלים"]')
-
-// po.type('id=ExposeeDate', formattedDate) 
-// po.pressENTER()
-
-// if (web.isVisible('//span[@id="vmsg_ExposeeDate" and @class="validationMessage"]', po.shortWait)) {
-//     po.click('//button[@id="datepicker_button_ExposeeDate"]')
-//     if (web.isVisible(`//a[contains(@class, "ui-state-active") and text()="${pastDay}"]`, po.shortWait)) {
-//         po.click(`//a[contains(@class, "ui-state-active") and text()="${pastDay}"]`)
-//     } else {
-//         po.click('//a[@data-handler="prev"]//span')
-//         po.click(`//a[@class="ui-state-default" and text()="${pastDay}"]`)
-//     }
-// }
-
-// po.type('id=EnteringIsolationDate', formattedDate)
-// po.pressENTER()
-
-// if (web.isVisible('//span[@id="vmsg_EnteringIsolationDate" and @class="validationMessage"]', po.shortWait)) {
-//     po.click('//button[@id="datepicker_button_EnteringIsolationDate"]')
-//     if (web.isVisible(`//a[contains(@class, "ui-state-active") and text()="${pastDay}"]`, po.shortWait)) {
-//         po.click(`//a[contains(@class, "ui-state-active") and text()="${pastDay}"]`)
-//     } else {
-//         po.click('//a[@data-handler="prev"]//span')
-//         po.click(`//a[@class="ui-state-default" and text()="${pastDay}"]`)
-//     }
-// }
-
-// po.click('//input[@id="AddSpouse2"]//..//label')
-// po.click('//input[@id="AddChildren2"]//..//label')
-// po.click('//input[@id="AddEscorts2"]//..//label')

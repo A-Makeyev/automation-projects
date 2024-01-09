@@ -12,7 +12,7 @@ log.info(`Email: ${email}`)
 
 web.transaction('Initializing')
 web.init()
-web.open('https://eudigitalpp.azurewebsites.net/fr/france/registrate/')
+web.open('https://azurewebsites.net/fr/france/registrate/')
 web.setTimeout(9000)
 
 web.waitForExist('//form[@action="/TevaFrHcpRegistrationBlock/RegisterUser"]')

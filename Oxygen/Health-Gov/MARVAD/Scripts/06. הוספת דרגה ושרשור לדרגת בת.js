@@ -35,14 +35,12 @@ for (let x = 0; x < driversRanks.length; x++) {
     }
 }
 
-
 if (web.isChecked(patients.requestedLicense)) {
     obj.click(utils.bottomSaveButton)
 } else {
     obj.click(patients.requestedLicense)
     obj.click(utils.bottomSaveButton)
 }
-
 
 endTime = func.getTime()
 log.info(

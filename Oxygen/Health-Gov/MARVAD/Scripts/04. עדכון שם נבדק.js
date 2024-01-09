@@ -37,21 +37,18 @@ obj.click(utils.dialogAccept)
 
 web.transaction('Assert Error Message')
 web.waitForVisible('//label[contains(@title, "שדה נדרש אינו יכול להיות ריק")]')
-// if (web.isVisible(utils.inputErrorMessage)) {
-//     let error = func.getText(utils.inputErrorMessage)
-//     if (!error.includes('אינו יכול להיות ריק')) {
-//         log.info('לא התקבלה הודעת שגיאה על שדה איזור רישוי ריק')
-//     }
-// }
-
+if (web.isVisible(utils.inputErrorMessage)) {
+    let error = func.getText(utils.inputErrorMessage)
+    if (!error.includes('אינו יכול להיות ריק')) {
+        log.info('לא התקבלה הודעת שגיאה על שדה איזור רישוי ריק')
+    }
+}
 
 obj.type(referrals.rishuiOfficeArea, 'חיפה')
 obj.click(utils.searchResult)
 
-
 web.transaction('Save')
 obj.click(utils.bottomSaveButton)
-
 
 web.transaction("Open Patient's Personal Details And Create Treatment") 
 obj.click(referrals.patient)
@@ -62,14 +59,11 @@ obj.type(treatments.caseType, 'אורתופד')
 obj.click(utils.searchResult)
 obj.click(utils.bottomSaveButton)
 
-
 web.transaction('Assert Treatment Already Exists Message')
 if (web.isVisible(utils.dialogHeader)) {
     let message = func.getText(utils.dialogHeader)
     message.includes('לנבדק קיים טיפול ניהולי פעיל') ? obj.click(utils.dialogCancel) : assert.fail('לא היה קיים טיפול ניהולי')
 }
-
-
 
 web.transaction('Return To The Patient And Change His/Her Name')
 obj.click(treatments.patient)

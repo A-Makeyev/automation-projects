@@ -1,38 +1,37 @@
 module.exports = {
 
     TEST: {
-        url: 'http://ccxrm16t/ContactCenterMOHEducation/main.aspx',
-        url_korona: 'https://xrm365t.moh.health.gov.il/Korona/main.aspx',
-        /* http://CloudBeatTST_User:Cdb12%23@ccxrm16t/ContactCenterMOHEducation/main.aspx */
+        url: 'https://.moh.health.gov.il/',
+        url_korona: 'https://.moh.health.gov.il/Korona/main.aspx',
         con_string: '',
         users: {
             public_inq: {
-                username: 'qflow.test1',
-                password: 'Aa123456'
+                username: 'XXXX.XXXX',
+                password: 'XXXXXXXX'
             },
             BO_rep: {
-                username: 'qflow.test2',
-                password: 'flow1!',
+                username: 'XXXX.XXXX',
+                password: 'XXXX!',
             },
             translation_rep: {
-                username: 'qflow.test3',
-                password: 'flow1!'
+                username: 'XXXX.XXXX',
+                password: 'XXXX!'
             },
             amar_rep: {
-                username: 'qflow.test4',
-                password: 'flow1!'
+                username: 'XXXX.XXXX',
+                password: 'XXXX!'
             },
             kvilot: {
-                username: 'qflow.test5',
-                password: 'flow1!'
+                username: 'XXXX.XXXX',
+                password: 'XXXX!'
             },
             moked_rep: {
-                username: 'qflow.test6',
-                password: 'flow1!'
+                username: 'XXXX.XXXX',
+                password: 'XXXX!'
             },
             general_user: {
-                username: 'learning5',
-                password: 'lear1!'
+                username: 'XXXX',
+                password: 'XXXX!'
             },
         },
     },

@@ -28,12 +28,12 @@ if (mob.isVisible('text=מתדלקים בקליק') || mob.isVisible(loginScreen
             assert.equal(mob.isVisible('text=שקל בSogoods'), true, 'אופציה (שקל בSogoods) לא מופיעה')
         }
 
-        // mob.transaction('05. Close And Go Back To Menu')
-        // utils.click(homePage.finishButton)
-        // assert.equal(
-        //     mob.isVisible('text=איך זה עובד?'), true,
-        //     'לא הועבר בחזרה לתפריט לאחר סיום'
-        // )
+        mob.transaction('05. Close And Go Back To Menu')
+        utils.click(homePage.finishButton)
+        assert.equal(
+            mob.isVisible('text=איך זה עובד?'), true,
+            'לא הועבר בחזרה לתפריט לאחר סיום'
+        )
     }
 } else {
     assert.fail('עמוד איך זה עובד לא נפתח')

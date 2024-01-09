@@ -76,57 +76,54 @@ module.exports = {
         log.info('Kernel Was Updated: ' + vars.kernelUpdated)
         
         if (vars.kernelUpdated) {
-            // utils.transaction('Update KarnelDB Settings')
+            utils.transaction('Update KarnelDB Settings')
             const fs = require('fs')
             const desktop = require('os').userInfo().homedir + '\\Desktop'
             const karnelDBSettings = fs.readFileSync(po.kernelDBPath).toString().split('\n')
             fs.writeFileSync(`${desktop}\\karnelDB-Copy.ini`, karnelDBSettings, 'utf8')
 
-            // if (resetKernel) {
-            //     karnelDBSettings[18] = 'LastTransaction = 100000'
-            //     log.info('Reset LastTransaction to 100000')
-            // } 
+            if (resetKernel) {
+                karnelDBSettings[18] = 'LastTransaction = 100000'
+                log.info('Reset LastTransaction to 100000')
+            } 
 
-            // var transactionNumber = karnelDBSettings[18].match(/\d+/g).join([])
-            // log.info('Transaction Number: ' + transactionNumber)
+            var transactionNumber = karnelDBSettings[18].match(/\d+/g).join([])
+            log.info('Transaction Number: ' + transactionNumber)
             
             service = service.toLowerCase()
             if (service == 'full service') {
-                karnelDBSettings[334] = 'Terminal1 = Panel ,  0 , 70 , -TCPIP:127.0.0.1:2500'
-                karnelDBSettings[857] = 'AddOn4 = 290, 0, 0, 0, 0:0:0:0, 0:0:0:0, 100, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, תוספת שירות'
+                karnelDBSettings[334] = 'Terminal = XXX ,  0 , XXX , -XXXXXXXXXXX'
+                karnelDBSettings[857] = 'AddOn = XXXX, 0, 0, 0, XXXXXXXXXXXX, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -X, תוספת שירות'
             }
-            if (service == 'self service') karnelDBSettings[334] = 'Terminal1 = Panel ,  0 , 70 , 3 , -SelfService , -TCPIP:127.0.0.1:2500'
+            if (service == 'self service') karnelDBSettings[334] = 'Terminal = XXX ,  0 , XX , X , -SelfService , -XXXXXXXXXXXXXX'
             if (service == 'not allocated dual service') {
-                karnelDBSettings[334] = 'Terminal1 = Panel ,  0 , 70 , -DualService , -TCPIP:127.0.0.1:2500'
-                karnelDBSettings[857] = 'AddOn4 = 290, 0, 0, 0, 0:0:0:0, 0:0:0:0, 100, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, תוספת שירות'
+                karnelDBSettings[334] = 'Terminal = XXX ,  0 , XXX , -DualService , -XXXXXXXXXXXX'
+                karnelDBSettings[857] = 'AddOn = XXXX, 0, 0, 0, XXXXXXXXXXXXX, XX, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -X, תוספת שירות'
             }
             if (service == 'allocated dual service') {
-                karnelDBSettings[334] = 'Terminal1 = Panel ,  0 , 70 , 2 , -DualService , -TCPIP:127.0.0.1:2500'
-                karnelDBSettings[857] = 'AddOn4 = 290, 0, 0, 0, 0:0:0:0, 0:0:0:0, 100, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, תוספת שירות'
+                karnelDBSettings[334] = 'Terminal = XXX ,  0 , XXX , X , -DualService , -XXXXXXXXXXXXX'
+                karnelDBSettings[857] = 'AddOn = XXXX, 0, 0, 0, XXXXXXXXXXXXXX, XX, 0, 0, Fuel, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -X, תוספת שירות'
             }
             log.info('Service: ' + karnelDBSettings[334])
             log.info('*'.repeat(100))
 
-            karnelDBSettings[303] = 'Authorizer1 = 1, 111, 0, 05/07/21-10:28:02, 0, 020785, 0, 0'
-            karnelDBSettings[304] = 'Authorizer20 = 1, 801, 0, 21/07/22-14:05:35, 0, 016849, 0, 0'
-            //karnelDBSettings[330] = 'Terminal2 = Printer ,  0 , 112, 30, 3, 00, -DevicesList: 1  , -TCPIP:200.200.230.70:3485'
-            //karnelDBSettings[331] = 'Terminal3 = Cash ,  200.200.230.13 , 29298 , 253 ,  -Orpak , -SelfService , -DoLog -LogPath'
-            //karnelDBSettings[332] = 'Terminal4 = Cash ,  200.200.230.13 , 29299 , 254 ,  -Orpak , -SelfService , -DoLog -LogPath'
-            //karnelDBSettings[330] = ''
-            //karnelDBSettings[331] = ''
-            //karnelDBSettings[332] = ''
+            karnelDBSettings[303] = 'Authorizer1 = X, XXX, 0, XXXXXXXXXXX, 0, XXXXXXX, 0, 0'
+            karnelDBSettings[304] = 'Authorizer2 = X, XXX, 0, XXXXXXXXXX, 0, XXXXXXXX, 0, 0'
+            karnelDBSettings[330] = 'Terminal2 = XXX ,  0 , XXX, XX, X, XX, -DevicesList: XXX  , -XXXXXXXXXXXXX'
+            karnelDBSettings[331] = 'Terminal3 = XXX ,  XXXXXXXXXXXX , XXXX , XXXX ,  -Orpak , -SelfService , -DoLog -LogPath'
+            karnelDBSettings[332] = 'Terminal4 = XXX ,  XXXXXXXXXXXX , XXXX , XXXX ,  -Orpak , -SelfService , -DoLog -LogPath'
 
             // find settings line
-            // for (let x = 0; x < karnelDBSettings.length; x++) {
-            //     if (karnelDBSettings[x].includes('[Terminals]')) {
-            //         log.info(x + ' ' + karnelDBSettings[x])
-            //     }
-            // }
+            for (let x = 0; x < karnelDBSettings.length; x++) {
+                if (karnelDBSettings[x].includes('[Terminals]')) {
+                    log.info(x + ' ' + karnelDBSettings[x])
+                }
+            }
 
             const newKarnelDBSettings = karnelDBSettings.join('\n')
             fs.writeFileSync(po.kernelDBPath, newKarnelDBSettings, 'utf8')
 
-            // utils.transaction('Run Kernel.exe')
+            utils.transaction('Run Kernel.exe')
             po.openProgram('Kernel.exe')
         }
 
@@ -163,7 +160,7 @@ module.exports = {
             var resultsLengthBefore = fs.readFileSync(po.resultsPath, 'utf-8').toString().split('\n').length
             log.info('Results Before Pumping: ' + resultsLengthBefore)
 
-            // utils.transaction('Run PumpSimulator.exe')
+            utils.transaction('Run PumpSimulator.exe')
             po.openProgram('PumpSimulator.exe')
 
             let tries = 20
@@ -310,8 +307,8 @@ module.exports = {
             if (nProductCount == lastResult_nProductCount) log.info(`✔ nProductCount (${nProductCount}) equals ${lastResult_nProductCount}`)
             else failedResults.push(`❌ Expected nProductCount to equal ${lastResult_nProductCount}, instead got: ${nProductCount}`)           
 
-            //if (Preset == lastResult_Preset) log.info(`✔ Preset (${Preset}) equals ${lastResult_Preset}`)
-            //else failedResults.push(`❌ Expected Preset to equal ${lastResult_Preset}, instead got: ${Preset}`) 
+            if (Preset == lastResult_Preset) log.info(`✔ Preset (${Preset}) equals ${lastResult_Preset}`)
+            else failedResults.push(`❌ Expected Preset to equal ${lastResult_Preset}, instead got: ${Preset}`) 
 
             if (nLimitUnits == lastResult_nLimitUnits) log.info(`✔ nLimitUnits (${nLimitUnits}) equals ${lastResult_nLimitUnits}`)
             else failedResults.push(`❌ Expected nLimitUnits to equal ${lastResult_nLimitUnits}, instead got: ${nLimitUnits}`) 
@@ -332,7 +329,7 @@ module.exports = {
                 assert.fail(`Some results don't match`)
             }
 
-            // fs.appendFileSync(resultsLog, results[results.length - 2] + '\n')
+            fs.appendFileSync(resultsLog, results[results.length - 2] + '\n')
 
         } else {
             assert.fail('Failed to load pre test files (KarnelDB.Ini, inputFile.jur)')

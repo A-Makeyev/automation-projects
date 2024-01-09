@@ -3,7 +3,7 @@ const nav = obj.sub_nav
 const utils = obj.utils
 const func = obj.functions
 const referrals = obj.referrals
-const non_existent_ID = '343619482'
+const non_existent_ID = '999999999'
 
 obj.init(env.url, 60)
 startTime = func.getTime()

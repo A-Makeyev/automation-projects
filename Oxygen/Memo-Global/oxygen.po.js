@@ -107,11 +107,11 @@ module.exports = {
     },
     
     details: {
-         email: 'qatamirtest666' + randomNum + '@qa-test.com',
-         password: 'CloudBeat5!@',
-         cardName: 'devscalosubransenberg',
-         cardNumber: '4580458045804580',
-         phoneNumber: '984918564',
+         email: 'XXXXXXXX' + randomNum + '@qa-test.com',
+         password: 'XXXXXXXXX!@',
+         cardName: 'XXXXXXXXXXX',
+         cardNumber: '777777777777',
+         phoneNumber: '77777777',
          randomName: () => { 
             let name = ''
             let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'

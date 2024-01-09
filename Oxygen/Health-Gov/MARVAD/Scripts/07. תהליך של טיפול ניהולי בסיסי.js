@@ -35,10 +35,8 @@ function navigateToPatient() {
 obj.init(env.url, 60)
 startTime = func.getTime()
 
-
 web.transaction('Navigate To The Current Patient')
 navigateToPatient()
-
 
 web.transaction('Create New Treatment')
 obj.click(patients.list.referralsAndTreatments)
@@ -46,17 +44,10 @@ obj.click(patients.addNewStandard_incident)
 
 obj.type(treatments.caseType, 'ביטוח לאומי')
 obj.click(utils.searchResult)
-
 obj.click('//li[@aria-label="בדיקות קליניות"]')
-
-
 
 obj.click(utils.bottomSaveButton)
 func.assertErrorMessage()
-
-
-
-
 
 endTime = func.getTime()
 log.info(

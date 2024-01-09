@@ -3,10 +3,10 @@ module.exports = {
     city: 'חוסנייה',
     lastName: 'מן',
     firstName: 'טסט',
-    ID: '000000018',
-    passport:  'AABB123',
-    phoneNumber: '0502569387',
-    emailPassword: 'CBHG1234',
+    ID: '000000000',
+    passport:  'XXXXXXXXX',
+    phoneNumber: '999999999',
+    emailPassword: 'XXXXXXX',
     emailAddress: 'cloudbeat.health.gov@gmail.com',
     shortWait: 1000,
     waitASecond: 5000,
@@ -60,9 +60,9 @@ module.exports = {
     },
 
     braini: {
-        url: 'http://qflow.test1:flow1!@braini-test.moh.health.gov.il/Pages/default.aspx',
-        username: 'qflow.test1',
-        password: 'flow1!',
+        url: 'http://braini-test.moh.health.gov.il/Pages/default.aspx',
+        username: 'XXXXX',
+        password: 'XXXXX!',
 
         nav: {
             topNavBar: '//div[contains(@id, "TopNavigationMenu")]',
@@ -109,17 +109,6 @@ module.exports = {
             },
         },
     }, /* end of braini */
-
-    // if (window == 'הסמכה תעודות ובחינות') {
-    //     if (web.getText(mp.treeHeader) != window) {
-    //         mp.treeHeader = '(//div[@class="boxTop"]//h2)[2]'
-    //     }
-    //     window = window.slice(0, 5) + ',' + window.slice(5)
-    // } else if (window == 'מרב"ד') {
-    //     if (web.getText(mp.treeHeader) != window) {
-    //         mp.treeHeader = '(//div[@class="boxTop"]//h2)[2]'
-    //     }
-    // }
 
     ramzor: {
         url: 'https://corona.health.gov.il',

@@ -1,6 +1,6 @@
 const pageObjects = {
     // URLS
-    drivePageUrl: 'https://qa-drivy.fnx.co.il/',
+    drivePageUrl: 'https://fnx.co.il/',
     // Main Page
     mainPage: {
         submitBtn: '//button[@id="submit" and not(disabled)]'

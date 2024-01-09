@@ -1,6 +1,5 @@
-const user = 'obligotest1@shufersal.co.il'
-const pass = 'team2021'
-
+const user = 'XXXXX'
+const pass = 'XXXXX'
 const productsToAdd = 10
 
 function removeAllProducts() {

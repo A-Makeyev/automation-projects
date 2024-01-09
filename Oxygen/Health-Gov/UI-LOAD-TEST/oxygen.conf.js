@@ -3,7 +3,7 @@ module.exports = {
     suites: [{
         name: 'UI Performance Tests',
         cases: [
-         // { path: './Scripts/01. Load Braini Windows.js' },
+            { path: './Scripts/01. Load Braini Windows.js' },
             { path: './Scripts/02. Corona Flight Check.js' },
             { path: './Scripts/03. Corona Isolation Calculator.js' },
             { path: './Scripts/04. Corona Parks Capacity Map.js' },

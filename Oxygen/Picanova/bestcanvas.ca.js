@@ -1,5 +1,5 @@
 // cli run
-// cloudbeat-cli start case 14057 --apiKey 944d387f-2430-44d9-bfd7-0a779631b95a --apiBaseUrl https://api.cloudbeat.io --env testEnv --tags url=https://www.my-picture.ae,version=v1-beta
+// cloudbeat-cli start case 14057 --apiKey XXX-XXX-XXX-XXX-XXXX --apiBaseUrl https://api.cloudbeat.io --env testEnv --tags url=https://www.my-picture.ae,version=v1-beta
 
 web.transaction('01 Init')
 web.init()
@@ -14,13 +14,13 @@ const filePath =  folder + '\\image.jpg'
 const couponCode = '100pica.nova100'
 
 // block certain domains
-// if (ctx.caps.browserName === 'chrome') {
-//     web.network.init()
-//     web.network && web.network.blockUrls && web.network.blockUrls([
-//         '*google.com',
-//         '*veinteractive.com'
-//     ])
-// }
+if (ctx.caps.browserName === 'chrome') {
+    web.network.init()
+    web.network && web.network.blockUrls && web.network.blockUrls([
+        '*google.com',
+        '*veinteractive.com'
+    ])
+}
 
 web.transaction('02 Homepage')
 web.open(`${url}/${version}`)

@@ -39,8 +39,8 @@ function getText(element) {
 web.transaction("Init")
 web.init()
 
-web.transaction("Connect to qliksenseprod01 - Agent Profit")
-web.open('https://qliksenseprod01.menoramivt.net/extensions/agentprofit/index.html')
+web.transaction("Connect to Agent Profit")
+web.open('https://menoramivt.net/extensions/agentprofit/index.html')
 
 web.transaction("Assert Page Title & Url")
 assert.equal(web.getTitle(), 'Agent Profit')

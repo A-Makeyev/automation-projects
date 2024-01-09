@@ -12,9 +12,9 @@ web.init({
     }
 })
 
-const customerNumber = '909335'
-const customerPassword = '12345678'
-const customerEmail = 'noitrabi@gmail.com'
+const customerNumber = '66666666'
+const customerPassword = '666666'
+const customerEmail = 'XXXXX@gmail.com'
 
 web.transaction('02. Open Main Page')
 web.open('https://operation.ship.co.il/#/easyship/find-customer')

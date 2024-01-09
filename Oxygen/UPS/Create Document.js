@@ -1,9 +1,9 @@
 web.transaction('01. Init')
 web.init()
 
-const customerNumber = '647712'
-const customerPassword = 'nerek123'
-const customerEmail = 'keren_cahila@yahoo.com'
+const customerNumber = '666666'
+const customerPassword = 'XXXX'
+const customerEmail = 'XXXXX@yahoo.com'
 
 web.transaction('02. Open Login Page')
 web.open('https://operation.ship.co.il/#/login')

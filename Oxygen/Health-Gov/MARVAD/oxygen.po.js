@@ -26,19 +26,19 @@ module.exports = {
         web.setTimeout(t * 1000)
     },
 
-    url: 'https://xrm9t.moh.health.gov.il/Marvad/main.aspx?appid=2a8d4770-d4c4-ea11-9175-005056842004',
-    deceased_patient_ID: '324776095',
-    non_existent_ID: '343619482',
-    valid_ID: '300779725',
+    url: 'https://moh.health.gov.il/Marvad/main.aspx',
+    deceased_patient_ID: '999999999',
+    non_existent_ID: '999999999',
+    valid_ID: '999999999',
 
     users: {
         admin: {
-            username: 'Hai.buzaglo',
-            password: 'GEFFENgb!1010'
+            username: 'XXXXXXXXXXX',
+            password: 'XXXXXXXXXXX'
         },
         representative: {
-            username: 'learning2',
-            password: 'lear1!',
+            username: 'XXXXXX',
+            password: 'XXXXXX',
         }
     },
 

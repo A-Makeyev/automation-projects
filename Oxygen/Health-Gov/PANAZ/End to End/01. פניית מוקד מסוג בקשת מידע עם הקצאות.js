@@ -56,13 +56,13 @@ function closeTask() {
     } 
 
     obj.click(manager.tasks.dismissTask)
-    // web.pause(3000)
-    // web.execute(() => {
-    //     document.evaluate(
-    //         '//span[@command="task|NoRelationship|Form|Mscrm.Form.CloseActivity"]',
-    //         document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
-    //     ).singleNodeValue.click()
-    // })
+    web.pause(3000)
+    web.execute(() => {
+        document.evaluate(
+            '//span[@command="task|NoRelationship|Form|Mscrm.Form.CloseActivity"]',
+            document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
+        ).singleNodeValue.click()
+    })
    
     web.selectFrame(utils.frames.dialogFrame)
     obj.click(utils.finishDialog)
@@ -253,16 +253,10 @@ if (pniyaIsNumeric == null || pniyaIsNumeric.includes('פריט פניה חדש'
 
 log.info(`פניה: ${pniyaNumber}`)
 
-
 web.transaction('05. Refresh Page And Close Dialog Frame')
 fun.refresh()
 fun.closeDialogFrame()
 web.pause(1500)
-
-                     /* bug */
-// sometimes the ID '000000018' has multiple users 
-// '(//div[@colname="governmentid"])[1]'
-
 
 web.transaction('06. Open SMS Window')
 obj.click(manager.cases.sendSMS)
@@ -372,16 +366,6 @@ web.selectWindow(`title=פניה: ${pniyaNumber}`)
 
 web.transaction('17. Save Natzig Details')
 obj.click(manager.cases._save)
-// web.execute(() => {
-//     document.evaluate(
-//         '//span[@command="incident|NoRelationship|Form|Mscrm.SavePrimary"]',
-//         document,
-//         null,
-//         XPathResult.FIRST_ORDERED_NODE_TYPE,
-//         null
-//     ).singleNodeValue.click()
-// })
-
 
 web.transaction('18. Dismiss Task As Moked BO')
 // wait for moked BO option to disappear
@@ -583,96 +567,3 @@ if (!caseOwner.includes('נציג מוקד')) {
         assert.fail('האירוע לא נפתר')
     }
 }
-
-
-
-
-/* 
-
-create new contact 
-
-const mobile = fun.generatePhone()
-const email = fun.generateEmail()
-const firstName = fun.generateFirstName()
-const lastName = fun.generateLastName()
-
-web.pointJS(cases.newContactField)
-
-
-    web.execute(() => {
-        getElementByXPath = (xpath) => {
-            return document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
-        }
-        getElementByXPath('//img[@id="el_id_contact_i"]').click()
-    })
-} catch(_) {
-    obj.click(cases.newContactSearchBtn)
-}
-
-obj.click(cases.addNewContact)
-
-web.transaction('Contact Info')
-web.selectWindow('title=איש קשר: פריט איש קשר חדש')
-web.selectFrame(utils.frames.frame_0) // frame -> #0
-
-web.pause(1500)
-obj.click(contactPage.firstNameField)
-obj.type(contactPage.firstNameInput, firstName)
-
-web.pause(1500)
-obj.click(contactPage.lastNameField)
-obj.type(contactPage.lastNameInput, lastName)
-
-web.pause(1500)
-obj.click(contactPage.idField)
-obj.type(contactPage.idInput, ID)
-
-if (web.isAlertPresent()) {
-    let loops = 0
-    while(web.isAlertPresent()) {
-        web.alertAccept()
-        loops++
-        if (loops > 5) {
-            break
-        }
-    }
-}
-
-
-    web.pause(1500)
-    web.doubleClick(contactPage.mobileField)
-} catch(_) {
-    web.execute(() => {
-        document.evaluate(
-        '//div[@id="mobilephone"]',
-        document,
-        null,
-        XPathResult.FIRST_ORDERED_NODE_TYPE,
-        null
-        ).singleNodeValue.click()
-    })  
-}
-
-obj.type(contactPage.mobileInput, mobile)
-
-web.pause(1500)
-obj.click(contactPage.emailField)
-obj.type(contactPage.emailInput, email)
-
-
-    web.execute(() => {
-        window.onload = () => {
-            document.evaluate(
-                '//li[contains(@id, "contact.SaveAndClose")]',
-                document,
-                null,
-                XPathResult.FIRST_ORDERED_NODE_TYPE,
-                null
-            ).singleNodeValue.click()
-        }
-    })    
-} catch(_) {
-    obj.click(manager._saveAndClose)
-}
-
-*/

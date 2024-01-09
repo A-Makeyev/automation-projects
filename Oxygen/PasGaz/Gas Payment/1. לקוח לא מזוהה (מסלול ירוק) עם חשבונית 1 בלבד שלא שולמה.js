@@ -4,8 +4,8 @@ web.setTimeout(75 * 1000)
 const utils = po.utils
 const general = po.general
 
-const customerNumber = '40074419'
-const invoiceNumber = 'IN19510134734'
+const customerNumber = '9999999999'
+const invoiceNumber = '99999999999'
 const email = 'anatoly.makeyev@cloudbeat.io'
 
 web.transaction('04. Enter Customer Details')

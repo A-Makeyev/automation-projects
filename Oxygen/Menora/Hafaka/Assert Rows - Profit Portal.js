@@ -20,12 +20,12 @@ function getText(element) {
 web.transaction("Init")
 web.init()
 
-web.transaction("Connect to qliksenseprod01 - Elm Profit - Portal")
-web.open('https://qliksenseprod01.menoramivt.net/extensions/ElmProfitportal/index.html')
+web.transaction("Connect to Elm Profit - Portal")
+web.open('https://.menoramivt.net/extensions/ElmProfitportal/index.html')
 
 web.transaction("Assert Page Title & Url")
 assert.equal(web.getTitle(), 'Elm Profit - Portal')
-assert.contain(web.getUrl(), 'qliksenseprod01.menoramivt.net')
+assert.contain(web.getUrl(), 'XXXXXXXXXX.XXXXXXXX.XXX')
 log.info(web.getUrl())
 
 web.transaction("Assert That Data Table is Visible")

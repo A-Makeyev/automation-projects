@@ -1,7 +1,7 @@
-const id = '999289416'
-const phone = '08-5046798' 
-const licenseNumber = '4543543'
-const email = 'TEST@TEST.COM'
+const id = '999099999'
+const phone = '0555555555'
+const carModel = '2008 SUV'
+const email = 'XXX@XXX.COM'
 const firstName = 'אוטומציה'
 const lastName = 'נהיגת מבחן'
 
@@ -13,7 +13,7 @@ const windowHeight = web.execute(() => { return window.innerHeight })
 windowWidth > 1920 && web.setWindowSize(1920, windowHeight)
 
 web.transaction('02. Open Online Shop Page')
-const url = 'https://testonline.lubinski.co.il/a4fr9srt76r5e6ar3a376/test-drive/'
+const url = 'https://lubinski.co.il/test-drive/'
 web.open(url)
 
 var index = 0

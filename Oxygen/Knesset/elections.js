@@ -1,8 +1,8 @@
 web.init()
 web.setTimeout(5000)
-web.open('http://10.207.254.90/startdemo.asp')
+web.open('http://startdemo.asp')
 
-const PROTOCOL_TEST_ENV = 'https://V22.demo.gov.il/MagicScripts/MGrqispi.dll?APPNAME=Kneset23&PRGNAME=LoginScreenProtokol'
+const PROTOCOL_TEST_ENV = 'https://demo.gov.il/MagicScripts/APPNAME=Kneset=LoginScreenProtokol'
 
 web.transaction('כניסה לסביבת טסט')
 web.waitForExist(`//a[@href="${PROTOCOL_TEST_ENV}"]`)
@@ -71,7 +71,6 @@ web.alertAccept()
 
 web.click('name=btnShmira')
 web.alertAccept()
-
 web.dispose()
 
 

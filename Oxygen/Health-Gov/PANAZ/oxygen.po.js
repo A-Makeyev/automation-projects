@@ -1,10 +1,4 @@
-אאאconst objects = {
-
-/*  
-    document.evaluate('', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
-    document.evaluate('', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.value = 'xxx'
-*/
-
+const objects = {
 
     adjustURL: (url, user, pass) => {
         if (url.includes('https')) {
@@ -31,43 +25,43 @@
         assert.equal(web.isVisible(objects.nav.mainNavBar), true)
     },
 
-    ID: '000000018',
+    ID: '000000000',
     users: {
         app_user: {
-            username: 'CloudBeatTST_User',
-            password: 'Cdb12%23'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_'
         },
         public_inq: {
-            username: 'qflow.test1',
-            password: 'Aa123456'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_'
         },
         BO_rep: {
-            username: 'qflow.test2',
-            password: 'flow1!',
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!',
         },
         translation_rep: {
-            username: 'qflow.test3',
-            password: 'flow1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
         amar_rep: {
-            username: 'qflow.test4',
-            password: 'flow1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
         kvilot: {
-            username: 'qflow.test5',
-            password: 'flow1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
         moked_rep: {
-            username: 'qflow.test6',
-            password: 'flow1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
         nurse: {
-            username: 'qflow.test7',
-            password: 'flow1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
         general_user: {
-            username: 'learning5',
-            password: 'lear1!'
+            username: '_XXXXXXX_',
+            password: '_XXXXXXX_!'
         },
     },
 
@@ -272,12 +266,12 @@
         savePniya: () => {
             web.selectWindow()
             objects.click(objects.ribbonManager.cases._save)
-            // web.execute(() => {
-            //     document.evaluate(
-            //         '//span[@command="incident|NoRelationship|Form|Mscrm.SavePrimary"]',
-            //         document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
-            //     ).singleNodeValue.click()
-            // })
+            web.execute(() => {
+                document.evaluate(
+                    '//span[@command="incident|NoRelationship|Form|Mscrm.SavePrimary"]',
+                    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
+                ).singleNodeValue.click()
+            })
         },
 
         resolve: (status) => {

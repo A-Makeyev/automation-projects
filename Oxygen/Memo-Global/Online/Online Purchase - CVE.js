@@ -2,8 +2,8 @@ const futureYear = (parseInt(date.now('YYYY')) + 7).toString()
 const randNum = Math.floor(Math.random() * (999999 - 9) + 9)
 const email = 'qatamirtest' + randNum + '@gmail.com'
 const cardName = 'devscalosubransenberg'
-const cardNumber = '4580458045804580'
-const phoneNumber = '98989898989'
+const cardNumber = '77777777777777'
+const phoneNumber = '777777777777'
 const firstName = 'Cloud'
 const lastName = 'Beat'
 
@@ -34,10 +34,6 @@ web.select('id=phone_code', 'label=Barbados (+1246)')
 
 web.type('id=Email', email)
 web.type('id=phone', phoneNumber)
-
-// web.clickHidden('//input[@id="YesPassportRadio"]')
-// web.clickHidden('//input[@id="iSpaekEn"]')
-// web.clickHidden('//div[@id="submitBTN"]')
 
 web.execute(() => {
     document.evaluate(

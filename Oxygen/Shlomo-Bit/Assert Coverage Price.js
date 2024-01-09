@@ -9,7 +9,7 @@ function errorCheck() {
 
  
 web.init()
-web.open('http://qa.co.nk-ins.test')
+web.open('http://nk-ins.test')
 
 web.type('//input[@name="username"]', env.user)
 web.type('//input[@name="tznumber"]', env.TZnumber)
@@ -23,7 +23,7 @@ web.selectWindow('title=ביטוח נסיעות לחו"ל')
 web.type('//input[@data-placeholder="מספר סוכן"]', '300070')
 web.type('//input[@id="mat-input-0"]','טסט')
 web.type('//input[@id="mat-input-1"]','בדיקה')
-web.type('//input[@id="mat-input-3"]','3253818')
+web.type('//input[@id="mat-input-3"]','333333')
 
 web.click('//div[@id="mat-select-value-1"]')
 web.click('//mat-label[contains(text(), "קידומת")]')

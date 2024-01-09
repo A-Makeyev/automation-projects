@@ -3,8 +3,8 @@ const path = require('path')
 const dataFolder = path.join(__dirname, `./Data`)
 const dataFilePath =  `${dataFolder}\\נתונים.xls`
 const data = utils.readXlsx(dataFilePath)
-const username = 'newk1'
-const password = 'KVgk-5269'
+const username = 'XXXX'
+const password = 'XXXX-9999'
 
 web.init()
 web.setTimeout(30 * 1000)

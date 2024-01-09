@@ -50,8 +50,8 @@ function getTime() {
     return (new Date()).getTime()
 }
 
-var agent = '509067'
-var startDate = '01072020'
+var agent = '5555555'
+var startDate = '555555'
 var startTime, endTime
 
 log.info('Start time: ' + getHours() + '\n')
@@ -75,7 +75,7 @@ function loopCount(iterations) {
             web.select('id=action', 'value=1')
 
             obj.click('id=search-branch-by-number')
-            obj.click('//ngb-highlight[contains(text(), "22 - иеф мгйшд")]')
+            obj.click('//ngb-highlight[contains(text(), "22 - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]')
 
             obj.type('id=startDate', startDate)
             obj.pressTAB() 
@@ -96,7 +96,7 @@ function loopCount(iterations) {
             startTime = getTime()
 
             const id_array = ['PDInsId', 'PDInsLastName', 'PDInsFirstName', 'PDInsStreet', 'PDInsCity', 'PDInsMobilePhoneNo', 'PDInsAgentClientNo']
-            const details = ['6833602', 'йщшам', 'щмен', 'гп', 'гп', '0544987897', '5555']
+            const details = ['6833602', 'пїЅпїЅпїЅпїЅпїЅ', 'пїЅпїЅпїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', '0544987897', '5555']
 
             for (let c = 0; c < id_array.length; c++) {
                 if (c == 4) { 
@@ -133,11 +133,11 @@ function loopCount(iterations) {
             // -9000
 
             web.pause(2000)
-            obj.type('(//span[contains(text(), "чеод")]//..//..//input)[1]', '2')
-            obj.type('(//span[contains(text(), "чеод")]//..//..//input)[2]', '4')
-            obj.type('(//span[contains(text(), "чеод")]//..//..//input)[3]', '50')
-            obj.type('//span[contains(text(), "ъашйк бйцет счш")]//..//..//input', startDate)
-            obj.type('//span[contains(text(), "щн дсечш")]//..//..//input', '2')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅ")]//..//..//input)[1]', '2')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅ")]//..//..//input)[2]', '4')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅ")]//..//..//input)[3]', '50')
+            obj.type('//span[contains(text(), "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ")]//..//..//input', startDate)
+            obj.type('//span[contains(text(), "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]//..//..//input', '2')
 
             obj.pressF8()
             obj.pressENTER()
@@ -149,7 +149,7 @@ function loopCount(iterations) {
             web.transaction('Section 01-00090')
             startTime = getTime()
 
-            obj.type('(//span[contains(text(), "бйиез обрд")]//..//..//input)[1]', '500000')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ")]//..//..//input)[1]', '500000')
             for (let x = 0; x < 12; x++) {
                 if (x == 11) { 
                     for (let y = 0; y < 3; y++) {
@@ -174,9 +174,9 @@ function loopCount(iterations) {
             web.transaction('Section 01-00200')
             startTime = getTime()
 
-            obj.type('(//span[contains(text(), "ълемд")]//..//..//input)[1]', '250000')
-            obj.type('(//span[contains(text(), "ълщйийн бочйу")]//..//..//input)[1]', '5000')
-            obj.type('(//span[contains(text(), "ълщйийн бочйу")]//..//..//input)[2]', '5000')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅпїЅ")]//..//..//input)[1]', '250000')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]//..//..//input)[1]', '5000')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]//..//..//input)[2]', '5000')
 
             for (let x = 0; x < 5; x++) {
                 if (x == 0) {
@@ -263,7 +263,7 @@ function loopCount(iterations) {
             web.transaction('Section 02-01950')
             startTime = getTime()
 
-            obj.type('(//span[contains(text(), "гвн")]//..//..//input)[1]', 'рецх')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅ")]//..//..//input)[1]', 'пїЅпїЅпїЅпїЅ')
             obj.type('(//label[@for="insuranceSum"])[24]//../input', '10000')
             obj.pressF8()
             obj.pressENTER()
@@ -275,7 +275,7 @@ function loopCount(iterations) {
             web.transaction('Section 03-00520')
             startTime = getTime()
 
-            obj.type('(//span[contains(text(), "ъаеш дозщб:")]//..//..//input)[1]', 'intel core i7')
+            obj.type('(//span[contains(text(), "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:")]//..//..//input)[1]', 'intel core i7')
             obj.type('(//label[@for="insuranceSum"])[29]//../input', '10000')
             obj.pressF8()
             // -3000
@@ -308,7 +308,7 @@ function loopCount(iterations) {
 
             obj.click('id=approveFinishBtnId')
             if (!web.isVisible('id=action')) {
-                if (web.isVisible('//h6[contains(text(), "щвйад")]')) {
+                if (web.isVisible('//h6[contains(text(), "пїЅпїЅпїЅпїЅпїЅ")]')) {
                     let error = web.getText('(//div[@class="modal-body"]/div)[1]')
                     assert.fail(error)
                 }

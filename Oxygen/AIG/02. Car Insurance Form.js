@@ -27,7 +27,7 @@ web.init()
 web.setTimeout(180 * 1000)
 
 web.transaction('02. Open Main Page')
-web.open('https://www-400.aig.co.il/auto') // https://sales.aig.co.il/auto
+web.open('https://www-400.aig.co.il/auto')
 web.waitForVisible('//h1[@id="title"]')
 
 web.transaction('03. Open Offer Page')

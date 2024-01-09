@@ -3,8 +3,7 @@ const korona = obj.korona
 const func = obj.functions
 const ncov = korona.NCOV
 const manager = korona.ribbonManager
-
-const fakeId = '295353003' // String(Math.random()).slice(2, 11)
+const fakeId = '999999999' // String(Math.random()).slice(2, 11)
 
 function navigateToNCOV() {
     obj.click(korona.nav.koronaOptionsArrow)

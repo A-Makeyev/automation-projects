@@ -13,7 +13,6 @@ web.setTimeout(10000);
 // Go to SHOP
 web.execute(() => {
     document.getElementsByClassName('menu-item-link js-smooth-scroll')[0].click();
-    // (//a[@class="menu-item-link js-smooth-scroll"])[1]
 });
 
 web.waitForExist('//h1[contains(text(), "New product range")]');

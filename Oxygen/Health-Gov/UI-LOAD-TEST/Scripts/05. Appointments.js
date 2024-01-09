@@ -2,12 +2,12 @@ web.transaction('01. Initialize')
 web.init()
 
 web.transaction('02. Open Appointments Page')
-web.open('https://my.health.gov.il/MyPortal/pages/FHCAppointWOP.aspx')
+web.open('https://my.health.gov.il/')
 
 web.waitForVisible('//h1[contains(text(), "איתור טיפות חלב וזימון תורים")]')
 
 web.transaction('03. Type ID & Birth Date')
-web.type('//input[@id="personalId"]', '314488651')
+web.type('//input[@id="personalId"]', '999999999')
 
 web.click('//input[@placeholder="יום"]')
 web.type('//input[@placeholder="יום"]', '01')

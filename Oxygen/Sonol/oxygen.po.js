@@ -61,8 +61,9 @@ module.exports = {
         enterPhoneNumber: (str) => {
             if (mob.isVisible(po.loginScreen.phoneInput, po.shortWait)) {
                 mob.type(po.loginScreen.phoneInput, str)
-                // mob.type(po.loginScreen.phoneNumberPrefixInput, str.substr(0, 3))
-                // mob.type(po.loginScreen.phoneNumberInput, str.substr(3, str.length))
+            } else {
+                mob.type(po.loginScreen.phoneNumberPrefixInput, str.substr(0, 3))
+                mob.type(po.loginScreen.phoneNumberInput, str.substr(3, str.length))
             }
         },
 

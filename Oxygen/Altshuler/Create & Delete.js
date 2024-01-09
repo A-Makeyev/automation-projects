@@ -1,5 +1,5 @@
 web.init();
-web.open('http://qcrm:5555/ALTSHULER/main.aspx#221845273');
+web.open('http://qcrm:5555/ALTSHULER/main.aspx');
 
 web.pointJS('id=navTabLogoTextId')
 
@@ -20,12 +20,10 @@ web.selectFrame('id=contentIFrame0')
 
 web.waitForVisible('id=gen_documenttype')
 web.pause(2500)
-
  
 web.click('id=gen_documenttype')
 web.pause(1000)
 
- 
 web.waitForVisible('//option[@title="בקשת הצטרפות לקופת גמל"]')
 web.click('//option[@title="בקשת הצטרפות לקופת גמל"]')
 
@@ -42,8 +40,6 @@ web.click('(//option[@value=\'1\'])[8]');
 web.clickHidden('id=gen_estatetype')
 web.pause(1000)
 
- 
-
 web.waitForVisible('//option[@title="שכיר"]')
 web.click('//option[@title="שכיר"]')
 web.click('id=gen_employername');
@@ -58,20 +54,12 @@ web.waitForVisible('id=gen_applicantidentitynumber_i')
 web.type('id=gen_applicantidentitynumber_i', '314488651')
 web.sendKeys('\uE007')
 
- 
-
 if (web.isAlertPresent()) {
-
     web.alertAccept()
-
 } else {
-
     web.pause(2500)
-
     web.alertAccept()
-
 }
-
 
 web.click('id=gen_gemeldefaultcourse')
 web.type('id=gen_gemeldefaultcourse_i', '100')

@@ -1,10 +1,10 @@
 // need random names?
 
-const PW = 'zohSgsYO'
-const USER = 'EPI_Automation'
-const EMAIL = 'testo@yopmail.com'
+const PW = 'XXXXXX'
+const USER = 'XXXX_Automation'
+const EMAIL = 'XXXX@XXXXX.com'
 const NAME = 'Estabon Villalon'
-const URL = 'https://eucampaignspp.azurewebsites.net'
+const URL = 'https://azurewebsites.net'
 
 web.transaction('Initializing')
 web.init()

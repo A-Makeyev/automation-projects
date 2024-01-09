@@ -1,7 +1,7 @@
-const id = '999096431'
-const phone = '02-5546798'
+const id = '999099999'
+const phone = '0555555555'
 const carModel = '2008 SUV'
-const email = 'TEST@TEST.COM'
+const email = 'XXX@XXX.COM'
 const firstName = 'אוטומציה'
 const lastName = 'מכירה'
 
@@ -48,7 +48,7 @@ const windowHeight = web.execute(() => { return window.innerHeight })
 windowWidth > 1920 && web.setWindowSize(1920, windowHeight)
 
 web.transaction('02. Open Online Shop Page')
-web.open('https://testonline.lubinski.co.il/a4fr9srt76r5e6ar3a376/online-shop/')
+web.open('https://lubinski.co.il/online-shop/')
 
 web.transaction('03. Open Car Model')
 if (web.isVisible(`//div[@class="purchase-choose-model-main"]//*[text()="${carModel}"]`)) {

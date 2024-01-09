@@ -2,7 +2,7 @@ web.transaction('01. Init')
 web.init()
 
 web.transaction('02. Open Dashboard Page')
-web.open('https://222.33.11.44/adminconsole')
+web.open('https://adminconsole')
 
 if (web.isVisible('//h1[text()="Your connection is not private"]', 3000)) {
     web.click('//button[@id="details-button"]')

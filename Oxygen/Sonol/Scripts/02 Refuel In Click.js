@@ -1,6 +1,6 @@
 const utils = po.utils
 const lg = po.loginScreen
-const phoneNumber = '0589999999'
+const phoneNumber = '0999999999'
 
 po.init(env.name)
 //utils.getAppSource()
@@ -17,7 +17,7 @@ if (!mob.isVisible('text=הבא', utils.longWait)) {
   mob.type('//android.widget.EditText[contains(@content-desc, "שם משפחה")]', 'מקייב')
   mob.click('//android.widget.CheckBox[contains(@content-desc, "מאשר/ת בזאת את התקנון ומדיניות הפרטיות בחירה")]')
   mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
-  mob.type('//android.widget.EditText[contains(@content-desc, "מספר רכב")]', '6922258')
+  mob.type('//android.widget.EditText[contains(@content-desc, "מספר רכב")]', '666666')
   mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
   mob.click('(//android.view.ViewGroup[@content-desc="כפתור רדיו"])[1]') // 95
   mob.click('//android.widget.Button[contains(@content-desc, "הבא") and not(contains(@content-desc, "הבא לא פעיל"))]')
@@ -56,11 +56,3 @@ while(!mob.isVisible('text=תדלוק בקליק', utils.shortWait)) {
 
 mob.click('text=תדלוק בקליק')
 mob.pause(utils.shortWait)
-
-
-
-mob.pause(utils.longWait)
-
-// cc -> 4580080113180592  01/24  151
-// cc -> 4580080113180576  01/24  237
-// id -> 000966424

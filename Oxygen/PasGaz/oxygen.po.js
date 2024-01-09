@@ -1,10 +1,8 @@
-// https://mail.google.com/mail/u/1/#inbox/FMfcgzGqQJdjdfpNnWFCnGPrwQgxrgkB
-
 module.exports = {
 
-    cityCodeHifa: '4000',
-    cityCodeNetaya: '7400',
-    cityCoderamle: '8500',
+    cityCodeHifa: '9999999999',
+    cityCodeNetaya: '9999999999',
+    cityCoderamle: '9999999999',
     salesForceLead_City: 'נתניה',
     priorityLead_City: 'חיפה',
     prioriyEmailLead_City: 'רמלה',
@@ -153,11 +151,10 @@ module.exports = {
         },
 
         getPhone: () => {
-            // let pre = ['050', '051', '052', '053', '054']
-            // return String(
-            //     pre[Math.floor(Math.random() * pre.length)]
-            //     + Math.random().toString().slice(2, 9)) 
-            return String('09-8782231')
+            let pre = ['050', '051', '052', '053', '054']
+            return String(
+                pre[Math.floor(Math.random() * pre.length)]
+                + Math.random().toString().slice(2, 9)) 
         },
 
         getEmail: () => {

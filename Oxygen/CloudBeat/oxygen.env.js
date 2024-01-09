@@ -1,8 +1,16 @@
 module.exports = {
 
-    TEST: {
-        name: 'EQA2',
-        url: 'http://eqa2.cloudbeat.io/',
+    default: {
+        name: 'EQA4',
+        url: 'http://eqa4.cloudbeat.io/',
+        username: 'romovs@gmail.com',
+        password: 'cb123456',
+        browser: 'EQA1',
+    },
+
+    EQA: {
+        name: 'EQA4',
+        url: 'http://eqa4.cloudbeat.io/',
         username: 'romovs@gmail.com',
         password: 'cb123456',
         browser: 'EQA1',
@@ -15,5 +23,5 @@ module.exports = {
         password: 'iLoveNasa69',
         browser: 'CloudBeat Public',
     },
-    
+
 }

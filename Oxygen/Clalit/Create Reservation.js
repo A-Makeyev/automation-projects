@@ -12,7 +12,7 @@ mob.transaction('Init')
 mob.init(capabilities)
 mob.setTimeout(120 * 1000)
 
-const ID = '999999154', code = 'RK74093', password = 'a123456z'
+const ID = '999999999', code = 'XXXXXXX', password = 'XXXXXXX'
 
 mob.transaction('Skip Add')
 mob.click("id=clalit.android:id/button_skip")

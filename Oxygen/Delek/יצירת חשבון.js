@@ -9,14 +9,14 @@ var capabilities = {
   "noReset": false // create account
 }
 
-const CARD_NUMBER = '7575575575575575',
-		  CARD_EXP = '0322',
-		  CARD_CODE = '528',
-		  ID = '890890890',
+const CARD_NUMBER = '7777777777777777',
+		  CARD_EXP = '0000',
+		  CARD_CODE = '000',
+		  ID = '999999999',
 
 web.transaction('Initialize Twilio')
 twilio.init('XXXXXXX', 'XXXXXXX')
-const twilioNumber = '0520520520'
+const twilioNumber = '0555555555'
 
 web.transaction('Initialize App')
 const startTime = new Date().getTime()
