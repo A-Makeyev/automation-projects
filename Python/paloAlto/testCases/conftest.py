@@ -1,12 +1,3 @@
-# %userprofile%/PycharmProjects/paloAlto
-# https://googlechromelabs.github.io/chrome-for-testing
-# run a single test ~> pytest -v -s testCases/test_contactUs.py --browser chrome
-# run parallel tests (use backup browser) ~> pytest -v -s -n=4 testCases/test_contactUs.py
-# Generate HTML reports ~> pytest -v -s --html=Reports\report.html testCases/test_createAccount.py
-# run sanity and regression tests ~> pytest -v -s -m "sanity and regression" testCases/
-# run sanity tests ~> pytest -v -s -m "sanity" testCases/ --browser chrome
-
-
 import os
 import pytest
 from selenium import webdriver
