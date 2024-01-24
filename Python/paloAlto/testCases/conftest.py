@@ -9,7 +9,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 backupDriverPath = '\\BackUpDriver\\chromedriver.exe'
 backupDriverPath = '..' + backupDriverPath if 'testCases' in os.getcwd() else '.' + backupDriverPath
 
-
 @pytest.fixture()
 def setup(browser):
     try:
@@ -32,22 +31,20 @@ def setup(browser):
         driver.maximize_window()
     return driver
 
-
 # get values from CLI / hooks
 def pytest_addoption(parser):
     parser.addoption('--browser')
-
+    parser.addini("metadata", type="args", help='add metadata', default=[])
 
 # return browser value to setup method
 @pytest.fixture()
 def browser(request):
     return request.config.getoption('--browser')
 
-
 # a hook to add environment info in HTML report
 def pytest_configure(config):
-    config._metadata['Project Name'] = 'Palo Alto'
-
+    for name in config.getini('metadata'):
+        config.metadata[name] = 'Palo Alto'
 
 # a hook to delete / modify environment info in HTML report
 @pytest.hookimpl(optionalhook=True)
