@@ -16,14 +16,24 @@ main.closeAllTabs()
 web.transaction('06. Navigate To Search Account Page')
 main.openSearchPage()
 
+const selectAccountQuery = 
+`
+    select h.account_number from wiz_wo_history h, WIZ_CUSTOMER_DESCRIP d 
+    where h.account_number = d.account_number 
+    and length(d.sf_consumer_id) > 3 and h.wo_type = 'SC' 
+    and h.closed_date between (sysdate - 130) and (sysdate - 100) 
+    and h.account_number not in (select w.account_number 
+    from wiz_work_order w where w.wo_type = 'SC') 
+    and d.home_area_code like '0%'
+`
+
 web.transaction('07. Fetch Accounts & Search Customer By Number')
 for (let x = 1; x <= 30; x++) {
-    let query = db.executeQuery("select h.account_number from wiz_wo_history h, WIZ_CUSTOMER_DESCRIP d where h.account_number = d.account_number and length(d.sf_consumer_id) > 3 and h.wo_type = 'SC' and h.closed_date between (sysdate - 130) and (sysdate - 100) and h.account_number not in (select w.account_number from wiz_work_order w where w.wo_type = 'SC') and d.home_area_code like '0%'")
-    var account_number =  query[x].ACCOUNT_NUMBER
+    var account_number =  selectAccountQuery[x].ACCOUNT_NUMBER
     if (account_number === null || account_number === 'undefined') {
         if (x >= 2) {
             assert.fail(
-                'Cannot fetch a valid account number with the given query: \n' + query
+                'Cannot fetch a valid account number with the given query: \n' + selectAccountQuery
                 + '\nafter ' + x + ' tries'
             )
         }
@@ -37,7 +47,7 @@ for (let x = 1; x <= 30; x++) {
 
         if (x >= 2) {
             assert.fail(
-                'Cannot fetch a valid account number with the given query: \n' + query
+                'Cannot fetch a valid account number with the given query: \n' + selectAccountQuery
                 + '\nafter ' + x + ' tries'
             )
         }

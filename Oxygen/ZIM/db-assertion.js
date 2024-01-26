@@ -3,14 +3,11 @@ db.setConnectionString('Driver={SQL Server};Server=DESKTOP-KDQHUS7\\SQLEXPRESS;D
 log.info('>>> Connected to Database');
 
 db.executeNonQuery("UPDATE Vessel SET VesselName = 'Msc Jeongmin (JM2)', IMOCode = 9720471, Voyage = 4, Direction = 'N', EUPort = 'Test', CurrentETA = '2020-05-27T12:00:00' WHERE ID = 10");
-
 var vesselName = db.getScalar('SELECT VesselName FROM Vessel WHERE Voyage=15');
 log.info(vesselName);
 
 var vesselTable = db.executeQuery('SELECT * FROM Vessel');
 log.info(vesselTable);
-
-
 
 // fixes the date from DB
 function fixDate(date) {
@@ -21,14 +18,12 @@ function fixDate(date) {
     return `${day}/${month}/${year} 12:00`
 }
 
-
 web.transaction('Initializing');
 const mainPage = 'https://www.zim.com';
 
 web.init();
 web.setTimeout(5000);
 web.open(`${mainPage}/schedules`);
-
 
 web.transaction('Accepting cookies');
 const cookieButton = '//button[@title="I Agree"]';
@@ -37,7 +32,6 @@ if (web.isVisible(cookieButton)) {
     web.click(cookieButton);
 }
 
-
 web.transaction('Opening vessel data table');
 const EU24Vessels = '//figcaption[contains(text(), "ETA for EU24 Vessels")]';
 web.waitForExist(EU24Vessels);
@@ -45,7 +39,6 @@ web.click(EU24Vessels);
 
 web.waitForExist('//div[@class="container for-footer-bottom"]');
 web.pause(1000);
-
 
 web.transaction('Receiving data from the page and asserting if it matches the database');
 var passedValues = 0;
@@ -106,14 +99,7 @@ for (let pageRow = 1, dbRow = 1; pageRow <= 10; pageRow++, dbRow++) {
 }
 
 passedValues == 60 ? log.info('All rows are equal') : assert.fail(`Only ${passedValues} from 10 rows are equal`);
-
 web.dispose();
-
-
-
-
-
-
 
 // web.transaction('Receiving data from the page');
 // var table = [];

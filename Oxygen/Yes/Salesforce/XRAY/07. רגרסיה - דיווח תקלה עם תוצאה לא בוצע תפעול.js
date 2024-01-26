@@ -16,13 +16,27 @@ main.closeAllTabs()
 web.transaction('06. Navigate To Search Account Page')
 main.openSearchPage()
 
+const selectAccountQuery = 
+`
+    select h.account_number 
+    from wiz_wo_history h, WIZ_CUSTOMER_DESCRIP d 
+    where h.account_number = d.account_number 
+    and length(d.sf_consumer_id) > 3 
+    and h.wo_type = 'SC' 
+    and h.closed_date between (sysdate - 110) 
+    and (sysdate - 70) 
+    and h.account_number not in (SELECT w.account_number 
+    from wiz_work_order w 
+    where w.wo_type = 'SC') 
+    and d.home_area_code like '0%'
+`
+
 web.transaction('07. Fetch Accounts & Search Customer By Number')
 for (let x = 1; x <= 30; x++) {
-    let query = "SELECT h.account_number FROM wiz_wo_history h, WIZ_CUSTOMER_DESCRIP d where h.account_number = d.account_number and length(d.sf_consumer_id) > 3 AND h.wo_type = 'SC' AND h.closed_date between (sysdate - 110) AND (sysdate - 70) AND h.account_number NOT IN (SELECT w.account_number FROM wiz_work_order w WHERE w.wo_type = 'SC') AND d.home_area_code like '0%'"
-    var account_number =  db.getScalar(`${query} AND ROWNUM = ${x};`)
+    var account_number =  db.getScalar(`${selectAccountQuery} and rownum = ${x};`)
     if (account_number === null || account_number === 'undefined') {
         if (x >= 30) {
-            assert.fail('Cannot fetch a valid account number with the given query: \n' + query)
+            assert.fail('Cannot fetch a valid account number with the given query: \n' + selectAccountQuery)
         }
         continue
     }

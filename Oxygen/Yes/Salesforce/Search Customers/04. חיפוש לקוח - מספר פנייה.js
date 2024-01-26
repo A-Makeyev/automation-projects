@@ -2,9 +2,9 @@ const main = po.alphaMainPage
 const searchPage = po.searchCustomerPage
 const alpha360 = po.customerDetails360
 
-const caseNumber = '25992406'
-const customerName = 'איילת גאוי'
-const accountNumber = '885393'
+const caseNumber = '00000000'
+const customerName = 'XXXXXX'
+const accountNumber = '00000'
 
 po.init(env.url, 60)
 

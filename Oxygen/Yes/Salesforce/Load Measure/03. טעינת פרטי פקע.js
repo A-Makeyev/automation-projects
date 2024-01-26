@@ -11,7 +11,7 @@ const searchPage = po.searchCustomerPage
 var ACCOUNT_NUMBER
 
 if (!ACCOUNT_NUMBER) {
-    ACCOUNT_NUMBER = '2110399'
+    ACCOUNT_NUMBER = '000000'
 } else {
     ACCOUNT_NUMBER = params.account
 }

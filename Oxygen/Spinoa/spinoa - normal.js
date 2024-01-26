@@ -5,7 +5,6 @@ const products = [
     'adventurer-pack'
 ]
 
-
 web.init();
 web.open('https://spinoa.ro/en');
 web.setTimeout(10000);

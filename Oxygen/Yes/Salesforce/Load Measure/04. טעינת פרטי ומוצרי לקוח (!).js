@@ -1,13 +1,7 @@
 /* alpha 360 - hebrew */
 // remove trycatch before uploading to cloudbeat
 
-const customers = [
-    'C-זאב ליס', 'C-שמואל לוי ערוסי', 'C-יוגב זאוי', 'C-שיינקור - מזוג אויר בעמ',
-    'C-ארמונות פאר (משה)', 'C-גורג זכנון', 'C-מרלוב מרלוב','C-תמר גלעד',
-    'C-מורן לירן ברדה אביטן', 'קטשינר אנה', 'פנס יוסי', 'סקופ שירי', 'אבזוב ארסן', 
-    'איריס אלמועלם', 'שחר הראל', 'יעקב פורבט', 'אפרת פלג', 'מילוא דוד', "יצחק דוצ'ין",
-    'אפרת פלג', 'זוחיקה אימאן', 'מוסקנה דוד', 'אפרת פלג', 'רובננקו חגית', 'רובננקו חגית'
-]
+const customers = ['XXX', 'XXX', 'XXX']
 
 po.init(env.url, 60)
 
@@ -71,7 +65,7 @@ try {
         var bezeqTableDetails = web.getElementCount(bezeqTable)
         for (let x = 1; x <= bezeqTableDetails; x++) {
             web.waitForVisible(`(${bezeqTable})[${x}]`)
-            // log.info(`Checked: ${web.getText(`(${bezeqTable})[${x}]`)}`)
+            log.info(`Checked: ${web.getText(`(${bezeqTable})[${x}]`)}`)
         }
     }
 } catch(e) {
@@ -85,7 +79,7 @@ try {
         var pelephoneTableDetails = web.getElementCount(pelephoneTable)
         for (let x = 1; x <= pelephoneTableDetails; x++) {
             web.waitForVisible(`(${pelephoneTable})[${x}]`)
-            // log.info(`Checked: ${web.getText(`(${pelephoneTable})[${x}]`)}`)
+            log.info(`Checked: ${web.getText(`(${pelephoneTable})[${x}]`)}`)
         }
     }
 } catch(e) {
