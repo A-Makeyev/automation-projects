@@ -3,7 +3,8 @@ const chrome_capabilities = {
     browserName: 'chrome',
     'goog:chromeOptions': {
         args: [
-            '--headless',
+		    '--headless',
+			'--incognito',
             '--no-sandbox',
             '--disable-notifications',
             '--disable-dev-shm-usage',
