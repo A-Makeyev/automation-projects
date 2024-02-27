@@ -2,7 +2,7 @@ module.exports = {
 
     default: {
         name: 'EQA4',
-        url: 'http://eqa4.cloudbeat.io/',
+        url: 'http://romovs%40gmail.com:cb123456@eqa4.cloudbeat.io/',
         username: 'romovs@gmail.com',
         password: 'cb123456',
         browser: 'EQA1',
@@ -10,7 +10,7 @@ module.exports = {
 
     EQA: {
         name: 'EQA4',
-        url: 'http://eqa4.cloudbeat.io/',
+        url: 'http://romovs%40gmail.com:cb123456@eqa4.cloudbeat.io/',
         username: 'romovs@gmail.com',
         password: 'cb123456',
         browser: 'EQA1',
