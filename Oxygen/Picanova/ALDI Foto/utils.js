@@ -15,6 +15,10 @@ module.exports = {
             "deviceName": "WindowsPC"
         })
 
+        if (win.isVisible('name=A copy of the application is already running.', utils.longWait)) {
+            win.click('name=OK')
+        }
+
         assert.equal(
             win.isVisible('name=Application'), true,
             `${app} has failed to load`

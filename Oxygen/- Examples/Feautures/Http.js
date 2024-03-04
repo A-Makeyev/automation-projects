@@ -3,6 +3,16 @@
 //     modules: ['web', 'log', 'http', 'db']
 // }
 
+http.setOptions({
+    timeout: {
+        lookup: 1000,
+        connect: 2*1000,
+        secureConnect: 2*1000,
+        socket: 100000,
+        send: 100000,
+        response: 1*60*1000
+    },
+})
 
 var url = 'https://jsonplaceholder.typicode.com'
 
