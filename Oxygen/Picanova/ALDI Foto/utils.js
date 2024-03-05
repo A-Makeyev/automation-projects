@@ -15,7 +15,7 @@ module.exports = {
             "deviceName": "WindowsPC"
         })
 
-        if (win.isVisible('name=A copy of the application is already running.', utils.longWait)) {
+        if (win.isVisible('name=A copy of the application is already running.', utils.shortWait)) {
             win.click('name=OK')
         }
 
