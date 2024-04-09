@@ -1,16 +1,16 @@
 module.exports = {
     default: {
-        url: 'https://merchone:karneval2@testing.merchone.com',
-        dashboardUrl: 'https://merchone:karneval2@testing-dashboard.merchone.com',
-        email: 'Diana.Bors+Automation@tcgroup.com',
-        password: 'Test4321'
+        url: 'https://username:password@testing.merchone.com',
+        dashboardUrl: 'https://username:password@testing-dashboard.merchone.com',
+        email: 'xxxx@xxxx.com',
+        password: 'xxxxxxxxx'
     },
 
     TEST: { 
-        url: 'https://testing.merchone.com',
-        dashboardUrl: 'https://merchone:karneval2@testing-dashboard.merchone.com',
-        email: 'Diana.Bors+Automation@tcgroup.com',
-        password: 'Test4321'
+        url: 'https://username:password@testing.merchone.com',
+        dashboardUrl: 'https://username:password@testing-dashboard.merchone.com',
+		email: 'xxxx@xxxx.com',
+        password: 'xxxxxxxxx'
     },
 
     PROD: { 
