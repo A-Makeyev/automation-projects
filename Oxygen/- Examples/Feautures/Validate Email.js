@@ -3,7 +3,7 @@
 // define email server details
 email.init(
     'anatoly.makeyev@cloudbeat.io',     // email address 
-    'password',                         // password
+    'password',                         // app password
     'imap.gmail.com',                   // IMAP server address. Current example is for Gmail
     993,                                // IMAP server port. Current example is for Gmail
     true,                               // specifies whether to use TLS or not. Current example is for Gmail

@@ -1,4 +1,5 @@
 // npm i -g xlsx
+// install location -> %appdata%\npm\node_modules
 // run settings -> Enable “npm -g root” execution
 // more info -> https://www.npmjs.com/package/xlsx
 

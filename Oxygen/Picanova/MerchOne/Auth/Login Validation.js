@@ -1,32 +1,31 @@
-const lp = require('../Pages/Login Page.js')
-var errors = []
+const auth = require('../Pages/Auth.js')
 
-web.transaction('Initialize')
+web.transaction(`Open ${env.dashboardUrl}`)
 po.init(env.dashboardUrl)
 
 web.transaction('Assert Login Page Is Displayed')
-if (web.isVisible(lp.authLayout)) {
-    po.log('success', 'Login page is displayed')
+if (web.isVisible(auth.authLayout)) {
+    po.passedTests.push('Login page is displayed')
 } else {
-    assert.fail('Failed to load login page')
+    po.errors.push('Failed to load login page')
 }
 
 web.transaction('Enter wrong Email')
-po.login('wrong@email.com', env.password)
-const emailValidation = po.validateLogin('wrong@email.com', env.password, 'email')
-emailValidation.includes('❌') && errors.push(emailValidation)
+const emailValidation = po.validateLogin('wrong@email.com', env.password)
+emailValidation.error ? errors.push(emailValidation.message) : po.passedTests.push(emailValidation.message)
+web.clear(auth.emailInput)
+web.clear(auth.passwordInput)
+web.pause(po.waitASecond)
 
 web.transaction('Enter wrong Password')
-po.login(env.email, 'xxxxx')
-const passwordValidation = po.validateLogin('wrong@email.com', env.password, 'password')
-passwordValidation.includes('❌') && errors.push(passwordValidation)
-
-if (errors.length > 0) {
-    po.log('info', 'Errors:')
-    errors.forEach(e => po.log('error', e))
-    assert.fail(`${errors.length} errors were found`)
-}
+const passwordValidation = po.validateLogin(env.email, 'WrongPassword123')
+passwordValidation.error ? errors.push(passwordValidation.message) : po.passedTests.push(passwordValidation.message)
+web.clear(auth.emailInput)
+web.clear(auth.passwordInput)
 
 web.transaction('Enter Correct Credentials')
 po.login(env.email, env.password)
 po.assertUserLoggedIn(env.email)
+
+web.transaction('Display Results')
+po.displayResults()

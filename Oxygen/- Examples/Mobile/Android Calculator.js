@@ -3,7 +3,7 @@ var capabilities = {
       to find deviceName run: adb devices
       to find appPackage & appActivity
       1) run: adb shell
-      2) run: dumpsys window windows | grep -E 'mCurrentFocus' 
+      2) run: dumpsys window windows | grep -E "mCurrentFocus" 
   */
   "deviceName": "ad071702170f42d9a0",
   "platformVersion": "8.0.0",
