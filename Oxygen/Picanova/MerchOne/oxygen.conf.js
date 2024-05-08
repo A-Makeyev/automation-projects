@@ -17,7 +17,7 @@ module.exports = {
         {
             name: 'Dashboard Tests',
             cases: [
-                { path: './Dashboard/Suggested Products.js' },
+                { path: './Main Dashboard/Suggested Products.js' },
             ]
         },
     ],
