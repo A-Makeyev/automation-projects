@@ -26,7 +26,6 @@ module.exports = {
         let XLSX = require('xlsx')
         let rows = Object.keys(sheet).filter((x) => x.startsWith(column) && x.charAt(1) !== 'F')
         let lastRow = rows[rows.length - 1]
-        log.info(rows)
         let newRow = column + String(Number(lastRow.replace(column, '')) + 1)
         XLSX.utils.sheet_add_aoa(sheet, [[value]], { origin: newRow })
         log.info(`Added New Value: "${value}" to -> ${newRow}`)

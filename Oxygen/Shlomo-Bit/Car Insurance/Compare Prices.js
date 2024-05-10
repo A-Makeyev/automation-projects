@@ -86,7 +86,7 @@ for (let profile = 1, row = startRow; row !== lastRow; row++, profile++) {
         let scale = web.getText(`(${scaleElements})[${x}]`)
         data.push({ 
             company: company,
-             price: price,
+            price: price,
             scale: scale 
         })
         utils.log('success',`Added row: Company: ${company} Price: ${price} Scale: ${scale}`)
