@@ -18,25 +18,25 @@ module.exports = {
         }
     },
 
+    readFromCell: function(sheet, column, row) {
+        return sheet[column + row] !== undefined ? sheet[column + row].v : ''
+    },
+
     addNewValue: function(sheet, column, value) { 
         let XLSX = require('xlsx')
         let rows = Object.keys(sheet).filter((x) => x.startsWith(column) && x.charAt(1) !== 'F')
         let lastRow = rows[rows.length - 1]
+        log.info(rows)
         let newRow = column + String(Number(lastRow.replace(column, '')) + 1)
         XLSX.utils.sheet_add_aoa(sheet, [[value]], { origin: newRow })
         log.info(`Added New Value: "${value}" to -> ${newRow}`)
     },
 
-    addNewRow: function(sheet, policy, name, sum, branch, error) {
+    addNewRow: function(sheet, company, price, scale) {
         let utils = require('./utils.js')
-        utils.addNewValue(sheet, 'A', policy)
-        utils.addNewValue(sheet, 'B', name)
-        utils.addNewValue(sheet, 'C', sum)
-        utils.addNewValue(sheet, 'D', branch)
-        utils.addNewValue(sheet, 'E', error)
-        utils.addNewValue(sheet, 'F', '')
-        utils.addNewValue(sheet, 'G', '')
-        utils.addNewValue(sheet, 'H', '')
+        utils.addNewValue(sheet, 'A', company)
+        utils.addNewValue(sheet, 'B', price)
+        utils.addNewValue(sheet, 'C', scale)
     },
 
     currentDateTime: function() {
@@ -46,6 +46,13 @@ module.exports = {
         let	year = today.getFullYear()
         let	hours = today.getHours()
         let	minutes = today.getMinutes()
-        return `${day}-${month}-${year}_${hours}-${minutes}`
+        return `${day}-${month}-${year}_${hours}h-${minutes}m`
+    },
+
+    log: (type, message) => {
+        if (type == 'info') log.info(`(ℹ️) ${message}`)
+        if (type == 'error') log.info(`❌ ${message}`)
+        if (type == 'warning') log.info(`⚠️ ${message}`)
+        if (type == 'success') log.info(`✔️ ${message}`)
     },
 }
