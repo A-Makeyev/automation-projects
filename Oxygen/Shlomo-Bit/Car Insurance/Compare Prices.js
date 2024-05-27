@@ -1,15 +1,17 @@
+// https://ioflood.com/blog/npm-xlsx
+
 web.transaction('Initialize Data')
-const utils = require('./utils.js')
-const fs = require('fs')
-const XLSX = require('xlsx')
-const path = require('path')
-const dataFolder = path.join(__dirname, './Data')
-const resultsFolder = path.join(__dirname, './Results')
-const xlsxFilePath =  dataFolder + '\\חובה - אתר משרד האוצר.xlsx'
-const copy_xlsxFilePath = dataFolder + '\\חובה - אתר משרד האוצר - Copy.xlsx'
-const resultsFilePath = resultsFolder + `\\results ~ ${utils.currentDateTime()}.xlsx`
-const workbook = XLSX.readFile(xlsxFilePath)
-const sheet = workbook.Sheets.sheet_1
+var utils = require('./utils.js')
+var fs = require('fs')
+var XLSX = require('xlsx')
+var path = require('path')
+var dataFolder = path.join(__dirname, './Data')
+var resultsFolder = path.join(__dirname, './Results')
+var xlsxFilePath =  dataFolder + '\\חובה - אתר משרד האוצר.xlsx'
+var copy_xlsxFilePath = dataFolder + '\\חובה - אתר משרד האוצר - Copy.xlsx'
+var resultsFilePath = resultsFolder + `\\results ~ ${utils.currentDateTime()}.xlsx`
+var workbook = XLSX.readFile(xlsxFilePath)
+var sheet = workbook.Sheets.sheet_1
 
 web.transaction('Create A Copy Of The Data File')
 if (!fs.existsSync(copy_xlsxFilePath)) {
@@ -22,36 +24,38 @@ if (!fs.existsSync(copy_xlsxFilePath)) {
 }
 
 web.transaction('Create New Results File')
-fs.appendFileSync(resultsFilePath)
+var resultsWorkbook = XLSX.utils.book_new()
+var companiesWritten = false
+var companies = []
+var ws_data = []
+var startRow = 39
+var lastRow = 50
 
 web.transaction('Open car.cma.gov.il')
 web.init()
 web.open('https://car.cma.gov.il')
 
-const windowWidth = web.execute(() => { return window.innerWidth })
-const windowHeight = web.execute(() => { return window.innerHeight })
+var windowWidth = web.execute(() => { return window.innerWidth })
+var windowHeight = web.execute(() => { return window.innerHeight })
 windowWidth > 1920 && web.setWindowSize(1700, windowHeight)
 
-const data = []
-const wb = XLSX.utils.book_new()
-const startRow = 39
-const lastRow = 50
-
 for (let profile = 1, row = startRow; row !== lastRow; row++, profile++) {
+    var prices = []
+
     web.transaction(`Read Values ~ Row ${row}`)
-    const carType = utils.readFromCell(sheet, 'B', row) === 'פרטי' ? 'רכב פרטי' : utils.readFromCell(sheet, 'B', row)
-    const ownership = utils.readFromCell(sheet, 'C', row) === 'פרטית' ? 'בעלות פרטית' : 'בעלות אחרת'
-    const gender = utils.readFromCell(sheet, 'D', row) === 'גבר' ? '1' : '2'
-    const age = utils.readFromCell(sheet, 'E', row)
-    const seniority = utils.readFromCell(sheet, 'F', row)
-    const engineCapacity = utils.readFromCell(sheet, 'G', row)
-    const ABS = utils.readFromCell(sheet, 'H', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    const ESP = utils.readFromCell(sheet, 'I', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    const FCW = utils.readFromCell(sheet, 'J', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    const LDW = utils.readFromCell(sheet, 'K', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    const usage = utils.readFromCell(sheet, 'L', row)
-    const fuel = utils.readFromCell(sheet, 'M', row)
-    const insuranceDate = utils.readFromCell(sheet, 'N', row).split('.').join('/')
+    var carType = utils.readFromCell(sheet, 'B', row) === 'פרטי' ? 'רכב פרטי' : utils.readFromCell(sheet, 'B', row)
+    var ownership = utils.readFromCell(sheet, 'C', row) === 'פרטית' ? 'בעלות פרטית' : 'בעלות אחרת'
+    var gender = utils.readFromCell(sheet, 'D', row) === 'גבר' ? '1' : '2'
+    var age = utils.readFromCell(sheet, 'E', row)
+    var seniority = utils.readFromCell(sheet, 'F', row)
+    var engineCapacity = utils.readFromCell(sheet, 'G', row)
+    var ABS = utils.readFromCell(sheet, 'H', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var ESP = utils.readFromCell(sheet, 'I', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var FCW = utils.readFromCell(sheet, 'J', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var LDW = utils.readFromCell(sheet, 'K', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var usage = utils.readFromCell(sheet, 'L', row)
+    var fuel = utils.readFromCell(sheet, 'M', row)
+    var insuranceDate = utils.readFromCell(sheet, 'N', row).split('.').join('/')
 
     web.transaction(`Enter Details ~ Row ${row}`)
     web.select('id=ddlSheets', `label=${carType}`)
@@ -74,36 +78,62 @@ for (let profile = 1, row = startRow; row !== lastRow; row++, profile++) {
     web.click('id=press_to_compare')
 
     web.transaction(`Collect Results ~ Row ${row}`)
-    const companyElements = '//td[contains(@class, "ColCompany")]'
-    const priceElements = `${companyElements}//..//td[@class="alignCenter" and contains(text(), ",") or contains(text(), "*") or contains(text(), "החברה אינה מוכרת ביטוח לפרופיל זה")]`
-    const scaleElements = `${companyElements}//..//td[@class="alignCenter" and not(contains(text(), ",") or contains(text(), "*"))]`
-    const results = web.getElementCount(companyElements)
+    var companyElements = '//td[contains(@class, "ColCompany")]'
+    var priceElements = `${companyElements}//..//td[@class="alignCenter" and contains(text(), ",") or contains(text(), "*") or contains(text(), "החברה אינה מוכרת ביטוח לפרופיל זה")]`
+    var scaleElements = `${companyElements}//..//td[@class="alignCenter" and not(contains(text(), ",") or contains(text(), "*"))]`
+    var results = web.getElementCount(companyElements)
 
     web.transaction(`Write Results ~ Row ${row}`)
+    if (!companiesWritten) {
+        for (let x = 1; x <= results; x++) {
+            let company = web.getText(`(${companyElements})[${x}]`)
+            companies.push(company) 
+        }
+
+        companies.push('', '', 'תאריך ת. ביטוח', 'דלק', 'שימוש', 'LDW', 'FCW', 'ESP', 'ABS', 'נפח מנוע', 'ותק', 'גיל', 'מין', 'בעלות', 'סוג רכב')
+        ws_data.push(companies)
+        companiesWritten = true
+    }
+
     for (let x = 1; x <= results; x++) {
         let company = web.getText(`(${companyElements})[${x}]`)
         let price = web.getText(`(${priceElements})[${x}]`)
         let scale = web.getText(`(${scaleElements})[${x}]`)
-        data.push({ 
-            company: company,
-            price: price,
-            scale: scale 
-        })
-        utils.log('success',`Added row: Company: ${company} Price: ${price} Scale: ${scale}`)
-    }
-    
-    const ws = XLSX.utils.json_to_sheet(data) 
-    XLSX.utils.book_append_sheet(wb, ws, `Profile ${profile}`)
 
-    // clear data 
-    data.length = 0
+        // data.push({ 
+        //     company: company,
+        //     price: price,
+        //     scale: scale 
+        // })
+
+        prices.push(price + '₪')
+        utils.log('success',`Company: ${company} Price: ${price} Scale: ${scale}`)
+    }
+
+    gender = gender == '1' ? 'גבר' : 'אישה'
+    prices.push('', '', insuranceDate, fuel, usage, LDW, FCW, ESP, ABS, engineCapacity, seniority, age, gender, ownership, carType)
+    ws_data.push(prices) 
+
+    var carType = utils.readFromCell(sheet, 'B', row) === 'פרטי' ? 'רכב פרטי' : utils.readFromCell(sheet, 'B', row)
+    var ownership = utils.readFromCell(sheet, 'C', row) === 'פרטית' ? 'בעלות פרטית' : 'בעלות אחרת'
+    var gender = utils.readFromCell(sheet, 'D', row) === 'גבר' ? '1' : '2'
+    var age = utils.readFromCell(sheet, 'E', row)
+    var seniority = utils.readFromCell(sheet, 'F', row)
+    var engineCapacity = utils.readFromCell(sheet, 'G', row)
+    var ABS = utils.readFromCell(sheet, 'H', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var ESP = utils.readFromCell(sheet, 'I', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var FCW = utils.readFromCell(sheet, 'J', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var LDW = utils.readFromCell(sheet, 'K', row) === 'יש' ? 'קיימת' : 'לא קיימת'
+    var usage = utils.readFromCell(sheet, 'L', row)
+    var fuel = utils.readFromCell(sheet, 'M', row)
+    var insuranceDate = utils.readFromCell(sheet, 'N', row).split('.').join('/')
+
+    // var ws = XLSX.utils.json_to_sheet(data) 
+    // XLSX.utils.book_append_sheet(wb, ws, `Profile ${profile}`)
+
     web.click('id=butt-1-reCalc')
 }
 
-XLSX.writeFile(wb, resultsFilePath)
-
-// web.transaction('Attach XSLX File')
-// ox.addAttachment(copy_xlsxFilePath)
-
-// web.transaction('Delete Copy of XSLX File')
-// fs.unlinkSync(copy_xlsxFilePath)
+var resultsWorksheet = XLSX.utils.aoa_to_sheet(ws_data)
+XLSX.utils.book_append_sheet(resultsWorkbook, resultsWorksheet, 'Contacts')
+XLSX.writeFile(resultsWorkbook, resultsFilePath)
