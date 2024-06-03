@@ -29,7 +29,7 @@ var companiesWritten = false
 var companies = []
 var ws_data = []
 var startRow = 39
-var lastRow = 50
+var lastRow = 41
 
 web.transaction('Open car.cma.gov.il')
 web.init()
@@ -41,6 +41,7 @@ windowWidth > 1920 && web.setWindowSize(1700, windowHeight)
 
 for (let profile = 1, row = startRow; row !== lastRow; row++, profile++) {
     var prices = []
+    var displayData = []
 
     web.transaction(`Read Values ~ Row ${row}`)
     var carType = utils.readFromCell(sheet, 'B', row) === 'פרטי' ? 'רכב פרטי' : utils.readFromCell(sheet, 'B', row)
@@ -100,40 +101,33 @@ for (let profile = 1, row = startRow; row !== lastRow; row++, profile++) {
         let price = web.getText(`(${priceElements})[${x}]`)
         let scale = web.getText(`(${scaleElements})[${x}]`)
 
-        // data.push({ 
+        // displayData.push({ 
         //     company: company,
         //     price: price,
         //     scale: scale 
         // })
 
         prices.push(price + '₪')
-        utils.log('success',`Company: ${company} Price: ${price} Scale: ${scale}`)
+        displayData.push(`Company: ${company} Price: ${price} Scale: ${scale}`)
     }
 
     gender = gender == '1' ? 'גבר' : 'אישה'
     prices.push('', '', insuranceDate, fuel, usage, LDW, FCW, ESP, ABS, engineCapacity, seniority, age, gender, ownership, carType)
     ws_data.push(prices) 
 
-    var carType = utils.readFromCell(sheet, 'B', row) === 'פרטי' ? 'רכב פרטי' : utils.readFromCell(sheet, 'B', row)
-    var ownership = utils.readFromCell(sheet, 'C', row) === 'פרטית' ? 'בעלות פרטית' : 'בעלות אחרת'
-    var gender = utils.readFromCell(sheet, 'D', row) === 'גבר' ? '1' : '2'
-    var age = utils.readFromCell(sheet, 'E', row)
-    var seniority = utils.readFromCell(sheet, 'F', row)
-    var engineCapacity = utils.readFromCell(sheet, 'G', row)
-    var ABS = utils.readFromCell(sheet, 'H', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    var ESP = utils.readFromCell(sheet, 'I', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    var FCW = utils.readFromCell(sheet, 'J', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    var LDW = utils.readFromCell(sheet, 'K', row) === 'יש' ? 'קיימת' : 'לא קיימת'
-    var usage = utils.readFromCell(sheet, 'L', row)
-    var fuel = utils.readFromCell(sheet, 'M', row)
-    var insuranceDate = utils.readFromCell(sheet, 'N', row).split('.').join('/')
-
-    // var ws = XLSX.utils.json_to_sheet(data) 
-    // XLSX.utils.book_append_sheet(wb, ws, `Profile ${profile}`)
-
+    utils.log('success', `Profile ${profile}:`)
+    for (let x = 0; x < displayData.length; x++) {
+        utils.log('info', displayData[x])
+    }
+    
     web.click('id=butt-1-reCalc')
 }
 
 var resultsWorksheet = XLSX.utils.aoa_to_sheet(ws_data)
-XLSX.utils.book_append_sheet(resultsWorkbook, resultsWorksheet, 'Contacts')
+XLSX.utils.book_append_sheet(resultsWorkbook, resultsWorksheet, 'תוצאות')
 XLSX.writeFile(resultsWorkbook, resultsFilePath)
+
+// XLSX.utils.sheet_add_aoa(resultsWorksheet, [
+//   ["Data 1", 1],
+//   ["Data 2", 2]
+// ], {origin:-1})
