@@ -38,6 +38,17 @@ module.exports = {
         utils.addNewValue(sheet, 'C', scale)
     },
 
+    writeResultsFile: (data, workbook, resultsFilePath) => {
+        let XLSX = require('xlsx')
+        let resultsWorksheet = XLSX.utils.aoa_to_sheet(data)
+        XLSX.utils.book_append_sheet(workbook, resultsWorksheet, 'תוצאות')
+        XLSX.writeFile(workbook, resultsFilePath)
+    },
+
+    randomNumber: (min, max) => { 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    },
+
     currentDateTime: function() {
         let today = new Date()
         let	day = String(today.getDate()).padStart(2, "0")
@@ -45,7 +56,7 @@ module.exports = {
         let	year = today.getFullYear()
         let	hours = today.getHours()
         let	minutes = today.getMinutes()
-        return `${day}-${month}-${year}_${hours}h-${minutes}m`
+        return `${day}-${month}-${year}`
     },
 
     log: (type, message) => {
