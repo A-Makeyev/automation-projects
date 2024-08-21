@@ -1,9 +1,11 @@
 // https://ioflood.com/blog/npm-xlsx
 
 web.transaction('Initialize Data')
+var debug = false
 var file = 'השוואת פרופילי ביטוח פרטי - אתר משרד האוצר.xlsx'
 var fileCopy = file.split('.')[0] + ' - Copy.' + file.split('.')[1]
 var utils = require('./utils.js')
+var shortWait = 5555
 var fs = require('fs')
 var XLSX = require('xlsx')
 var path = require('path')
@@ -11,9 +13,12 @@ var dataFolder = path.join(__dirname, './Data')
 var resultsFolder = path.join(__dirname, './Results')
 var xlsxFilePath =  dataFolder + '\\' + file 
 var copy_xlsxFilePath = dataFolder + '\\' + fileCopy
-var resultsFilePath = resultsFolder + `\\results ~ ${utils.currentDateTime()}_ID-${utils.randomNumber(66666, 99999)}.xlsx`
 var workbook = XLSX.readFile(xlsxFilePath)
 var sheet = workbook.Sheets.Everything
+
+var result = resultsFolder + `\\Result ~ ${utils.currentDateTime()} ~ ID_${utils.randomNumber(66666, 99999)}`
+var resultsFilePath = result + `\\Prices ~ ${utils.currentDateTime()}.xlsx`
+if (!fs.existsSync(result)) fs.mkdirSync(result)
 
 web.transaction('Create A Copy Of The Data File')
 if (!fs.existsSync(copy_xlsxFilePath)) {
@@ -27,25 +32,25 @@ if (!fs.existsSync(copy_xlsxFilePath)) {
 
 web.transaction('Create New Results File')
 var resultsWorkbook = XLSX.utils.book_new()
+var lastRow = utils.lastRowNumber(sheet)
+var startRow = 2
 var companiesWritten = false
 var companies = []
 var ws_data = []
-var startRow = 2
-var lastRow = utils.lastRowNumber(sheet)
 
 web.transaction('Open car.cma.gov.il')
 web.init()
 web.open('https://car.cma.gov.il')
 
-// if (web.isVisible('//div[@id="pagecontainer"]', 5000)) web.click('//input[@type="submit"]')
-// if (web.isVisible('//div[@class="m_txtErr"]', 5000)) assert.fail(web.getText('//div[@class="m_txtErr"]'))
+if (web.isVisible('//div[@id="pagecontainer"]', shortWait) && debug) web.click('//input[@type="submit"]')
+if (web.isVisible('//div[@class="m_txtErr"]', shortWait) && debug) assert.fail(web.getText('//div[@class="m_txtErr"]'))
 
 var windowWidth = web.execute(() => { return window.innerWidth })
 var windowHeight = web.execute(() => { return window.innerHeight })
 windowWidth > 1920 && web.setWindowSize(1700, windowHeight)
 
 try {
-    for (let profile = 1, row = startRow; row <= lastRow; row++, profile++) {
+    for (let row = startRow; row <= lastRow; row++) {
         var prices = []
         var displayData = []
 
@@ -64,6 +69,8 @@ try {
         var fuel = utils.readFromCell(sheet, 'B', row)
         var insuranceDate = utils.readFromCell(sheet, 'J', row) // .toString().split('.').join('/')
 
+        if (web.isVisible('//div[@id="pagecontainer"]', shortWait) && debug) web.click('//input[@type="submit"]')
+        
         web.transaction(`Enter Details ~ Row ${row}`)
         // web.select('id=ddlSheets', `label=${carType}`)
         // web.select('id=B', `label=${usage}`)
@@ -89,16 +96,22 @@ try {
         web.transaction('Compare')
         web.click('id=press_to_compare')
 
+        if (web.isVisible('//div[@id="pagecontainer"]', shortWait) && debug) web.click('//input[@type="submit"]')
+        
         web.transaction(`Collect Results ~ Row ${row}`)
         var companyElements = '//td[contains(@class, "ColCompany")]'
         var priceElements = `${companyElements}//..//td[@class="alignCenter" and contains(text(), ",") or contains(text(), "*") or contains(text(), "החברה אינה מוכרת ביטוח לפרופיל זה")]`
         var scaleElements = `${companyElements}//..//td[@class="alignCenter" and not(contains(text(), ",") or contains(text(), "*"))]`
         var results = web.getElementCount(companyElements)
 
+        web.scrollToElement(`(${companyElements})[${results - 1}]`, true)
+        web.click('//th[@title="לחיצה על הכותרת תמיין את הנתונים בעמודה" and contains(text(), "חברת הביטוח")]')
+        web.pause(shortWait / 2)
+
         web.transaction(`Write Results ~ Row ${row}`)
         if (!companiesWritten) {
             for (let x = 1; x <= results; x++) {
-                let company = web.getText(`(${companyElements})[${x}]`)
+                let company = web.isVisible(`(${companyElements})[${x}]`) ? web.getText(`(${companyElements})[${x}]`) : ''
                 companies.push(company) 
             }
 
@@ -108,9 +121,9 @@ try {
         }
 
         for (let x = 1; x <= results; x++) {
-            let company = web.getText(`(${companyElements})[${x}]`)
-            let price = web.getText(`(${priceElements})[${x}]`)
-            let scale = web.getText(`(${scaleElements})[${x}]`)
+            let company = web.isVisible(`(${companyElements})[${x}]`) ? web.getText(`(${companyElements})[${x}]`) : ''
+            let price = web.isVisible(`(${priceElements})[${x}]`) ? web.getText(`(${priceElements})[${x}]`) : ''
+            let scale = web.isVisible(`(${scaleElements})[${x}]`) ? web.getText(`(${scaleElements})[${x}]`) : ''
 
             prices.push(price + '₪')
             displayData.push(`Company: ${company} Price: ${price} Scale: ${scale}`)
@@ -130,6 +143,12 @@ try {
             utils.log('info', displayData[x])
         }
         
+        if (web.isVisible('//div[@id="pagecontainer"]', shortWait) && debug) web.click('//input[@type="submit"]')
+
+        var ss = web.takeScreenshot()
+        var screenshotFile = result + `\\Row - ${row}.jpg`
+        fs.writeFileSync(screenshotFile, ss, 'base64')
+
         web.click('id=butt-1-reCalc')
     }
 } catch(error) {
@@ -137,5 +156,5 @@ try {
 }
 
 if (!fs.existsSync(resultsFilePath)) {
-    utils.writeResultsFile(ws_data,resultsWorkbook, resultsFilePath)
+    utils.writeResultsFile(ws_data, resultsWorkbook, resultsFilePath)
 }
