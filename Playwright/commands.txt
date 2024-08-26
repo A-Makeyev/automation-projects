@@ -1,0 +1,25 @@
+Tutorial
+https://www.youtube.com/playlist?list=PLUDwpEzHYYLsw33jpra65LIvX1nKWpp7-
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Installation
+
+npm init playwright@latest
+npx playwright i
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+npx playwright test -> run all tests headless
+npx playwright show-report
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+npx playwright test HomePageTest.spec.js -> run a specific test headless
+npx playwright test HomePageTest.spec.js --project=chromium -> run a specific test headless on chromium
+npx playwright test HomePageTest.spec.js --project=chromium --headed -> run a specific test on chromium headed
+npx playwright test HomePageTest.spec.js --project=chromium --headed --debug -> run a specific test debugging step by step
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
