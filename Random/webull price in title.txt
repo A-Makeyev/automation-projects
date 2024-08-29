@@ -1,5 +1,3 @@
-
-
 setInterval(() => { 
 	let name = document.querySelector('.tit').innerText.split(' ')[0]
 	let price = document.querySelector('.price').innerText + '$'
