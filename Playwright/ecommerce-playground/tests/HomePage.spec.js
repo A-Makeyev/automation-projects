@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
 
-test('Assert home page', async ({ page }) => {
-    await page.goto('https://ecommerce-playground.lambdatest.io')  
+test('Assert home page', async ({ page, baseURL }) => {
+    await page.goto(baseURL)  
     const pageTitle = await page.title()
     console.log('Title: ' + pageTitle)
     
@@ -12,8 +12,8 @@ test('Assert home page', async ({ page }) => {
     page.close()
 })
 
-test('Get products', async ({ page }) => {
-    await page.goto('https://ecommerce-playground.lambdatest.io')
+test('Get products', async ({ page, baseURL }) => {
+    await page.goto(baseURL)
 
     const productsXpath = '//div[@class="product-thumb image-top"]'
     const products = await page.locator(productsXpath).all()
