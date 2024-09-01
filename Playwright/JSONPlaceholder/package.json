@@ -1,0 +1,17 @@
+{
+  "name": "jsonplaceholder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "users": "npx playwright test users.spec.ts",
+    "posts": "npx playwright test posts.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.1"
+  }
+}

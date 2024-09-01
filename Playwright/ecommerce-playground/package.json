@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --project=chromium --headed",
+    "test": "npx playwright test HomePage.spec.js --project=chromium --headed",
     "test register": "npx playwright test Register.spec.js --project=chromium --headed",
     "test login": "npx playwright test Login.spec.js --project=chromium --headed"
   },

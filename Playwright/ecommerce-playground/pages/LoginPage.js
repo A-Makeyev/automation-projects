@@ -58,7 +58,7 @@ module.exports = class RegisterPage {
     async assertErrorMessage() {
         let error = await this.page.locator(this.errorText).textContent()
         await expect(error).toContain('Warning')
-        await expect(error).toHaveCSS('color: #721c24;')
+        await expect(error).toHaveCSS('color', '#721c24')
         console.log('Register Error: ' + error)
     }
 
