@@ -18,19 +18,19 @@ http.setOptions({
 
 /* With Auth */
 
-const username = 'xxxxxxxx'
-const password = 'xxxxxxxx'
-const encodedCredentials = Buffer.from(username + ':' + password).toString('base64')
+var username = 'xxxxxxxx'
+var password = 'xxxxxxxx'
+var encodedCredentials = Buffer.from(username + ':' + password).toString('base64')
 
-const baseURL = 'https://jsonplaceholder.typicode.com/'
-const posts = `${baseURL}/posts`
+var baseURL = 'https://jsonplaceholder.typicode.com/'
+var posts = `${baseURL}/posts`
 
-const headers = {
+var headers = {
     "Authorization": `Basic ${encodedCredentials}`,
 	"Content-type": "application/json; charset=UTF-8"
 }
 
-const data = {
+var data = {
     title: "foo",
     body: "bar",
     userId: 1,
@@ -43,21 +43,24 @@ const data = {
 
 
 /* GET */
-const response = http.get(posts)
-const body = response.body
-const userId = response.body.userId
+var response = http.get(posts)
+var body = response.body
+var userId = response.body.userId
 log.info(body)
+log.info('*'.repeat(100))
 
 /* POST */
-const response = http.post(posts, data, headers)
-const body = response.body
+response = http.post(posts, data, headers)
+body = response.body
 log.info(response)
+log.info('*'.repeat(100))
 
 /* PUT */
-const response = http.put(`${posts}/1`, data, headers)
+response = http.put(`${posts}/1`, data, headers)
 log.info(response)
+log.info('*'.repeat(100))
 
 /* DELETE */
-const response = http.delete(`${posts}/1`)
+response = http.delete(`${posts}/1`)
 log.info(response)
-
+log.info('*'.repeat(100))
