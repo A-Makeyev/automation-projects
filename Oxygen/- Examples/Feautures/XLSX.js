@@ -1,3 +1,6 @@
+// https://www.npmjs.com/package/xlsx
+// set inside -> %appdata%\npm
+
 function currentDateTime() {
     let today = new Date()
     let	day = String(today.getDate()).padStart(2, "0")

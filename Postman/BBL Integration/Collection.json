@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "5b827a47-1c19-48c6-ab32-4e78cdc8bac6",
+		"name": "BBL Integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37847149"
+	},
+	"item": [
+		{
+			"name": "Get materials views from fusion",
+			"item": [
+				{
+					"name": "Get materials views from fusion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const requiredVars = ['base_url', 'access_token']\r",
+									"// const missingVars = requiredVars.filter(varName => !pm.environment.get(varName))\r",
+									"\r",
+									"// if (missingVars.length > 0) {\r",
+									"//     pm.error(`Missing environment variables: ${missingVars.join(', ')}`)\r",
+									"// } else {\r",
+									"//     pm.request.headers.add({\r",
+									"//         key: 'Authorization',\r",
+									"//         value: `Bearer ${pm.environment.get('access_token')}`\r",
+									"//     })\r",
+									"\r",
+									"//     const baseUrl = pm.environment.get('base_url')\r",
+									"//     if (baseUrl) {\r",
+									"//         const currentUrl = pm.request.url.toString()\r",
+									"//         if (!currentUrl.startsWith(baseUrl)) {\r",
+									"//             pm.request.url = baseUrl + pm.request.url.getPath()\r",
+									"//         }\r",
+									"//     }\r",
+									"// }\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic xxxxxxxxxxxx",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"CLOUD_CONNECT",
+								"GETFILEFROMUCMBYDATE",
+								"1.0",
+								"ucm",
+								"download"
+							],
+							"query": [
+								{
+									"key": "dateToFetchFor",
+									"value": "07-23-2024"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth Token",
+			"item": [
+				{
+					"name": "Auth Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Validate schema', () => { \r",
+									"    const schema = {\r",
+									"        type: 'object',\r",
+									"        properties: {\r",
+									"            access_token: { type: 'string'},\r",
+									"            token_type: { type: 'string'},\r",
+									"            expires_in: { type: 'number'},\r",
+									"        },\r",
+									"        required: ['access_token', 'token_type', 'expires_in']\r",
+									"    }\r",
+									"    pm.response.to.have.jsonSchema(schema)\r",
+									"})\r",
+									"\r",
+									"pm.test('All response fields are not empty'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    Object.entries(data).forEach(([key, value]) => {\r",
+									"        console.log(`Field ${key} value -> ${value}`)\r",
+									"        pm.expect(value).to.not.be.oneOf([null, undefined, ''])\r",
+									"    })\r",
+									"}\r",
+									"\r",
+									"pm.test('Token exists and is not empty'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.access_token).to.be.a('string').and.not.empty\r",
+									"}\r",
+									"\r",
+									"pm.test('Token has a valid JWT format'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    const jwt = data.access_token.split('.')\r",
+									"    pm.expect(jwt).to.be.a('string').to.have.lengthOf(3)\r",
+									"}\r",
+									"\r",
+									"pm.test('Token type is \"Bearer\"'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.token_type.toLowerCase()).to.eql('bearer')\r",
+									"}\r",
+									"\r",
+									"pm.test('Expiry validity'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.expires_in).to.be.a('number').and.to.be.within(3600, 86400)\r",
+									"}\r",
+									"\r",
+									"const data = pm.response.json()\r",
+									"pm.environment.set('access_token', data.access_token)\r",
+									"pm.environment.set('token_type', data.token_type)\r",
+									"\r",
+									"pm.test('Token is set in environment'), () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.eql(data.access_token)\r",
+									"    pm.expect(pm.environment.get('token_type')).to.eql(data.token_type)\r",
+									"}\r",
+									"\r",
+									"console.log(data)\r",
+									"console.log(pm.environment.get('access_token'))\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Request method is POST', () => {\r",
+									"    pm.expect(pm.request.method).to.eql('POST')\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic xxxxxxxxxxxxxxxx"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "https://ic/api/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://oauth2/v1/token",
+							"protocol": "https",
+							"host": [
+								"idcs-7172989e307149f9bf21317a3648d369",
+								"identity",
+								"oraclecloud",
+								"com"
+							],
+							"port": "443",
+							"path": [
+								"oauth2",
+								"v1",
+								"token"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'https://oauth2/v1/token' \\\r\n\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n\r\n--header 'Authorization: Basic xxxxxx' \\\r\n\r\n--data-urlencode 'grant_type=client_credentials' \\\r\n\r\n--data-urlencode 'scope=https://D81consumer::all https://ic/api/'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Taxi Approver List",
+			"item": [
+				{
+					"name": "Get Taxi Approver List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"pm.test('Response contains Success Message', () => {\r",
+									"    pm.expect(data).to.include('<Message>Success</Message>')\r",
+									"})\r",
+									"\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        pm.test('XML Parsed Successfully', () => pm.expect(error).to.be.null)\r",
+									"\r",
+									"        const G1Nodes = [].concat(result.reply.ROWS.G_1 || []) \r",
+									"        pm.expect(G1Nodes).to.not.be.empty\r",
+									"\r",
+									"        G1Nodes.forEach((G1, index) => {\r",
+									"            const nodes = ['PERSON', 'EMP_NAME', 'EMAIL_ADDRESS']\r",
+									"            pm.test(`<G_1> ${index + 1} of ${G1Nodes.length} Data -> PERSON: ${G1.PERSON}, EMP_NAME: ${G1.EMP_NAME}, EMAIL_ADDRESS: ${G1.EMAIL_ADDRESS}`, () => {\r",
+									"                nodes.forEach(field => pm.expect(G1[field]).to.not.be.empty)\r",
+									"                pm.expect(G1.PERSON).to.match(/^\\d+$/, 'person is numeric')\r",
+									"                pm.expect(/[\\u0590-\\u05FF]/.test(G1.EMP_NAME)).to.be.true\r",
+									"                pm.expect(G1.EMAIL_ADDRESS).to.match(/^[^@]+@[^@]+\\.[^@]+$/, 'email is valid')\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/getTaxiApproverList\n",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON",
+								"GETTAXIAPPROVERLIST",
+								"1.0",
+								"masofon",
+								"getTaxiApproverList\n"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'https://getTaxiApproverList'"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
