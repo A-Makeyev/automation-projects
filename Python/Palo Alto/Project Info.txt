@@ -1,0 +1,16 @@
+Initialize project:
+~~~~~~~~~~~~~~~~~~~
+python -m venv env
+env\Scripts\activate
+python -m pip install --upgrade pip
+pip install selenium webdriver-manager pytest pytest-html pytest-xdist openpyxl urllib3 setuptools
+pip list
+
+Run Commands:
+~~~~~~~~~~~~~
+run everything: pytest
+run a single test: pytest -v -s testCases/test_contactUs.py --browser chrome
+run parallel tests (use backup browser): pytest -v -s -n=4 testCases/test_contactUs.py
+Generate HTML reports: pytest -v -s --capture sys --html=Reports\report.html testCases/test_createAccount.py
+run sanity and regression tests: pytest -v -s -m "sanity and regression" testCases/
+run sanity tests: pytest -v -s -m "sanity" testCases/ --browser chrome

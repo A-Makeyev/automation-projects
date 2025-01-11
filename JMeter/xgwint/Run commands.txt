@@ -1,0 +1,21 @@
+1) open cmd
+
+2) cd C:\JMETER\apache-jmeter-5.1.1\bin
+
+3) jmeter -f -n -t C:\JMETER\apache-jmeter-5.1.1\bin\tests\XGWINT\sbl-rest-soap.jmx -l C:\JMETER\apache-jmeter-5.1.1\bin\tests\XGWINT\results.csv -e -o C:\JMETER\apache-jmeter-5.1.1\bin\tests\XGWINT\report
+
+4) open multiple results in the report html open devtools and paste in the console:
+
+const arrows = document.getElementsByClassName('fa fa-chevron-down').length
+for (let x = 0; x < arrows; x++) {
+ document.getElementsByClassName('fa fa-chevron-down')[x].click() 
+}
+
+
+
+*** 
+שירות soap - get: חמש לדקה 
+שירות soap - post: אחד לדקה
+שירות rest - get: עשרים לדקה 
+שירות rest - post: חמש לדקה
+לאורך כל היממה (24 שעות). 

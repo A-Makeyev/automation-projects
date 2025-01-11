@@ -1,0 +1,32 @@
+01/05/2025 12:16:32 AM: INFO: ====== WebDriver manager ======
+01/05/2025 12:16:33 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/05/2025 12:16:33 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/05/2025 12:16:33 AM: INFO: Driver [C:\Users\anato\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache
+01/05/2025 12:16:35 AM: INFO: patching driver executable C:\Users\anato\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+01/05/2025 12:16:37 AM: INFO: 01. Open https://treasury.coti.io
+01/05/2025 12:16:40 AM: INFO: 02. Create MetaMask Account
+01/05/2025 12:16:42 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:45 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:52 AM: INFO: 03. Open MetaMask Signature
+01/05/2025 12:16:52 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:52 AM: INFO: 04. Login To MetaMask
+01/05/2025 12:16:54 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:55 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:58 AM: INFO: 05. Assert Connection Status
+01/05/2025 12:16:58 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+01/05/2025 12:16:59 AM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 101/05/2025 12:25:45 AM: INFO: ====== WebDriver manager ======01/06/2025 02:01:58 AM: INFO: ====== WebDriver manager ======
+01/06/2025 02:01:59 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/06/2025 02:01:59 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/06/2025 02:01:59 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/06/2025 02:02:00 AM: INFO: WebDriver version 131.0.6778.204 selected
+01/06/2025 02:02:00 AM: INFO: Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+01/06/2025 02:02:00 AM: INFO: About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+01/06/2025 02:02:00 AM: INFO: Driver downloading response is 200
+01/06/2025 02:02:01 AM: INFO: Get LATEST chromedriver version for google-chrome
+01/06/2025 02:02:02 AM: INFO: Driver has been saved in cache [C:\Users\anato\.wdm\drivers\chromedriver\win64\131.0.6778.204]
+01/06/2025 02:02:03 AM: INFO: patching driver executable C:\Users\anato\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+01/06/2025 02:02:05 AM: INFO: 01. Open https://treasury.coti.io
+01/06/2025 02:02:08 AM: INFO: 02. Create MetaMask Account
+01/06/2025 02:02:21 AM: INFO: 03. Connect MetaMask To Coti Treasury
+01/06/2025 02:02:21 AM: INFO: 04. Login To MetaMask
+01/06/2025 02:02:26 AM: INFO: 05. Assert Connection Status

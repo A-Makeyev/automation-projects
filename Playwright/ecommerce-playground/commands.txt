@@ -1,0 +1,20 @@
+Installation
+
+npm init playwright@latest
+npx playwright i
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+npx playwright test -> run all tests headless
+npx playwright show-report
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+npx playwright test Login.spec.js -> run a specific test headless
+npx playwright test Login.spec.js --project=chromium -> run a specific test headless on chromium
+npx playwright test Login.spec.js --project=chromium --headed -> run a specific test on chromium headed
+npx playwright test Login.spec.js --project=chromium --headed --debug -> run a specific test debugging step by step
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

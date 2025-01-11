@@ -1,0 +1,9 @@
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.deps.json
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.csprojAssemblyReference.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.AssemblyInfoInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.AssemblyInfo.cs
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.csproj.CoreCompileInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.Common\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.pdb

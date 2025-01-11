@@ -1,0 +1,229 @@
+//Clear cache and cookies in case the script runs several iterations
+//WDS.browser.getLocalStorage().clear();
+//WDS.browser.manage().deleteAllCookies();
+
+var URL = 'https://hafaka-frontend-npcqa.menora.co.il'
+
+var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = JavaImporter(org.openqa.selenium.support.ui.ExpectedConditions)
+var wait = new support_ui.WebDriverWait(WDS.browser, 15)
+
+var robota = new java.awt.Robot()
+var keyEvent = java.awt.event.KeyEvent
+
+
+var attempt = 1
+var start = new Date().getTime()
+while (new Date().getTime() - start < 5000) {
+	try {
+		// Login Page
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('Login Page')
+		WDS.browser.get(URL + '/login')
+		
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-user")))
+		var usernameField = WDS.browser.findElement(pkg.By.id("input-login-user"))
+		usernameField.sendKeys(["k90fis1"])
+		
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("input-login-password")))
+		var passwordField = WDS.browser.findElement(pkg.By.id("input-login-password"))
+		passwordField.sendKeys(["fis1"])
+		
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'התחברות')]")))
+		var loginButton = WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'התחברות')]"))
+		loginButton.click()
+		
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Logged in successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+		WDS.sampleResult.sampleEnd()
+		
+		// Customer Policy Data
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('Customer Policy Data')
+		
+		function getPolicyData (policyNumber) {
+			
+			wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("action")))
+			var selectAction = WDS.browser.findElement(pkg.By.id("action"))
+			var select = new org.openqa.selenium.support.ui.Select(selectAction)
+			select.selectByIndex(3)
+			
+			wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("policyId")))
+			var policyField =  WDS.browser.findElement(pkg.By.id("policyId"))
+			policyField.sendKeys([policyNumber])
+			// policyField.sendKeys([Keys.TAB])
+			robota.keyPress(keyEvent.VK_TAB)
+			robota.keyRelease(keyEvent.VK_TAB)
+
+			java.lang.Thread.sleep(3000)
+		
+			// Get Data
+			wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'נתוני חיתום') and not(disabled)]")))
+			var dataButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'נתוני חיתום') and not(disabled)]"))
+			dataButton.click()
+			
+		}
+
+		getPolicyData('043358972819700')
+		
+
+		
+		java.lang.Thread.sleep(3000)
+		
+		// Click Next
+		for (var x = 0; x < 2; x++) {
+			wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'הבא')]")))
+			var nextButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'הבא')]"))
+			nextButton.click()
+			java.lang.Thread.sleep(1500)
+		}
+
+		
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Customer Policy Data completed successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+		WDS.sampleResult.sampleEnd()
+	
+		// First Section Options
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('First Section Options')
+
+		// Expand
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'הרחב סעיפים')]")))
+		var expandButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'הרחב סעיפים')]"))
+		expandButton.click()
+		java.lang.Thread.sleep(3000)
+
+		// Shrink
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'כווץ סעיפים')]")))
+		var shrinkButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'כווץ סעיפים')]"))
+		shrinkButton.click()
+		java.lang.Thread.sleep(3000)
+
+		// Finish
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("finishClausesBtn")))
+		var finishButton =  WDS.browser.findElement(pkg.By.id("finishClausesBtn"))
+		finishButton.click()
+		java.lang.Thread.sleep(3000)
+
+		// Go Back
+		WDS.browser.get(URL + '/clauses')
+
+//		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'חזור' )]")))
+//		var backButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'חזור' )]"))
+//		backButton.click()
+
+		java.lang.Thread.sleep(3000)
+
+
+//		var handles = WDS.browser.getWindowHandles() 
+//		var iterator = handles.iterator()
+//		var currentHandle = WDS.browser.getWindowHandle()
+//		while(iterator.hasNext()) {
+//		    var handle = iterator.next() 
+//		    if (handle != currentHandle) {
+//		        WDS.browser.switchTo().window(handle)
+//		        WDS.browser.close()
+//		    }
+//		}
+//		WDS.browser.switchTo().defaultContent()
+		
+
+		// Exit
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("(//button[@class='btn btn-sm clause-btn clause-btn-exit'])[1]")))
+		var exitButton =  WDS.browser.findElement(pkg.By.xpath("(//button[@class='btn btn-sm clause-btn clause-btn-exit'])[1]"))
+		exitButton.click()
+		java.lang.Thread.sleep(3000)
+
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> First Section Options completed successfully')
+		WDS.sampleResult.sampleEnd()
+
+
+		// Car Policy Data
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('Car Policy Data')
+		
+		getPolicyData('040303476319000')	
+
+	
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Car Policy Data completed successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+		WDS.sampleResult.sampleEnd()
+
+
+		// Assert Error Nessage
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('Assert Error Nessage')
+
+		// Pop Up Approve CheckBox
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.id("checkedApproveId")))
+		var popUpApproveCheckBox =  WDS.browser.findElement(pkg.By.id("checkedApproveId"))
+		popUpApproveCheckBox.click()
+		java.lang.Thread.sleep(3000)
+
+		// Continue 
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'המשך') and not(@disabled)]")))
+		var continueButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'המשך') and not(@disabled)]"))
+		continueButton.click()
+		java.lang.Thread.sleep(3000)
+
+		// Next
+		for (var x = 0; x < 2; x++) {
+			wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'הבא')]")))
+			var nextButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'הבא')]"))
+			nextButton.click()
+			java.lang.Thread.sleep(1500)
+		}	
+
+
+		// Error Message
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//app-button[@id='modalCloseBtn']//button")))
+		var closeErrorMessage =  WDS.browser.findElement(pkg.By.xpath("//app-button[@id='modalCloseBtn']//button"))
+		closeErrorMessage.click()
+		java.lang.Thread.sleep(3000)		
+
+		// Approve CheckBox
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//label[@for='confirmation']")))
+		var approveCheckBox =  WDS.browser.findElement(pkg.By.xpath("//label[@for='confirmation']"))
+		approveCheckBox.click()
+		java.lang.Thread.sleep(3000)
+
+		// Next
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'הבא')]")))
+		var nextButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'הבא')]"))
+		nextButton.click()
+		java.lang.Thread.sleep(1500)
+		
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Assert Error Nessage completed successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+		WDS.sampleResult.sampleEnd()
+
+
+		// Second Section Options
+		WDS.sampleResult.sampleStart()
+		WDS.sampleResult.setResponseMessage('Second Section Options')
+
+		// Expand
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("//button[contains(text(), 'הרחב סעיפים')]")))
+		var expandButton =  WDS.browser.findElement(pkg.By.xpath("//button[contains(text(), 'הרחב סעיפים')]"))
+		expandButton.click()
+		java.lang.Thread.sleep(3000)
+
+		// Exit
+		wait.until(conditions.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath("(//button[@class='btn btn-sm clause-btn clause-btn-exit'])[1]")))
+		var exitButton =  WDS.browser.findElement(pkg.By.xpath("(//button[@class='btn btn-sm clause-btn clause-btn-exit'])[1]"))
+		exitButton.click()
+		java.lang.Thread.sleep(3000)
+
+		WDS.log.info('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Second Section Options completed successfully <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+		WDS.sampleResult.sampleEnd()
+
+
+		WDS.log.info('>>> Test Passed')
+
+	} catch (err) {
+	    WDS.log.info('>>> Test Failed')
+	    WDS.log.info('>>> ' + err.message)
+	    WDS.log.info('Attempt # ' + attempt + ', Element not found')
+         java.lang.Thread.sleep(1000)
+         attempt++
+	    // var screenshot = WDS.browser.getScreenshotAs(pkg.OutputType.FILE)
+	    // screenshot.renameTo(java.io.File('failure-screen.png'))
+	}
+}

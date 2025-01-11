@@ -1,0 +1,745 @@
+#3 (i) Case XRAY-6492 already has steps uploaded
+#4 (i) Case XRAY-6477 already has steps uploaded
+#5 ✔️ Test steps were successfully added to case XRAY-6476
+#6 ✔️ Test steps were successfully added to case XRAY-6475
+#7 ✔️ Test steps were successfully added to case XRAY-6474
+#8 ✔️ Test steps were successfully added to case XRAY-6473
+#9 ✔️ Test steps were successfully added to case XRAY-6472
+#10 ⚠️  Test XRAY-6455 doesn't have an export file
+#11 ✔️ Test steps were successfully added to case XRAY-6454
+#12 ✔️ Test steps were successfully added to case XRAY-6453
+#13 ✔️ Test steps were successfully added to case XRAY-6452
+#14 ✔️ Test steps were successfully added to case XRAY-6450
+#15 ✔️ Test steps were successfully added to case XRAY-6445
+#16 ✔️ Test steps were successfully added to case XRAY-6442
+#17 ✔️ Test steps were successfully added to case XRAY-6441
+#18 ✔️ Test steps were successfully added to case XRAY-6440
+#19 ✔️ Test steps were successfully added to case XRAY-6439
+#20 ✔️ Test steps were successfully added to case XRAY-6438
+#21 ✔️ Test steps were successfully added to case XRAY-6437
+#22 ✔️ Test steps were successfully added to case XRAY-6436
+#23 ✔️ Test steps were successfully added to case XRAY-6435
+#24 ✔️ Test steps were successfully added to case XRAY-6434
+#25 ✔️ Test steps were successfully added to case XRAY-6433
+#26 ✔️ Test steps were successfully added to case XRAY-6432
+#27 ✔️ Test steps were successfully added to case XRAY-6431
+#28 ✔️ Test steps were successfully added to case XRAY-6429
+#29 ✔️ Test steps were successfully added to case XRAY-6428
+#30 ✔️ Test steps were successfully added to case XRAY-6427
+#31 ✔️ Test steps were successfully added to case XRAY-6426
+#32 ✔️ Test steps were successfully added to case XRAY-6425
+#33 ✔️ Test steps were successfully added to case XRAY-6424
+#34 ✔️ Test steps were successfully added to case XRAY-6423
+#35 ✔️ Test steps were successfully added to case XRAY-6422
+#36 ✔️ Test steps were successfully added to case XRAY-6421
+#37 ✔️ Test steps were successfully added to case XRAY-6420
+#38 ✔️ Test steps were successfully added to case XRAY-6419
+#39 ✔️ Test steps were successfully added to case XRAY-6418
+#40 ✔️ Test steps were successfully added to case XRAY-6417
+#41 ✔️ Test steps were successfully added to case XRAY-6416
+#42 ✔️ Test steps were successfully added to case XRAY-6415
+#43 ✔️ Test steps were successfully added to case XRAY-6414
+#44 ✔️ Test steps were successfully added to case XRAY-6413
+#45 ✔️ Test steps were successfully added to case XRAY-6412
+#46 ✔️ Test steps were successfully added to case XRAY-6411
+#47 ✔️ Test steps were successfully added to case XRAY-6410
+#48 ✔️ Test steps were successfully added to case XRAY-6409
+#49 ✔️ Test steps were successfully added to case XRAY-6407
+#50 ✔️ Test steps were successfully added to case XRAY-6406
+#51 ⚠️  Test XRAY-6402 doesn't have an export file
+#52 ✔️ Test steps were successfully added to case XRAY-6401
+#53 ✔️ Test steps were successfully added to case XRAY-6400
+#54 ⚠️  Test XRAY-6399 doesn't have an export file
+#55 ✔️ Test steps were successfully added to case XRAY-6398
+#56 ✔️ Test steps were successfully added to case XRAY-6397
+#57 ✔️ Test steps were successfully added to case XRAY-6396
+#58 ✔️ Test steps were successfully added to case XRAY-6395
+#59 ✔️ Test steps were successfully added to case XRAY-6394
+#60 ✔️ Test steps were successfully added to case XRAY-6390
+#61 ✔️ Test steps were successfully added to case XRAY-6389
+#62 ✔️ Test steps were successfully added to case XRAY-6388
+#63 ✔️ Test steps were successfully added to case XRAY-6387
+#64 ✔️ Test steps were successfully added to case XRAY-6384
+#65 ✔️ Test steps were successfully added to case XRAY-6383
+#66 ✔️ Test steps were successfully added to case XRAY-6381
+#67 ✔️ Test steps were successfully added to case XRAY-6380
+#68 ✔️ Test steps were successfully added to case XRAY-6379
+#69 ✔️ Test steps were successfully added to case XRAY-6378
+#70 ✔️ Test steps were successfully added to case XRAY-6376
+#71 ✔️ Test steps were successfully added to case XRAY-6373
+#72 ✔️ Test steps were successfully added to case XRAY-6371
+#73 ✔️ Test steps were successfully added to case XRAY-6359
+#74 ✔️ Test steps were successfully added to case XRAY-6358
+#75 ✔️ Test steps were successfully added to case XRAY-6357
+#76 ✔️ Test steps were successfully added to case XRAY-6356
+#77 ✔️ Test steps were successfully added to case XRAY-6337
+#78 ✔️ Test steps were successfully added to case XRAY-6336
+#79 ✔️ Test steps were successfully added to case XRAY-6335
+#80 ✔️ Test steps were successfully added to case XRAY-6334
+#81 ✔️ Test steps were successfully added to case XRAY-6333
+#82 ✔️ Test steps were successfully added to case XRAY-6332
+#83 ❌ XRAY-6331 wasn't downloaded
+#84 ✔️ Test steps were successfully added to case XRAY-6328
+#85 ✔️ Test steps were successfully added to case XRAY-6327
+#86 ✔️ Test steps were successfully added to case XRAY-6326
+#87 ✔️ Test steps were successfully added to case XRAY-6325
+#88 ✔️ Test steps were successfully added to case XRAY-6320
+#89 ✔️ Test steps were successfully added to case XRAY-6319
+#90 ✔️ Test steps were successfully added to case XRAY-6318
+#91 ✔️ Test steps were successfully added to case XRAY-6317
+#92 ✔️ Test steps were successfully added to case XRAY-6316
+#93 ✔️ Test steps were successfully added to case XRAY-6314
+#94 ✔️ Test steps were successfully added to case XRAY-6312
+#95 ✔️ Test steps were successfully added to case XRAY-6311
+#96 ⚠️  Test XRAY-6310 doesn't have an export file
+#97 ⚠️  Test XRAY-6309 doesn't have an export file
+#98 ✔️ Test steps were successfully added to case XRAY-6308
+#99 ✔️ Test steps were successfully added to case XRAY-6307
+#100 ✔️ Test steps were successfully added to case XRAY-6306
+#101 ✔️ Test steps were successfully added to case XRAY-6303
+#102 ✔️ Test steps were successfully added to case XRAY-6302
+#103 ✔️ Test steps were successfully added to case XRAY-6301
+#104 ✔️ Test steps were successfully added to case XRAY-6300
+#105 ✔️ Test steps were successfully added to case XRAY-6299
+#106 ✔️ Test steps were successfully added to case XRAY-6298
+#107 ⚠️  Test XRAY-6295 doesn't have an export file
+#108 ⚠️  Test XRAY-6294 doesn't have an export file
+#109 ✔️ Test steps were successfully added to case XRAY-6293
+#110 ✔️ Test steps were successfully added to case XRAY-6292
+#111 ✔️ Test steps were successfully added to case XRAY-6291
+#112 ✔️ Test steps were successfully added to case XRAY-6289
+#113 ✔️ Test steps were successfully added to case XRAY-6288
+#114 ✔️ Test steps were successfully added to case XRAY-6287
+#115 ✔️ Test steps were successfully added to case XRAY-6286
+#116 ✔️ Test steps were successfully added to case XRAY-6285
+#117 ✔️ Test steps were successfully added to case XRAY-6284
+#118 ✔️ Test steps were successfully added to case XRAY-6283
+#119 ✔️ Test steps were successfully added to case XRAY-6281
+#120 ✔️ Test steps were successfully added to case XRAY-6280
+#121 ✔️ Test steps were successfully added to case XRAY-6276
+#122 ⚠️  Test XRAY-6275 doesn't have an export file
+#123 ✔️ Test steps were successfully added to case XRAY-6272
+#124 ✔️ Test steps were successfully added to case XRAY-6271
+#125 ✔️ Test steps were successfully added to case XRAY-6270
+#126 ✔️ Test steps were successfully added to case XRAY-6269
+#127 ✔️ Test steps were successfully added to case XRAY-6268
+#128 ✔️ Test steps were successfully added to case XRAY-6267
+#129 ✔️ Test steps were successfully added to case XRAY-6266
+#130 ✔️ Test steps were successfully added to case XRAY-6261
+#131 ⚠️  Test XRAY-6259 doesn't have an export file
+#132 ✔️ Test steps were successfully added to case XRAY-6258
+#133 ⚠️  Test XRAY-6257 doesn't have an export file
+#134 ✔️ Test steps were successfully added to case XRAY-6256
+#135 ✔️ Test steps were successfully added to case XRAY-6255
+#136 ✔️ Test steps were successfully added to case XRAY-6254
+#137 ✔️ Test steps were successfully added to case XRAY-6253
+#138 ✔️ Test steps were successfully added to case XRAY-6241
+#139 ✔️ Test steps were successfully added to case XRAY-6240
+#140 ✔️ Test steps were successfully added to case XRAY-6239
+#141 ✔️ Test steps were successfully added to case XRAY-6238
+#142 ✔️ Test steps were successfully added to case XRAY-6234
+#143 ✔️ Test steps were successfully added to case XRAY-6233
+#144 ✔️ Test steps were successfully added to case XRAY-6232
+#145 ✔️ Test steps were successfully added to case XRAY-6231
+#146 ✔️ Test steps were successfully added to case XRAY-6230
+#147 ✔️ Test steps were successfully added to case XRAY-6229
+#148 ✔️ Test steps were successfully added to case XRAY-6223
+#149 ✔️ Test steps were successfully added to case XRAY-6222
+#150 ✔️ Test steps were successfully added to case XRAY-6221
+#151 ✔️ Test steps were successfully added to case XRAY-6220
+#152 ✔️ Test steps were successfully added to case XRAY-6219
+#153 ✔️ Test steps were successfully added to case XRAY-6201
+#154 ✔️ Test steps were successfully added to case XRAY-6200
+#155 ⚠️  Test XRAY-6197 doesn't have an export file
+#156 ⚠️  Test XRAY-6193 doesn't have an export file
+#157 ✔️ Test steps were successfully added to case XRAY-6192
+#158 ✔️ Test steps were successfully added to case XRAY-6191
+#159 ⚠️  Test XRAY-6189 doesn't have an export file
+#160 ⚠️  Test XRAY-6188 doesn't have an export file
+#161 ⚠️  Test XRAY-6186 doesn't have an export file
+#162 ✔️ Test steps were successfully added to case XRAY-6184
+#163 ✔️ Test steps were successfully added to case XRAY-6183
+#164 ✔️ Test steps were successfully added to case XRAY-6182
+#165 ✔️ Test steps were successfully added to case XRAY-6181
+#166 ✔️ Test steps were successfully added to case XRAY-6179
+#167 ✔️ Test steps were successfully added to case XRAY-6178
+#168 ⚠️  Test XRAY-6177 doesn't have an export file
+#169 ✔️ Test steps were successfully added to case XRAY-6176
+#170 ✔️ Test steps were successfully added to case XRAY-6175
+#171 ✔️ Test steps were successfully added to case XRAY-6174
+#172 ✔️ Test steps were successfully added to case XRAY-6172
+#173 ✔️ Test steps were successfully added to case XRAY-6171
+#174 ✔️ Test steps were successfully added to case XRAY-6169
+#175 ✔️ Test steps were successfully added to case XRAY-6167
+#176 ✔️ Test steps were successfully added to case XRAY-6166
+#177 ✔️ Test steps were successfully added to case XRAY-6165
+#178 ✔️ Test steps were successfully added to case XRAY-6164
+#179 ✔️ Test steps were successfully added to case XRAY-6163
+#180 ⚠️  Test XRAY-6160 doesn't have an export file
+#181 ✔️ Test steps were successfully added to case XRAY-6155
+#182 ✔️ Test steps were successfully added to case XRAY-6154
+#183 ✔️ Test steps were successfully added to case XRAY-6153
+#184 ✔️ Test steps were successfully added to case XRAY-6152
+#185 ✔️ Test steps were successfully added to case XRAY-6151
+#186 ✔️ Test steps were successfully added to case XRAY-6150
+#187 ⚠️  Test XRAY-6149 doesn't have an export file
+#188 ⚠️  Test XRAY-6148 doesn't have an export file
+#189 ⚠️  Test XRAY-6147 doesn't have an export file
+#190 ⚠️  Test XRAY-6146 doesn't have an export file
+#191 ⚠️  Test XRAY-6145 doesn't have an export file
+#192 ✔️ Test steps were successfully added to case XRAY-6144
+#193 ✔️ Test steps were successfully added to case XRAY-6143
+#194 ✔️ Test steps were successfully added to case XRAY-6142
+#195 ✔️ Test steps were successfully added to case XRAY-6141
+#196 ✔️ Test steps were successfully added to case XRAY-6140
+#197 ✔️ Test steps were successfully added to case XRAY-6138
+#198 ✔️ Test steps were successfully added to case XRAY-6137
+#199 ✔️ Test steps were successfully added to case XRAY-6136
+#200 ✔️ Test steps were successfully added to case XRAY-6135
+#201 ✔️ Test steps were successfully added to case XRAY-6134
+#202 ✔️ Test steps were successfully added to case XRAY-6132
+#203 ⚠️  Test XRAY-6130 doesn't have an export file
+#204 ⚠️  Test XRAY-6129 doesn't have an export file
+#205 ⚠️  Test XRAY-6128 doesn't have an export file
+#206 ⚠️  Test XRAY-6127 doesn't have an export file
+#207 ⚠️  Test XRAY-6126 doesn't have an export file
+#208 ⚠️  Test XRAY-6125 doesn't have an export file
+#209 ⚠️  Test XRAY-6124 doesn't have an export file
+#210 ⚠️  Test XRAY-6123 doesn't have an export file
+#211 ⚠️  Test XRAY-6122 doesn't have an export file
+#212 ⚠️  Test XRAY-6121 doesn't have an export file
+#213 ⚠️  Test XRAY-6120 doesn't have an export file
+#214 ⚠️  Test XRAY-6119 doesn't have an export file
+#215 ⚠️  Test XRAY-6118 doesn't have an export file
+#216 ⚠️  Test XRAY-6117 doesn't have an export file
+#217 ⚠️  Test XRAY-6116 doesn't have an export file
+#218 ⚠️  Test XRAY-6115 doesn't have an export file
+#219 ⚠️  Test XRAY-6114 doesn't have an export file
+#220 ⚠️  Test XRAY-6113 doesn't have an export file
+#221 ⚠️  Test XRAY-6112 doesn't have an export file
+#222 ✔️ Test steps were successfully added to case XRAY-6111
+#223 ✔️ Test steps were successfully added to case XRAY-6110
+#224 ✔️ Test steps were successfully added to case XRAY-6109
+#225 ⚠️  Test XRAY-6108 doesn't have an export file
+#226 ✔️ Test steps were successfully added to case XRAY-6107
+#227 ✔️ Test steps were successfully added to case XRAY-6106
+#228 ✔️ Test steps were successfully added to case XRAY-6105
+#229 ✔️ Test steps were successfully added to case XRAY-6104
+#230 ✔️ Test steps were successfully added to case XRAY-6103
+#231 ✔️ Test steps were successfully added to case XRAY-6102
+#232 ✔️ Test steps were successfully added to case XRAY-6093
+#233 ✔️ Test steps were successfully added to case XRAY-6092
+#234 ✔️ Test steps were successfully added to case XRAY-6087
+#235 ✔️ Test steps were successfully added to case XRAY-6086
+#236 ✔️ Test steps were successfully added to case XRAY-6085
+#237 ✔️ Test steps were successfully added to case XRAY-6084
+#238 ✔️ Test steps were successfully added to case XRAY-6083
+#239 ✔️ Test steps were successfully added to case XRAY-6082
+#240 ✔️ Test steps were successfully added to case XRAY-6079
+#241 ✔️ Test steps were successfully added to case XRAY-6078
+#242 ✔️ Test steps were successfully added to case XRAY-6077
+#243 ✔️ Test steps were successfully added to case XRAY-6076
+#244 ✔️ Test steps were successfully added to case XRAY-6075
+#245 ✔️ Test steps were successfully added to case XRAY-6074
+#246 ✔️ Test steps were successfully added to case XRAY-6073
+#247 ✔️ Test steps were successfully added to case XRAY-6072
+#248 ✔️ Test steps were successfully added to case XRAY-6071
+#249 ✔️ Test steps were successfully added to case XRAY-6070
+#250 ✔️ Test steps were successfully added to case XRAY-6063
+#251 ⚠️  Test XRAY-6032 doesn't have an export file
+#252 ⚠️  Test XRAY-6031 doesn't have an export file
+#253 ⚠️  Test XRAY-6030 doesn't have an export file
+#254 ⚠️  Test XRAY-6029 doesn't have an export file
+#255 ✔️ Test steps were successfully added to case XRAY-6027
+#256 ✔️ Test steps were successfully added to case XRAY-6022
+#257 ✔️ Test steps were successfully added to case XRAY-6021
+#258 ✔️ Test steps were successfully added to case XRAY-6020
+#259 ✔️ Test steps were successfully added to case XRAY-6019
+#260 ✔️ Test steps were successfully added to case XRAY-6018
+#261 ✔️ Test steps were successfully added to case XRAY-6017
+#262 ✔️ Test steps were successfully added to case XRAY-6016
+#263 ✔️ Test steps were successfully added to case XRAY-6015
+#264 ✔️ Test steps were successfully added to case XRAY-5995
+#265 ✔️ Test steps were successfully added to case XRAY-5994
+#266 ✔️ Test steps were successfully added to case XRAY-5993
+#267 ✔️ Test steps were successfully added to case XRAY-5991
+#268 ✔️ Test steps were successfully added to case XRAY-5990
+#269 ✔️ Test steps were successfully added to case XRAY-5989
+#270 ✔️ Test steps were successfully added to case XRAY-5988
+#271 ✔️ Test steps were successfully added to case XRAY-5987
+#272 ✔️ Test steps were successfully added to case XRAY-5982
+#273 ✔️ Test steps were successfully added to case XRAY-5981
+#274 ✔️ Test steps were successfully added to case XRAY-5980
+#275 ✔️ Test steps were successfully added to case XRAY-5979
+#276 ✔️ Test steps were successfully added to case XRAY-5978
+#277 ⚠️  Test XRAY-5954 doesn't have an export file
+#278 ✔️ Test steps were successfully added to case XRAY-5938
+#279 ✔️ Test steps were successfully added to case XRAY-5937
+#280 ✔️ Test steps were successfully added to case XRAY-5936
+#281 ✔️ Test steps were successfully added to case XRAY-5935
+#282 ✔️ Test steps were successfully added to case XRAY-5934
+#283 ✔️ Test steps were successfully added to case XRAY-5933
+#284 ✔️ Test steps were successfully added to case XRAY-5932
+#285 ✔️ Test steps were successfully added to case XRAY-5931
+#286 ✔️ Test steps were successfully added to case XRAY-5930
+#287 ✔️ Test steps were successfully added to case XRAY-5929
+#288 ✔️ Test steps were successfully added to case XRAY-5928
+#289 ✔️ Test steps were successfully added to case XRAY-5927
+#290 ✔️ Test steps were successfully added to case XRAY-5925
+#291 ✔️ Test steps were successfully added to case XRAY-5924
+#292 ✔️ Test steps were successfully added to case XRAY-5923
+#293 ✔️ Test steps were successfully added to case XRAY-5922
+#294 ✔️ Test steps were successfully added to case XRAY-5921
+#295 ✔️ Test steps were successfully added to case XRAY-5920
+#296 ✔️ Test steps were successfully added to case XRAY-5916
+#297 ✔️ Test steps were successfully added to case XRAY-5915
+#298 ✔️ Test steps were successfully added to case XRAY-5914
+#299 ✔️ Test steps were successfully added to case XRAY-5913
+#300 ✔️ Test steps were successfully added to case XRAY-5912
+#301 ✔️ Test steps were successfully added to case XRAY-5911
+#302 ✔️ Test steps were successfully added to case XRAY-5910
+#303 ✔️ Test steps were successfully added to case XRAY-5907
+#304 ✔️ Test steps were successfully added to case XRAY-5899
+#305 ✔️ Test steps were successfully added to case XRAY-5898
+#306 ✔️ Test steps were successfully added to case XRAY-5897
+#307 ✔️ Test steps were successfully added to case XRAY-5896
+#308 ✔️ Test steps were successfully added to case XRAY-5894
+#309 ✔️ Test steps were successfully added to case XRAY-5893
+#310 ✔️ Test steps were successfully added to case XRAY-5892
+#311 ✔️ Test steps were successfully added to case XRAY-5891
+#312 ✔️ Test steps were successfully added to case XRAY-5890
+#313 ✔️ Test steps were successfully added to case XRAY-5889
+#314 undefined
+#315 ✔️ Test steps were successfully added to case XRAY-5887
+#316 ✔️ Test steps were successfully added to case XRAY-5886
+#317 ✔️ Test steps were successfully added to case XRAY-5885
+#318 ✔️ Test steps were successfully added to case XRAY-5884
+#319 ✔️ Test steps were successfully added to case XRAY-5883
+#320 ✔️ Test steps were successfully added to case XRAY-5882
+#321 ✔️ Test steps were successfully added to case XRAY-5881
+#322 ✔️ Test steps were successfully added to case XRAY-5877
+#323 ✔️ Test steps were successfully added to case XRAY-5876
+#324 ✔️ Test steps were successfully added to case XRAY-5874
+#325 ⚠️  Test XRAY-5872 doesn't have an export file
+#326 ✔️ Test steps were successfully added to case XRAY-5870
+#327 ✔️ Test steps were successfully added to case XRAY-5869
+#328 ✔️ Test steps were successfully added to case XRAY-5868
+#329 ✔️ Test steps were successfully added to case XRAY-5867
+#330 ✔️ Test steps were successfully added to case XRAY-5866
+#331 ✔️ Test steps were successfully added to case XRAY-5865
+#332 ✔️ Test steps were successfully added to case XRAY-5864
+#333 ✔️ Test steps were successfully added to case XRAY-5863
+#334 ✔️ Test steps were successfully added to case XRAY-5862
+#335 ✔️ Test steps were successfully added to case XRAY-5861
+#336 ✔️ Test steps were successfully added to case XRAY-5860
+#337 ✔️ Test steps were successfully added to case XRAY-5859
+#338 ✔️ Test steps were successfully added to case XRAY-5857
+#339 ✔️ Test steps were successfully added to case XRAY-5856
+#340 ✔️ Test steps were successfully added to case XRAY-5855
+#341 ✔️ Test steps were successfully added to case XRAY-5854
+#342 ✔️ Test steps were successfully added to case XRAY-5843
+#343 ✔️ Test steps were successfully added to case XRAY-5842
+#344 ✔️ Test steps were successfully added to case XRAY-5841
+#345 ✔️ Test steps were successfully added to case XRAY-5839
+#346 ✔️ Test steps were successfully added to case XRAY-5838
+#347 ✔️ Test steps were successfully added to case XRAY-5837
+#348 ✔️ Test steps were successfully added to case XRAY-5836
+#349 ✔️ Test steps were successfully added to case XRAY-5835
+#350 ✔️ Test steps were successfully added to case XRAY-5833
+#351 ✔️ Test steps were successfully added to case XRAY-5832
+#352 ✔️ Test steps were successfully added to case XRAY-5831
+#353 ❌ XRAY-5830 wasn't downloaded
+#354 ✔️ Test steps were successfully added to case XRAY-5826
+#355 ✔️ Test steps were successfully added to case XRAY-5821
+#356 ✔️ Test steps were successfully added to case XRAY-5820
+#357 ✔️ Test steps were successfully added to case XRAY-5819
+#358 ⚠️  Test XRAY-5818 doesn't have an export file
+#359 ✔️ Test steps were successfully added to case XRAY-5816
+#360 ✔️ Test steps were successfully added to case XRAY-5815
+#361 ✔️ Test steps were successfully added to case XRAY-5814
+#362 ✔️ Test steps were successfully added to case XRAY-5813
+#363 ✔️ Test steps were successfully added to case XRAY-5812
+#364 ✔️ Test steps were successfully added to case XRAY-5811
+#365 ✔️ Test steps were successfully added to case XRAY-5805
+#366 ✔️ Test steps were successfully added to case XRAY-5804
+#367 ✔️ Test steps were successfully added to case XRAY-5803
+#368 ✔️ Test steps were successfully added to case XRAY-5802
+#369 ✔️ Test steps were successfully added to case XRAY-5801
+#370 ⚠️ Validation process found 1 error(s) The validation process found some errors with the steps you wish to import.
+#371 ⚠️ Validation process found 1 error(s) The validation process found some errors with the steps you wish to import. 
+#372 ⚠️ Validation process found 1 error(s) The validation process found some errors with the steps you wish to import.
+#373 ⚠️ Validation process found 1 error(s) The validation process found some errors with the steps you wish to import. 
+#374 ✔️ Test steps were successfully added to case XRAY-5795
+#375 ✔️ Test steps were successfully added to case XRAY-5794
+#376 ✔️ Test steps were successfully added to case XRAY-5793
+#377 ✔️ Test steps were successfully added to case XRAY-5785
+#378 ✔️ Test steps were successfully added to case XRAY-5784
+#379 ✔️ Test steps were successfully added to case XRAY-5783
+#380 ✔️ Test steps were successfully added to case XRAY-5782
+#381 ✔️ Test steps were successfully added to case XRAY-5778
+#382 ✔️ Test steps were successfully added to case XRAY-5777
+#383 ✔️ Test steps were successfully added to case XRAY-5776
+#384 ✔️ Test steps were successfully added to case XRAY-5775
+#385 ✔️ Test steps were successfully added to case XRAY-5774
+#386 ✔️ Test steps were successfully added to case XRAY-5773
+#387 ✔️ Test steps were successfully added to case XRAY-5772
+#388 ✔️ Test steps were successfully added to case XRAY-5771
+#389 ✔️ Test steps were successfully added to case XRAY-5767
+#390 ✔️ Test steps were successfully added to case XRAY-5766
+#391 ✔️ Test steps were successfully added to case XRAY-5765
+#392 ✔️ Test steps were successfully added to case XRAY-5764
+#393 ✔️ Test steps were successfully added to case XRAY-5763
+#394 ✔️ Test steps were successfully added to case XRAY-5762
+#395 ✔️ Test steps were successfully added to case XRAY-5761
+#396 ✔️ Test steps were successfully added to case XRAY-5760
+#397 ✔️ Test steps were successfully added to case XRAY-5759
+#398 ✔️ Test steps were successfully added to case XRAY-5758
+#399 ✔️ Test steps were successfully added to case XRAY-5741
+#400 ✔️ Test steps were successfully added to case XRAY-5724
+#401 ✔️ Test steps were successfully added to case XRAY-5723
+#402 ✔️ Test steps were successfully added to case XRAY-5722
+#403 ✔️ Test steps were successfully added to case XRAY-5721
+#404 ✔️ Test steps were successfully added to case XRAY-5720
+#405 ✔️ Test steps were successfully added to case XRAY-5719
+#406 ✔️ Test steps were successfully added to case XRAY-5717
+#407 ✔️ Test steps were successfully added to case XRAY-5715
+#408 ✔️ Test steps were successfully added to case XRAY-5712
+#409 ✔️ Test steps were successfully added to case XRAY-5711
+#410 ✔️ Test steps were successfully added to case XRAY-5710
+#411 ✔️ Test steps were successfully added to case XRAY-5709
+#412 ✔️ Test steps were successfully added to case XRAY-5708
+#413 ✔️ Test steps were successfully added to case XRAY-5707
+#414 ✔️ Test steps were successfully added to case XRAY-5706
+#415 ✔️ Test steps were successfully added to case XRAY-5705
+#416 ✔️ Test steps were successfully added to case XRAY-5704
+#417 ✔️ Test steps were successfully added to case XRAY-5703
+#418 ✔️ Test steps were successfully added to case XRAY-5702
+#419 ✔️ Test steps were successfully added to case XRAY-5701
+#420 ✔️ Test steps were successfully added to case XRAY-5700
+#421 ✔️ Test steps were successfully added to case XRAY-5699
+#422 ✔️ Test steps were successfully added to case XRAY-5698
+#423 ✔️ Test steps were successfully added to case XRAY-5697
+#424 ✔️ Test steps were successfully added to case XRAY-5696
+#425 ✔️ Test steps were successfully added to case XRAY-5695
+#426 ✔️ Test steps were successfully added to case XRAY-5694
+#427 ✔️ Test steps were successfully added to case XRAY-5693
+#428 ✔️ Test steps were successfully added to case XRAY-5692
+#429 ✔️ Test steps were successfully added to case XRAY-5691
+#430 ✔️ Test steps were successfully added to case XRAY-5690
+#431 ✔️ Test steps were successfully added to case XRAY-5689
+#432 ✔️ Test steps were successfully added to case XRAY-5688
+#433 ✔️ Test steps were successfully added to case XRAY-5687
+#434 ✔️ Test steps were successfully added to case XRAY-5686
+#435 ✔️ Test steps were successfully added to case XRAY-5685
+#436 ✔️ Test steps were successfully added to case XRAY-5684
+#437 ✔️ Test steps were successfully added to case XRAY-5683
+#438 ✔️ Test steps were successfully added to case XRAY-5682
+#439 ✔️ Test steps were successfully added to case XRAY-5681
+#440 ✔️ Test steps were successfully added to case XRAY-5680
+#441 ✔️ Test steps were successfully added to case XRAY-5679
+#442 ✔️ Test steps were successfully added to case XRAY-5669
+#443 ✔️ Test steps were successfully added to case XRAY-5668
+#444 ✔️ Test steps were successfully added to case XRAY-5667
+#445 ✔️ Test steps were successfully added to case XRAY-5666
+#446 ✔️ Test steps were successfully added to case XRAY-5665
+#447 ✔️ Test steps were successfully added to case XRAY-5664
+#448 ✔️ Test steps were successfully added to case XRAY-5661
+#449 ✔️ Test steps were successfully added to case XRAY-5658
+#450 ✔️ Test steps were successfully added to case XRAY-5656
+#451 ✔️ Test steps were successfully added to case XRAY-5655
+#452 ✔️ Test steps were successfully added to case XRAY-5652
+#453 ✔️ Test steps were successfully added to case XRAY-5651
+#454 ✔️ Test steps were successfully added to case XRAY-5650
+#455 ✔️ Test steps were successfully added to case XRAY-5649
+#456 ✔️ Test steps were successfully added to case XRAY-5648
+#457 ✔️ Test steps were successfully added to case XRAY-5647
+#458 ✔️ Test steps were successfully added to case XRAY-5646
+#459 ✔️ Test steps were successfully added to case XRAY-5645
+#460 ✔️ Test steps were successfully added to case XRAY-5644
+#461 ✔️ Test steps were successfully added to case XRAY-5642
+#462 ✔️ Test steps were successfully added to case XRAY-5640
+#463 ⚠️  Test XRAY-5639 doesn't have an export file
+#464 ✔️ Test steps were successfully added to case XRAY-5638
+#465 ✔️ Test steps were successfully added to case XRAY-5637
+#466 ✔️ Test steps were successfully added to case XRAY-5636
+#467 ✔️ Test steps were successfully added to case XRAY-5597
+#468 ✔️ Test steps were successfully added to case XRAY-5595
+#469 ✔️ Test steps were successfully added to case XRAY-5594
+#470 ✔️ Test steps were successfully added to case XRAY-5593
+#471 ✔️ Test steps were successfully added to case XRAY-5592
+#472 ✔️ Test steps were successfully added to case XRAY-5591
+#473 ✔️ Test steps were successfully added to case XRAY-5590
+#474 ✔️ Test steps were successfully added to case XRAY-5589
+#475 ✔️ Test steps were successfully added to case XRAY-5588
+#476 ✔️ Test steps were successfully added to case XRAY-5585
+#477 ✔️ Test steps were successfully added to case XRAY-5582
+#478 ✔️ Test steps were successfully added to case XRAY-5581
+#479 ✔️ Test steps were successfully added to case XRAY-5580
+#480 ✔️ Test steps were successfully added to case XRAY-5579
+#481 ✔️ Test steps were successfully added to case XRAY-5578
+#482 ✔️ Test steps were successfully added to case XRAY-5577
+#483 ✔️ Test steps were successfully added to case XRAY-5575
+#484 ✔️ Test steps were successfully added to case XRAY-5574
+#485 ✔️ Test steps were successfully added to case XRAY-5573
+#486 ✔️ Test steps were successfully added to case XRAY-5570
+#487 ✔️ Test steps were successfully added to case XRAY-5569
+#488 ✔️ Test steps were successfully added to case XRAY-5559
+#489 ✔️ Test steps were successfully added to case XRAY-5558
+#490 ✔️ Test steps were successfully added to case XRAY-5557
+#491 ✔️ Test steps were successfully added to case XRAY-5554
+#492 ✔️ Test steps were successfully added to case XRAY-5553
+#493 ✔️ Test steps were successfully added to case XRAY-5552
+#494 ✔️ Test steps were successfully added to case XRAY-5551
+#495 ✔️ Test steps were successfully added to case XRAY-5550
+#496 ✔️ Test steps were successfully added to case XRAY-5549
+#497 ✔️ Test steps were successfully added to case XRAY-5548
+#498 ✔️ Test steps were successfully added to case XRAY-5547
+#499 ✔️ Test steps were successfully added to case XRAY-5546
+#500 ✔️ Test steps were successfully added to case XRAY-5545
+#501 ✔️ Test steps were successfully added to case XRAY-5543
+#502 ✔️ Test steps were successfully added to case XRAY-5541
+#503 ✔️ Test steps were successfully added to case XRAY-5527
+#504 ✔️ Test steps were successfully added to case XRAY-5525
+#505 ✔️ Test steps were successfully added to case XRAY-5523
+#506 ✔️ Test steps were successfully added to case XRAY-5521
+#507 ✔️ Test steps were successfully added to case XRAY-5464
+#508 ✔️ Test steps were successfully added to case XRAY-5463
+#509 ✔️ Test steps were successfully added to case XRAY-5450
+#510 ✔️ Test steps were successfully added to case XRAY-5449
+#511 ✔️ Test steps were successfully added to case XRAY-5448
+#512 ✔️ Test steps were successfully added to case XRAY-5447
+#513 ✔️ Test steps were successfully added to case XRAY-5446
+#514 ⚠️  Test XRAY-5445 doesn't have an export file
+#515 ✔️ Test steps were successfully added to case XRAY-5444
+#516 ✔️ Test steps were successfully added to case XRAY-5443
+#517 ✔️ Test steps were successfully added to case XRAY-5442
+#518 ✔️ Test steps were successfully added to case XRAY-5441
+#519 ✔️ Test steps were successfully added to case XRAY-5436
+#520 ✔️ Test steps were successfully added to case XRAY-5435
+#521 ✔️ Test steps were successfully added to case XRAY-5433
+#522 ✔️ Test steps were successfully added to case XRAY-5427
+#523 ✔️ Test steps were successfully added to case XRAY-5426
+#524 ✔️ Test steps were successfully added to case XRAY-5425
+#525 ✔️ Test steps were successfully added to case XRAY-5423
+#526 ✔️ Test steps were successfully added to case XRAY-5422
+#527 ✔️ Test steps were successfully added to case XRAY-5421
+#528 ✔️ Test steps were successfully added to case XRAY-5419
+#529 ✔️ Test steps were successfully added to case XRAY-5418
+#530 ✔️ Test steps were successfully added to case XRAY-5417
+#531 ✔️ Test steps were successfully added to case XRAY-5415
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#3 ✔️ Test steps were successfully added to case XRAY-5413
+#4 ✔️ Test steps were successfully added to case XRAY-5400
+#5 ✔️ Test steps were successfully added to case XRAY-5378
+#6 ✔️ Test steps were successfully added to case XRAY-5377
+#7 ✔️ Test steps were successfully added to case XRAY-5376
+#8 ✔️ Test steps were successfully added to case XRAY-5375
+#9 ✔️ Test steps were successfully added to case XRAY-5373
+#10 ✔️ Test steps were successfully added to case XRAY-5372
+#11 ✔️ Test steps were successfully added to case XRAY-5371
+#12 ✔️ Test steps were successfully added to case XRAY-5370
+#13 ✔️ Test steps were successfully added to case XRAY-5368
+#14 ✔️ Test steps were successfully added to case XRAY-5367
+#15 ✔️ Test steps were successfully added to case XRAY-5366
+#16 ✔️ Test steps were successfully added to case XRAY-5365
+#17 ✔️ Test steps were successfully added to case XRAY-5364
+#18 ✔️ Test steps were successfully added to case XRAY-5363
+#19 ✔️ Test steps were successfully added to case XRAY-5362
+#20 ✔️ Test steps were successfully added to case XRAY-5360
+#21 ✔️ Test steps were successfully added to case XRAY-5359
+#22 ✔️ Test steps were successfully added to case XRAY-5358
+#23 ✔️ Test steps were successfully added to case XRAY-5357
+#24 ✔️ Test steps were successfully added to case XRAY-5355
+#25 ✔️ Test steps were successfully added to case XRAY-5354
+#26 ✔️ Test steps were successfully added to case XRAY-5353
+#27 ✔️ Test steps were successfully added to case XRAY-5352
+#28 ✔️ Test steps were successfully added to case XRAY-5351
+#29 ✔️ Test steps were successfully added to case XRAY-5349
+#30 ✔️ Test steps were successfully added to case XRAY-5348
+#31 ✔️ Test steps were successfully added to case XRAY-5347
+#32 ✔️ Test steps were successfully added to case XRAY-5346
+#33 ✔️ Test steps were successfully added to case XRAY-5345
+#34 ✔️ Test steps were successfully added to case XRAY-5344
+#35 ✔️ Test steps were successfully added to case XRAY-5343
+#36 ✔️ Test steps were successfully added to case XRAY-5342
+#37 ✔️ Test steps were successfully added to case XRAY-5341
+#38 ✔️ Test steps were successfully added to case XRAY-5340
+#39 ✔️ Test steps were successfully added to case XRAY-5339
+#40 ✔️ Test steps were successfully added to case XRAY-5338
+#41 ✔️ Test steps were successfully added to case XRAY-5336
+#42 ✔️ Test steps were successfully added to case XRAY-5334
+#43 ✔️ Test steps were successfully added to case XRAY-5333
+#44 ✔️ Test steps were successfully added to case XRAY-5332
+#45 ✔️ Test steps were successfully added to case XRAY-5331
+#46 ✔️ Test steps were successfully added to case XRAY-5330
+#47 ✔️ Test steps were successfully added to case XRAY-5329
+#48 ✔️ Test steps were successfully added to case XRAY-5327
+#49 ✔️ Test steps were successfully added to case XRAY-5325
+#50 ✔️ Test steps were successfully added to case XRAY-5324
+#51 ✔️ Test steps were successfully added to case XRAY-5323
+#52 ✔️ Test steps were successfully added to case XRAY-5322
+#53 ✔️ Test steps were successfully added to case XRAY-5321
+#54 ✔️ Test steps were successfully added to case XRAY-5319
+#55 ✔️ Test steps were successfully added to case XRAY-5316
+#56 ✔️ Test steps were successfully added to case XRAY-5315
+#57 ✔️ Test steps were successfully added to case XRAY-5314
+#58 ✔️ Test steps were successfully added to case XRAY-5313
+#59 ✔️ Test steps were successfully added to case XRAY-5312
+#60 ✔️ Test steps were successfully added to case XRAY-5311
+#61 ✔️ Test steps were successfully added to case XRAY-5310
+#62 ✔️ Test steps were successfully added to case XRAY-5309
+#63 ✔️ Test steps were successfully added to case XRAY-5308
+#64 ✔️ Test steps were successfully added to case XRAY-5307
+#65 ✔️ Test steps were successfully added to case XRAY-5306
+#66 ✔️ Test steps were successfully added to case XRAY-5305
+#67 ✔️ Test steps were successfully added to case XRAY-5304
+#68 ✔️ Test steps were successfully added to case XRAY-5303
+#69 ✔️ Test steps were successfully added to case XRAY-5301
+#70 ✔️ Test steps were successfully added to case XRAY-5300
+#71 ✔️ Test steps were successfully added to case XRAY-5299
+#72 ✔️ Test steps were successfully added to case XRAY-5298
+#73 ✔️ Test steps were successfully added to case XRAY-5297
+#74 ✔️ Test steps were successfully added to case XRAY-5295
+#75 ✔️ Test steps were successfully added to case XRAY-5294
+#76 ⚠️  Test XRAY-5293 doesn't have an export file
+#77 ✔️ Test steps were successfully added to case XRAY-5292
+#78 ⚠️  Test XRAY-5291 doesn't have an export file
+#79 ✔️ Test steps were successfully added to case XRAY-5289
+#80 ✔️ Test steps were successfully added to case XRAY-5288
+#81 ✔️ Test steps were successfully added to case XRAY-5287
+#82 ✔️ Test steps were successfully added to case XRAY-5286
+#83 ✔️ Test steps were successfully added to case XRAY-5285
+#84 ✔️ Test steps were successfully added to case XRAY-5284
+#85 ✔️ Test steps were successfully added to case XRAY-5283
+#86 ✔️ Test steps were successfully added to case XRAY-5282
+#87 ✔️ Test steps were successfully added to case XRAY-5281
+#88 ✔️ Test steps were successfully added to case XRAY-5280
+#89 ⚠️  Test XRAY-5278 doesn't have an export file
+#90 ✔️ Test steps were successfully added to case XRAY-5276
+#91 ⚠️  Test XRAY-5274 doesn't have an export file
+#92 ✔️ Test steps were successfully added to case XRAY-5270
+#93 ✔️ Test steps were successfully added to case XRAY-5269
+#94 ✔️ Test steps were successfully added to case XRAY-5268
+#95 ✔️ Test steps were successfully added to case XRAY-5265
+#96 ✔️ Test steps were successfully added to case XRAY-5264
+#97 ✔️ Test steps were successfully added to case XRAY-5262
+#98 ⚠️  Test XRAY-5260 doesn't have an export file
+#99 ⚠️  Test XRAY-5258 doesn't have an export file
+#100 ✔️ Test steps were successfully added to case XRAY-5256
+#101 ✔️ Test steps were successfully added to case XRAY-5254
+#102 ✔️ Test steps were successfully added to case XRAY-5252
+#103 ⚠️  Test XRAY-5250 doesn't have an export file
+#104 ✔️ Test steps were successfully added to case XRAY-5249
+#105 ✔️ Test steps were successfully added to case XRAY-5247
+#106 ✔️ Test steps were successfully added to case XRAY-5245
+#107 ✔️ Test steps were successfully added to case XRAY-5243
+#108 ✔️ Test steps were successfully added to case XRAY-5241
+#109 ✔️ Test steps were successfully added to case XRAY-5239
+#110 ✔️ Test steps were successfully added to case XRAY-5237
+#111 ✔️ Test steps were successfully added to case XRAY-5236
+#112 ⚠️  Test XRAY-5235 doesn't have an export file
+#113 ✔️ Test steps were successfully added to case XRAY-5234
+#114 ✔️ Test steps were successfully added to case XRAY-5233
+#115 ✔️ Test steps were successfully added to case XRAY-5232
+#116 ✔️ Test steps were successfully added to case XRAY-5231
+#117 ✔️ Test steps were successfully added to case XRAY-5230
+#118 ✔️ Test steps were successfully added to case XRAY-5229
+#119 ✔️ Test steps were successfully added to case XRAY-5228
+#120 ✔️ Test steps were successfully added to case XRAY-5227
+#121 ✔️ Test steps were successfully added to case XRAY-5226
+#122 ✔️ Test steps were successfully added to case XRAY-5225
+#123 ✔️ Test steps were successfully added to case XRAY-5224
+#124 ✔️ Test steps were successfully added to case XRAY-5223
+#125 ✔️ Test steps were successfully added to case XRAY-5222
+#126 ✔️ Test steps were successfully added to case XRAY-5221
+#127 ✔️ Test steps were successfully added to case XRAY-5220
+#128 ✔️ Test steps were successfully added to case XRAY-5219
+#129 ✔️ Test steps were successfully added to case XRAY-5218
+#130 ✔️ Test steps were successfully added to case XRAY-5216
+#131 ✔️ Test steps were successfully added to case XRAY-5214
+#132 ✔️ Test steps were successfully added to case XRAY-5213
+#133 ✔️ Test steps were successfully added to case XRAY-5210
+#134 ✔️ Test steps were successfully added to case XRAY-5209
+#135 ✔️ Test steps were successfully added to case XRAY-5199
+#136 ✔️ Test steps were successfully added to case XRAY-5198
+#137 ✔️ Test steps were successfully added to case XRAY-5197
+#138 ✔️ Test steps were successfully added to case XRAY-5196
+#139 ✔️ Test steps were successfully added to case XRAY-5195
+#140 ✔️ Test steps were successfully added to case XRAY-5194
+#141 ✔️ Test steps were successfully added to case XRAY-5188
+#142 ✔️ Test steps were successfully added to case XRAY-5187
+#143 ✔️ Test steps were successfully added to case XRAY-5186
+#144 ✔️ Test steps were successfully added to case XRAY-5185
+#145 ✔️ Test steps were successfully added to case XRAY-5184
+#146 ✔️ Test steps were successfully added to case XRAY-5165
+#147 ✔️ Test steps were successfully added to case XRAY-5163
+#148 ✔️ Test steps were successfully added to case XRAY-5161
+#149 ⚠️  Test XRAY-5130 doesn't have an export file
+#150 ✔️ Test steps were successfully added to case XRAY-5117
+#151 ✔️ Test steps were successfully added to case XRAY-5115
+#152 ✔️ Test steps were successfully added to case XRAY-5097
+#153 ⚠️  Test XRAY-5096 doesn't have an export file
+#154 ✔️ Test steps were successfully added to case XRAY-5095
+#155 ✔️ Test steps were successfully added to case XRAY-5092
+#156 ✔️ Test steps were successfully added to case XRAY-5057
+#157 ✔️ Test steps were successfully added to case XRAY-5020
+#158 ⚠️  Test XRAY-4971 doesn't have an export file
+#159 ✔️ Test steps were successfully added to case XRAY-4904
+#160 ⚠️  Test XRAY-4861 doesn't have an export file
+#161 ✔️ Test steps were successfully added to case XRAY-4797
+#162 ✔️ Test steps were successfully added to case XRAY-4760
+#163 ✔️ Test steps were successfully added to case XRAY-4756
+#164 ✔️ Test steps were successfully added to case XRAY-4721
+#165 ✔️ Test steps were successfully added to case XRAY-4716
+#166 ✔️ Test steps were successfully added to case XRAY-4666
+#167 ✔️ Test steps were successfully added to case XRAY-4663
+#168 ✔️ Test steps were successfully added to case XRAY-4630
+#169 ✔️ Test steps were successfully added to case XRAY-4629
+#170 ✔️ Test steps were successfully added to case XRAY-4628
+#171 ✔️ Test steps were successfully added to case XRAY-4627
+#172 ✔️ Test steps were successfully added to case XRAY-4626
+#173 ✔️ Test steps were successfully added to case XRAY-4602
+#174 ✔️ Test steps were successfully added to case XRAY-4592
+#175 ✔️ Test steps were successfully added to case XRAY-4574
+#176 ✔️ Test steps were successfully added to case XRAY-4573
+#177 ✔️ Test steps were successfully added to case XRAY-4572
+#178 ✔️ Test steps were successfully added to case XRAY-4571
+#179 ✔️ Test steps were successfully added to case XRAY-4570
+#180 ✔️ Test steps were successfully added to case XRAY-4569
+#181 ✔️ Test steps were successfully added to case XRAY-4568
+#182 ✔️ Test steps were successfully added to case XRAY-4533
+#183 ✔️ Test steps were successfully added to case XRAY-4531
+#184 ✔️ Test steps were successfully added to case XRAY-4530
+#185 ✔️ Test steps were successfully added to case XRAY-4529
+#186 ✔️ Test steps were successfully added to case XRAY-4528
+#187 ✔️ Test steps were successfully added to case XRAY-4526
+#188 ✔️ Test steps were successfully added to case XRAY-4525
+#189 ✔️ Test steps were successfully added to case XRAY-4524
+#190 ✔️ Test steps were successfully added to case XRAY-4523
+#191 ✔️ Test steps were successfully added to case XRAY-4522
+#192 ✔️ Test steps were successfully added to case XRAY-4521
+#193 ✔️ Test steps were successfully added to case XRAY-4520
+#194 ✔️ Test steps were successfully added to case XRAY-4518
+#195 ✔️ Test steps were successfully added to case XRAY-4487
+#196 ✔️ Test steps were successfully added to case XRAY-4486
+#197 ✔️ Test steps were successfully added to case XRAY-4484
+#198 ✔️ Test steps were successfully added to case XRAY-4430
+#199 ✔️ Test steps were successfully added to case XRAY-4379
+#200 ✔️ Test steps were successfully added to case XRAY-4372
+#201 ✔️ Test steps were successfully added to case XRAY-4369
+#202 ✔️ Test steps were successfully added to case XRAY-4368
+#203 ✔️ Test steps were successfully added to case XRAY-4347
+#204 ✔️ Test steps were successfully added to case XRAY-4336
+#205 ✔️ Test steps were successfully added to case XRAY-4335
+#206 ✔️ Test steps were successfully added to case XRAY-4303
+#207 ✔️ Test steps were successfully added to case XRAY-4301
+#208 ✔️ Test steps were successfully added to case XRAY-4297
+#209 ✔️ Test steps were successfully added to case XRAY-4274
+#210 ⚠️  Test XRAY-4193 doesn't have an export file
+#211 ✔️ Test steps were successfully added to case XRAY-4147
+#212 ✔️ Test steps were successfully added to case XRAY-4146
+#213 ✔️ Test steps were successfully added to case XRAY-4145
+#214 ✔️ Test steps were successfully added to case XRAY-4144
+#215 ✔️ Test steps were successfully added to case XRAY-4143
+#216 ✔️ Test steps were successfully added to case XRAY-4121
+#217 ✔️ Test steps were successfully added to case XRAY-4111

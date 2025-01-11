@@ -1,0 +1,21 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test HomePage.spec.js --project=chromium --headed",
+    "test register": "npx playwright test Register.spec.js --project=chromium --headed",
+    "test login": "npx playwright test Login.spec.js --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

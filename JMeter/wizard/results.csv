@@ -1,0 +1,80 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec,,
+Soap Request,1307,12719,9208,30025,38789,71171,187,75107,0.84%,8.29446,7.22,22.88,,
+TOTAL,1307,12719,9208,30025,38789,71171,187,75107,0.84%,8.29446,7.22,22.88,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,failureMessage,bytes,grpThreads,allThreads,Latency,SampleCount,ErrorCount,Hostname
+1.58E+12,12003,Soap Request,200,OK,Number of Users 1-185,TRUE,,874,162,162,12003,1,0,WebLoad1
+1.58E+12,12285,Soap Request,200,OK,Number of Users 1-129,TRUE,,874,162,162,12285,1,0,WebLoad1
+1.58E+12,12294,Soap Request,200,OK,Number of Users 1-89,TRUE,,874,162,162,12294,1,0,WebLoad1
+1.58E+12,12542,Soap Request,200,OK,Number of Users 1-184,TRUE,,874,162,162,12542,1,0,WebLoad1
+1.58E+12,16064,Soap Request,200,OK,Number of Users 1-177,TRUE,,874,162,162,16064,1,0,WebLoad1
+1.58E+12,12450,Soap Request,200,OK,Number of Users 1-125,TRUE,,874,162,162,12450,1,0,WebLoad1
+1.58E+12,11615,Soap Request,200,OK,Number of Users 1-186,TRUE,,874,162,162,11615,1,0,WebLoad1
+1.58E+12,12022,Soap Request,200,OK,Number of Users 1-91,TRUE,,880,167,167,12022,1,0,WebLoad1
+1.58E+12,21016,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-119,FALSE,,2713,174,174,0,1,1,WebLoad1
+1.58E+12,21016,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-121,FALSE,,2713,174,174,0,1,1,WebLoad1
+1.58E+12,21013,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-183,FALSE,,2713,178,178,0,1,1,WebLoad1
+1.58E+12,23572,Soap Request,200,OK,Number of Users 1-171,TRUE,,874,189,189,23572,1,0,WebLoad1
+1.58E+12,23043,Soap Request,200,OK,Number of Users 1-92,TRUE,,874,189,189,23043,1,0,WebLoad1
+1.58E+12,22997,Soap Request,200,OK,Number of Users 1-102,TRUE,,880,189,189,22997,1,0,WebLoad1
+1.58E+12,23052,Soap Request,200,OK,Number of Users 1-133,TRUE,,874,189,189,23052,1,0,WebLoad1
+1.58E+12,23599,Soap Request,200,OK,Number of Users 1-168,TRUE,,874,189,189,23599,1,0,WebLoad1
+1.58E+12,23580,Soap Request,200,OK,Number of Users 1-148,TRUE,,874,189,189,23580,1,0,WebLoad1
+1.58E+12,23122,Soap Request,200,OK,Number of Users 1-72,TRUE,,874,189,189,23122,1,0,WebLoad1
+1.58E+12,23124,Soap Request,200,OK,Number of Users 1-113,TRUE,,874,189,189,23124,1,0,WebLoad1
+1.58E+12,23595,Soap Request,200,OK,Number of Users 1-85,TRUE,,874,189,189,23595,1,0,WebLoad1
+1.58E+12,23633,Soap Request,200,OK,Number of Users 1-128,TRUE,,874,189,189,23633,1,0,WebLoad1
+1.58E+12,27532,Soap Request,200,OK,Number of Users 1-181,TRUE,,874,189,189,27532,1,0,WebLoad1
+1.58E+12,23636,Soap Request,200,OK,Number of Users 1-83,TRUE,,874,189,189,23636,1,0,WebLoad1
+1.58E+12,23644,Soap Request,200,OK,Number of Users 1-167,TRUE,,874,189,189,23644,1,0,WebLoad1
+1.58E+12,23636,Soap Request,200,OK,Number of Users 1-150,TRUE,,874,189,189,23636,1,0,WebLoad1
+1.58E+12,24082,Soap Request,200,OK,Number of Users 1-188,TRUE,,874,189,189,24082,1,0,WebLoad1
+1.58E+12,23648,Soap Request,200,OK,Number of Users 1-170,TRUE,,874,189,189,23648,1,0,WebLoad1
+1.58E+12,23099,Soap Request,200,OK,Number of Users 1-190,TRUE,,874,189,189,23099,1,0,WebLoad1
+1.58E+12,23142,Soap Request,200,OK,Number of Users 1-130,TRUE,,874,189,189,23141,1,0,WebLoad1
+1.58E+12,23142,Soap Request,200,OK,Number of Users 1-114,TRUE,,874,189,189,23142,1,0,WebLoad1
+1.58E+12,24585,Soap Request,200,OK,Number of Users 1-187,TRUE,,874,189,189,24585,1,0,WebLoad1
+1.58E+12,23126,Soap Request,200,OK,Number of Users 1-77,TRUE,,880,189,189,23126,1,0,WebLoad1
+1.58E+12,23217,Soap Request,200,OK,Number of Users 1-84,TRUE,,874,190,190,23217,1,0,WebLoad1
+1.58E+12,23408,Soap Request,200,OK,Number of Users 1-172,TRUE,,874,190,190,23408,1,0,WebLoad1
+1.58E+12,23470,Soap Request,200,OK,Number of Users 1-134,TRUE,,874,190,190,23470,1,0,WebLoad1
+1.58E+12,22639,Soap Request,200,OK,Number of Users 1-155,TRUE,,874,190,190,22639,1,0,WebLoad1
+1.58E+12,22647,Soap Request,200,OK,Number of Users 1-108,TRUE,,874,190,190,22647,1,0,WebLoad1
+1.58E+12,24198,Soap Request,200,OK,Number of Users 1-169,TRUE,,874,190,190,24198,1,0,WebLoad1
+1.58E+12,22748,Soap Request,200,OK,Number of Users 1-103,TRUE,,874,190,190,22748,1,0,WebLoad1
+1.58E+12,23486,Soap Request,200,OK,Number of Users 1-154,TRUE,,874,191,191,23486,1,0,WebLoad1
+1.58E+12,22720,Soap Request,200,OK,Number of Users 1-192,TRUE,,874,191,191,22720,1,0,WebLoad1
+1.58E+12,23712,Soap Request,200,OK,Number of Users 1-76,TRUE,,874,191,191,23712,1,0,WebLoad1
+1.58E+12,22779,Soap Request,200,OK,Number of Users 1-156,TRUE,,874,191,191,22779,1,0,WebLoad1
+1.58E+12,22808,Soap Request,200,OK,Number of Users 1-157,TRUE,,874,191,191,22808,1,0,WebLoad1
+1.58E+12,22734,Soap Request,200,OK,Number of Users 1-64,TRUE,,874,191,191,22734,1,0,WebLoad1
+1.58E+12,21001,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-203,FALSE,,2713,198,198,0,1,1,WebLoad1
+1.58E+12,28925,Soap Request,200,OK,Number of Users 1-115,TRUE,,874,205,205,28925,1,0,WebLoad1
+1.58E+12,28814,Soap Request,200,OK,Number of Users 1-105,TRUE,,874,205,205,28814,1,0,WebLoad1
+1.58E+12,29001,Soap Request,200,OK,Number of Users 1-194,TRUE,,874,205,205,29001,1,0,WebLoad1
+1.58E+12,28919,Soap Request,200,OK,Number of Users 1-104,TRUE,,874,205,205,28919,1,0,WebLoad1
+1.58E+12,29505,Soap Request,200,OK,Number of Users 1-193,TRUE,,874,205,205,29505,1,0,WebLoad1
+1.58E+12,28908,Soap Request,200,OK,Number of Users 1-118,TRUE,,874,205,205,28908,1,0,WebLoad1
+1.58E+12,28930,Soap Request,200,OK,Number of Users 1-158,TRUE,,874,205,205,28930,1,0,WebLoad1
+1.58E+12,29995,Soap Request,200,OK,Number of Users 1-174,TRUE,,874,205,205,29995,1,0,WebLoad1
+1.58E+12,38581,Soap Request,200,OK,Number of Users 1-175,TRUE,,874,205,205,38581,1,0,WebLoad1
+1.58E+12,30042,Soap Request,200,OK,Number of Users 1-53,TRUE,,874,205,205,30042,1,0,WebLoad1
+1.58E+12,30039,Soap Request,200,OK,Number of Users 1-86,TRUE,,874,204,204,30039,1,0,WebLoad1
+1.58E+12,28954,Soap Request,200,OK,Number of Users 1-37,TRUE,,874,204,204,28954,1,0,WebLoad1
+1.58E+12,28965,Soap Request,200,OK,Number of Users 1-60,TRUE,,874,203,203,28965,1,0,WebLoad1
+1.58E+12,28945,Soap Request,200,OK,Number of Users 1-149,TRUE,,874,203,203,28945,1,0,WebLoad1
+1.58E+12,30025,Soap Request,200,OK,Number of Users 1-38,TRUE,,874,203,203,30025,1,0,WebLoad1
+1.58E+12,29059,Soap Request,200,OK,Number of Users 1-137,TRUE,,874,202,202,29059,1,0,WebLoad1
+1.58E+12,30055,Soap Request,200,OK,Number of Users 1-106,TRUE,,874,202,202,30055,1,0,WebLoad1
+1.58E+12,30089,Soap Request,200,OK,Number of Users 1-135,TRUE,,874,202,202,30089,1,0,WebLoad1
+1.58E+12,29081,Soap Request,200,OK,Number of Users 1-101,TRUE,,874,202,202,29081,1,0,WebLoad1
+1.58E+12,20997,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-218,FALSE,,2713,210,210,0,1,1,WebLoad1
+1.58E+12,21027,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-119,FALSE,,2713,209,209,0,1,1,WebLoad1
+1.58E+12,21009,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-121,FALSE,,2713,208,208,0,1,1,WebLoad1
+1.58E+12,21019,Soap Request,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to 10.10.123.6:8011 [/10.10.123.6] failed: Connection timed out: connect,Number of Users 1-221,FALSE,,2713,207,207,0,1,1,WebLoad1
+1.58E+12,73572,Soap Request,200,OK,Number of Users 1-32,TRUE,,874,206,206,73572,1,0,WebLoad1
+1.58E+12,35029,Soap Request,200,OK,Number of Users 1-52,TRUE,,874,205,205,35029,1,0,WebLoad1
+1.58E+12,74632,Soap Request,200,OK,Number of Users 1-80,TRUE,,874,204,204,74632,1,0,WebLoad1
+1.58E+12,73601,Soap Request,200,OK,Number of Users 1-73,TRUE,,874,203,203,73601,1,0,WebLoad1
+1.58E+12,33867,Soap Request,200,OK,Number of Users 1-178,TRUE,,874,202,202,33867,1,0,WebLoad1

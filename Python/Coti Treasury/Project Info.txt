@@ -1,0 +1,39 @@
+Initialize project:
+~~~~~~~~~~~~~~~~~~~
+python -m venv env
+env\Scripts\activate
+python -m pip install --upgrade pip
+pip install selenium webdriver-manager pytest pytest-html pytest-xdist openpyxl urllib3 setuptools undetected-chromedriver
+pip list
+
+
+Run Commands:
+~~~~~~~~~~~~~
+run everything: pytest 
+run a single test: pytest -v -s Tests/test_ConnectAccount.py --browser chrome --keep-open
+run parallel tests (use backup browser): pytest -v -s -n=4 Tests/test_ConnectAccount.py
+Generate HTML reports: pytest -v -s --capture sys --html=Reports\report.html Tests/test_ConnectAccount.py
+run sanity and regression tests: pytest -v -s -m "sanity and regression" Tests/
+run sanity tests: pytest -v -s -m "sanity" Tests/ --browser chrome
+
+
+Chromedriver
+~~~~~~~~~~~~
+For a backup driver, download the current chromedriver from: https://googlechromelabs.github.io/chrome-for-testing
+Unzip and place inside TestData folder
+
+
+MetaMask Extension
+~~~~~~~~~~~~~~~~~~
+Download the extension from: https://github.com/metamask/metamask-extension/releases
+Unzip and place inside TestData folder
+
+
+Notes:
+~~~~~~
+In order to automate MetaMask window, we have to disable "scuttleGlobalThis" at "runtime-lavamoat.js" inside the extension folder
+Change "scuttleGlobalThis":{"enabled":true -> "scuttleGlobalThis":{"enabled":false
+
+Solving this error:
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector
+E from javascript error: LavaMoat - property "Window" of globalThis is inaccessible under scuttling mode.

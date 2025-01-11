@@ -1,0 +1,5 @@
+1) npm install -g oxygen-cli
+
+2) cd C:\Program Files\nodejs\node_modules\oxygen-cli
+
+3) cls && node build\lib\cli "C:\Users\Path-to-Script\test.js"

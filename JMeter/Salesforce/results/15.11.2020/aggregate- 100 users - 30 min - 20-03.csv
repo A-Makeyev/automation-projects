@@ -1,0 +1,103 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+01.01. /welcome,3276,178,114,333,353,426,86,5462,0.000%,1.81973,9.57,0.63
+01.02 /login-messages/promos.html-232,3275,236,247,322,344,2167,60,5024,0.000%,1.81958,6.43,0.88
+01. Login Screen,3275,415,383,605,649,2459,150,5747,0.000%,1.81911,15.99,1.51
+02.01 Login Details,3231,902,926,1165,1934,3031,458,4250,0.000%,1.79961,16.35,11.14
+02.02 /one/one.app-251,3228,878,709,1000,2461,2921,553,6087,0.000%,1.80035,149.55,13.74
+02.03 /visualforce/recsession-255,3227,457,331,451,1981,2469,278,6150,0.000%,1.80042,139.81,3.88
+/aura?preloadActions-257,3226,383,299,364,604,2099,242,3758,0.000%,1.80021,38.93,3.27
+02. Login,3226,2622,2299,4161,4446,5723,1650,9687,0.000%,1.79762,344.13,31.98
+/aura?r=0&ui-flexipage-components-page.FlexipageControllerV2.getPage=1-262,3198,244,186,384,423,1983,144,3440,0.000%,1.79588,27.95,3.86
+/aura?r=2&ui-force-components-controllers-hostConfig.HostConfig.getConfigData=1-264,3198,136,113,142,170,379,98,2186,0.000%,1.79595,22.97,3.81
+/aura?r=1&ui-force-components-controllers-empApi.EmpApi.getEmpConfig=1&ui-global-components-one-consoleLayoutContainer.ConsoleLayout.getConsoleState=2&ui-global-components-one-favorites.Favorites.getFavorites=1&ui-global-components-one-header.Header.getSettings=1&ui-global-components-one-systemMessage.SystemMessage.getSystemMessages=1&ui-notifications-components-notifications-controller.Notifications.getInitializationValues=1-263,3197,199,175,207,232,567,146,2299,0.000%,1.79532,5.58,7.32
+/aura?r=3&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1-266,3197,151,129,160,181,416,111,2106,0.000%,1.79537,3.75,3.99
+/cs127/auraCmpDef-265,100,444,446,469,495,515,393,561,0.000%,1.69601,202.68,6.13
+/aura?r=4&ui-force-components-controllers-lists-listViewManager.ListViewManager.getMetadataInitialLoad=1-267,3197,206,179,210,232,1858,146,2172,0.000%,1.79585,3.84,4.19
+/auraCmpDef-268,3197,108,91,118,154,300,80,2076,0.000%,1.79600,2.82,1.96
+/aura?r=5&ui-force-components-controllers-socialPhoto.SocialPhoto.resolvePhotos=1-269,3197,116,95,118,135,320,84,2210,0.000%,1.79607,3.30,3.96
+/auraCmpDef-270,3197,114,91,124,151,326,80,2759,0.000%,1.79608,2.43,1.94
+/aura?r=6&ui-force-components-controllers-lists-listViewDataManager.ListViewDataManager.getItems=1&ui-force-components-virtualRecordList.VirtualRecordList.getRecordLayoutComponent=1-272,3197,207,172,207,230,1939,148,2825,0.000%,1.79605,10.84,5.37
+/aura?r=7&ui-global-components-one-actionsManager.ActionsManager.handleAction=1-273,3197,150,120,146,172,1863,105,2850,0.000%,1.79609,4.02,4.41
+/aura?r=8&ui-search-components-forcesearch-sgdp.ScopesCache.getScopeMaps=1-274,3197,149,124,153,173,1391,107,2226,0.000%,1.79609,3.56,3.86
+/aura?r=9&ui-liveagent-components-aura-controller.ChatConfig.getChatConfiguration=1&ui-liveagent-components-aura-controller.Status.getStatuses=1-275,3197,155,129,156,183,1339,111,2853,0.000%,1.79607,3.31,4.33
+/aura?r=10&ui-liveagent-components-aura-controller.OmniWidget.getDeclineReasons=1&ui-liveagent-components-aura-controller.OmniWidget.getSCRTInfo=1&ui-liveagent-components-aura-controller.OmniWidget.isDeclineReasonEnabled=1-276,3197,185,154,190,214,1867,132,2626,0.000%,1.79617,3.74,4.85
+/chat/rest/console-277,100,300,290,312,349,469,281,494,0.000%,1.70838,0.82,0.98
+/_nc_external/system/security/session/SessionTimeServlet-278,100,82,80,95,97,125,71,133,0.000%,1.71550,1.60,1.60
+/aura?r=11&ui-force-components-controllers-defenseHook.DefenseHook.getDefenseHook=1&ui-global-components-one-globalCreate.GlobalCreate.getDockableActionsList=1&ui-global-components-one-onboardingManager.OnboardingManager.getPayload=1&ui-global-components-one-unsupportedContainer.UnsupportedContainer.getSettings=1&ui-global-components-one-userProfileCard.UserProfileCard.loadProfileCardInfo=1&ui-identity-components-sessiontimeoutwarn.SessionTimeoutWarn.getSessionTimeoutConfig=1&ui-notifications-components-notifications-controller.Notifications.getNotifications=1&ui-rtc-components-aura-components.RtcDiscoveryBanner.getConfig=1&ui-search-components-forcesearch-sgdp.PermsAndPrefsCache.getPermsAndPrefs=1&ui-support-components-crossFrameApiManager.CrossFrameApiManager.getIsLightningOpenCtiUser=1-279,3197,187,150,186,211,1897,127,3402,0.000%,1.79661,4.16,9.71
+/cometd/40.0-283,3197,104,78,104,125,1205,71,2036,0.063%,1.79669,2.34,2.50
+/cometd/40.0-291,3195,107,87,112,128,321,78,2197,0.000%,1.79555,2.01,2.64
+/cometd/40.0-292,3195,89,75,96,111,219,69,2170,0.000%,1.79558,1.80,2.55
+/cometd/40.0-297,3195,101,86,110,126,196,77,2167,0.000%,1.79557,2.01,2.62
+/aura?r=15&ui-setup-components-aura-components-gear.Gear.getPermissions=1-284,3195,117,97,124,143,370,84,2066,0.000%,1.79555,3.21,3.78
+/aura?r=14&ui-setup-components-aura-components-gear.Gear.getGearSetupApps=1-281,3195,155,126,155,180,1829,111,2785,0.000%,1.79553,3.37,3.86
+/auraCmpDef-288,3195,119,93,127,186,1082,81,2254,0.000%,1.79556,11.07,1.93
+/aura?r=12&ui-instrumentation-components-beacon.InstrumentationBeacon.sendData=1-282,3194,246,195,277,319,2053,150,2562,0.000%,1.79503,3.22,184.46
+/aura?r=13&ui-search-components-forcesearch-sgdp.ScopesCache.getScopeMaps=1-280,3194,411,353,416,473,2158,288,2788,0.000%,1.79494,5.44,3.84
+/auraCmpDef-290,3194,125,92,131,162,1885,80,2293,0.000%,1.79522,3.55,1.94
+/aura?r=16&ui-setup-components-aura-components-gear.Gear.getEntitySupport=1-289,3194,184,154,190,212,1876,130,2637,0.000%,1.79525,5.14,3.78
+/chat/rest/cdm-293,3194,833,691,916,2508,2700,285,5723,0.000%,1.79476,8.88,2.19
+/cs127/auraCmpDef-295,100,72,70,80,89,107,62,211,0.000%,1.71963,37.11,1.30
+/_/ContentDomainCSPNoAuth?type=lightning-298,3194,250,289,353,391,2147,71,4958,0.000%,1.79545,0.53,3.79
+/aura?r=17&ui-force-components-controllers-platformStateManager.PlatformStateManager.getActionOverrides=1&ui-force-components-controllers-platformStateManager.PlatformStateManager.getIsLWCFlexipageEnabled=1&ui-force-components-controllers-platformStateManager.PlatformStateManager.getKeyPrefixesWithRecordTypes=1-299,3194,264,199,259,384,2075,165,5495,0.000%,1.79560,17.85,121.11
+/aura?r=18&ui-opencti-components-openCtiApiHandler.OpenCtiApiHandler.getHVSConfig=1&ui-opencti-components-openCtiApiHandler.OpenCtiApiHandler.isRecordActionEnabled=1-300,3194,122,94,119,137,1840,84,2989,0.000%,1.79571,3.05,4.36
+/aura?r=20&ui-force-components-controllers-platformStateManager.PlatformStateManager.getFlexipageInfo=1-302,3194,142,116,143,163,1419,102,3420,0.000%,1.79569,3.47,4.85
+/aura?r=21&ui-force-components-controllers-platformStateManager.PlatformStateManager.getFlexipageInfo=1-303,3194,146,116,143,164,1881,100,2146,0.000%,1.79569,3.47,4.85
+/aura?r=22&ui-force-components-controllers-platformStateManager.PlatformStateManager.getFlexipageInfo=1-304,3194,145,116,144,169,1846,101,2805,0.000%,1.79570,3.47,4.85
+/aura?r=23&ui-global-components-one-systemMessage.SystemMessage.getSystemMessages=1-305,3194,128,97,122,142,1873,86,2244,0.000%,1.79572,3.00,3.82
+/aura?r=19&ui-opencti-components-openCtiApiHandler.OpenCtiApiHandler.getSoftphoneConfig=1-301,3194,480,357,561,1953,2273,290,2839,0.000%,1.79548,94.31,3.79
+/aura?r=24&ui-opencti-components-openCtiApiHandler.OpenCtiApiHandler.getSoftphoneConfig=1-306,3194,481,355,537,1970,2262,286,3724,0.000%,1.79549,94.31,3.79
+/apex/ctipage-307,3194,927,789,1175,2591,2891,530,4171,0.000%,1.79525,16.81,12.09
+03. Home Screen - Customers,3196,8024,8242,9384,10703,12501,2066,14457,0.063%,1.78884,400.90,445.39
+/aura?r=25&ui-search-components-forcesearch-sgdp.MRUCache.getGlobalMrus=1-311,3190,528,442,663,729,2259,341,3833,0.000%,1.79986,6.68,3.83
+/aura?r=26&ui-search-components-forcesearch-experiment.Experiment.startExperiment=1&ui-search-components-forcesearch-typeaheaddataprovider.TypeAheadDataProvider.getTypeaheadItems=1-313,3190,270,224,282,333,1961,174,2761,0.000%,1.80009,3.78,8.03
+/aura?r=27&ui-instrumentation-components-beacon.InstrumentationBeacon.sendData=1-314,3190,207,159,291,326,1829,130,2214,0.000%,1.80027,3.23,143.96
+/apex/ctipage-315,3190,214,150,377,408,792,116,2317,0.000%,1.80030,5.48,1.56
+/visualforce/recsession-317,3190,258,221,269,308,1980,192,2554,0.000%,1.80021,6.78,3.58
+/aura?r=28&ui-federated-search-components-federatedsearch-externalscopeslistdataprovider.ExternalScopesListDataProvider.getScopeMaps=1-319,3190,125,104,129,149,358,91,3542,0.000%,1.80034,3.00,4.00
+/apex/ctipage-320,3190,162,136,169,194,662,114,2426,0.000%,1.80030,5.48,1.56
+/aura?r=29&ui-search-components-forcesearch-topresultsdataprovider.TopResultsDataProvider.getItems=1-321,3189,424,380,459,531,2058,282,3240,0.000%,1.80249,6.46,9.55
+/resource/1604338975000/softphone_it__jquery-328,3189,123,84,129,328,716,72,2151,0.000%,1.80284,2.98,1.67
+/resource/1604339094000/sfdcLogger-331,100,83,81,92,97,123,73,131,0.000%,1.73406,1.35,1.38
+/resource/1604339094000/iwsprescript-330,100,82,80,88,94,125,74,149,0.000%,1.73461,4.48,1.39
+/resource/1604338975000/softphone_it__softphone_connector_core-329,3189,101,83,112,164,311,71,2160,0.000%,1.80376,2.76,1.54
+/resource/1604339094000/iwsstyle-332,100,83,81,90,98,146,74,151,0.000%,1.73491,2.52,1.41
+/aura?r=30&ui-force-components-controllers-lists-listViewManagerGrid.ListViewManagerGrid.getRecordLayoutComponent=1-333,3189,177,151,188,210,1225,128,2348,0.000%,1.80387,8.15,6.38
+/aura?r=31&ui-force-components-controllers-lists-listViewManagerGrid.ListViewManagerGrid.getRecordLayoutComponent=1-334,3189,178,158,189,212,436,134,2306,0.000%,1.80386,8.48,6.38
+/aura?r=32&ui-search-components-forcesearch-sgdp.ScopesCache.getScopeMaps=1-336,3189,186,166,199,217,451,139,2132,0.000%,1.80382,4.56,5.73
+/aura?r=33&ui-instrumentation-components-beacon.InstrumentationBeacon.sendData=1-337,3189,232,194,264,313,1916,159,2532,0.000%,1.80386,3.24,234.82
+/visualforce/session-340,3189,399,400,610,683,2295,158,2638,0.000%,1.80365,5.96,3.49
+/visualforce/session-341,3189,208,178,215,245,1897,155,2657,0.000%,1.80365,3.66,4.01
+/aura?r=34&ui-force-components-controllers-platformStateManager.PlatformStateManager.getFlexipageInfo=1-342,3189,140,117,142,169,398,102,2274,0.000%,1.80370,3.49,6.54
+/visualforce/recsession-343,3189,94,82,101,114,206,71,1989,0.000%,1.80374,1.03,1.55
+/visualforce/recsession-344,3189,90,81,99,111,193,71,1971,0.000%,1.80373,1.06,1.58
+/resource/1604913866000/iwsscript-349,100,83,80,90,111,133,73,219,0.000%,1.73286,5.96,1.38
+/resource/1604853796000/iwsutil-351,100,81,79,90,92,103,74,109,0.000%,1.73313,7.11,1.38
+/resource/1604339094000/wdeintegration-350,100,82,80,89,93,133,73,192,0.000%,1.73310,2.13,1.39
+/resource/1604339094000/logo_softphone-353,100,84,82,90,98,121,76,122,0.000%,1.73310,36.61,1.41
+/resource/1604339094000/iwsconfig-352,100,84,78,89,117,219,73,274,0.000%,1.73340,3.04,1.38
+04. Search Customer,3189,4146,3800,5593,5835,6398,2976,8366,0.000%,1.79922,88.20,449.30
+/aura?r=35&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1-357,3187,189,153,351,376,484,122,2430,0.000%,1.81856,3.92,5.74
+/aura?r=38&aura.RecordUi.getObjectInfo=1-360,3187,129,118,141,160,243,101,2292,0.000%,1.81861,14.99,5.38
+/aura?r=37&aura.DynamicComponent.getTemplateDescriptorWithExpansionBundle=1-359,3187,191,179,209,228,393,149,2086,0.000%,1.81853,9.89,5.96
+/aura?r=36&aura.DynamicComponent.getTemplateDescriptorWithExpansionBundle=1-358,3187,309,283,332,362,776,237,2436,0.000%,1.81841,14.44,5.95
+/cs127/auraCmpDef-361,100,73,70,89,91,94,59,107,0.000%,1.74350,9.23,1.39
+/cs127/auraCmpDef-362,100,67,66,75,78,88,56,102,0.000%,1.74395,3.54,1.34
+/aura?r=39&aura.RecordUi.getRecordWithFields=1-363,3187,166,151,177,198,365,129,2289,0.000%,1.81903,3.93,5.93
+/aura?r=40&aura.Actions.getRecordActions=1-364,3187,179,160,189,209,462,136,2550,0.000%,1.81902,4.49,5.48
+/aura?r=41&aura.RecordUi.getRecordWithFields=1-365,3187,152,135,157,177,363,115,2298,0.000%,1.81904,3.64,5.65
+/aura?r=43&aura.ApexAction.execute=1-367,3187,145,130,152,169,327,114,2058,0.000%,1.81905,3.27,5.74
+/aura?r=42&aura.ApexAction.execute=1-366,3187,227,200,248,272,1434,165,2165,0.000%,1.81897,3.27,5.72
+/auraCmpDef-369,3187,107,92,115,156,309,81,2078,0.000%,1.81925,2.50,2.05
+/aura?r=46&ui-global-components-one-workspaceTabWrapper.WorkspaceTabWrapper.getThemeForEntityApiName=1-372,3187,109,94,114,129,303,84,2120,0.000%,1.81935,3.19,4.21
+/auraCmpDef-373,100,96,93,102,105,163,86,190,0.000%,1.74908,4.68,1.94
+/aura?r=44&aura.ApexAction.execute=1-368,3187,616,564,668,770,2258,483,3671,0.000%,1.81899,4.87,5.77
+/aura?r=48&aura.ApexAction.execute=1-375,3187,611,552,666,796,2237,472,3330,0.000%,1.81914,3.54,4.16
+/aura?r=47&aura.ApexAction.execute=1-374,3187,798,663,1065,1780,2544,457,3147,0.000%,1.81842,3.26,4.27
+/aura?r=49&aura.ApexAction.execute=1-377,3187,825,739,1067,1246,2765,467,3717,0.000%,1.82000,3.51,4.25
+/aura?r=50&aura.ApexAction.execute=1-378,3186,764,626,1039,1271,2600,440,3749,0.000%,1.81962,3.55,4.26
+/aura?r=51&aura.ApexAction.execute=1-379,3186,804,662,1081,1806,2647,463,3774,0.000%,1.81992,3.58,4.26
+/aura?r=45&aura.ApexAction.execute=6&aura.RecordUi.getRecordWithFields=1-371,3186,1523,1393,2060,2857,3562,921,4652,0.000%,1.81897,5.76,8.41
+/aura?r=52&ui-instrumentation-components-beacon.InstrumentationBeacon.sendData=1-387,3186,239,187,306,511,1274,153,3957,0.000%,1.82035,3.33,143.59
+/cometd/40.0-296,3186,83,74,88,99,215,68,2071,0.000%,1.82044,1.82,2.30
+05. Customer Details,3186,8182,7844,9895,10380,11405,6041,16075,0.000%,1.80952,100.79,237.89
+TOTAL,276405,541,165,832,2180,8310,56,16075,0.001%,153.45893,1883.94,2299.82

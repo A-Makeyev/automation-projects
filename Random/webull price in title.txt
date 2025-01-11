@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+setInterval(() => { 
+	let name = document.querySelector('.tit').innerText.split(' ')[0]
+	let price = document.querySelector('.price').innerText + '$'
+	document.title = name + ' ' + price
+}, 500)
+=======
+setInterval(() => { 
+	let name = document.querySelector('.tit').innerText.split(' ')[0]
+	let price = document.querySelector('.price').innerText + '$'
+	document.title = name + ' ' + price
+}, 500)
+>>>>>>> 5a35b15c11b7b9723de540122d3d85953c0d21a4

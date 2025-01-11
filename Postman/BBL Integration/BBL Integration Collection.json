@@ -1,0 +1,2010 @@
+{
+	"info": {
+		"_postman_id": "5b827a47-1c19-48c6-ab32-4e78cdc8bac6",
+		"name": "BBL Integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37847149"
+	},
+	"item": [
+		{
+			"name": "Post Auth Token",
+			"item": [
+				{
+					"name": "Post Auth Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Validate schema', () => { \r",
+									"    const schema = {\r",
+									"        type: 'object',\r",
+									"        properties: {\r",
+									"            access_token: { type: 'string'},\r",
+									"            token_type: { type: 'string'},\r",
+									"            expires_in: { type: 'number'},\r",
+									"        },\r",
+									"        required: ['access_token', 'token_type', 'expires_in']\r",
+									"    }\r",
+									"    pm.response.to.have.jsonSchema(schema)\r",
+									"})\r",
+									"\r",
+									"pm.test('All response fields are not empty'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    Object.entries(data).forEach(([key, value]) => {\r",
+									"        console.log(`Field ${key} value -> ${value}`)\r",
+									"        pm.expect(value).to.not.be.oneOf([null, undefined, ''])\r",
+									"    })\r",
+									"}\r",
+									"\r",
+									"pm.test('Token exists and is not empty'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.access_token).to.be.a('string').and.not.empty\r",
+									"}\r",
+									"\r",
+									"pm.test('Token has a valid JWT format'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    const jwt = data.access_token.split('.')\r",
+									"    pm.expect(jwt).to.be.a('string').to.have.lengthOf(3)\r",
+									"}\r",
+									"\r",
+									"pm.test('Token type is \"Bearer\"'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.token_type.toLowerCase()).to.eql('bearer')\r",
+									"}\r",
+									"\r",
+									"pm.test('Expiry validity'), () => {\r",
+									"    const data = pm.response.json()\r",
+									"    pm.expect(data.expires_in).to.be.a('number').and.to.be.within(3600, 86400)\r",
+									"}\r",
+									"\r",
+									"const data = pm.response.json()\r",
+									"pm.environment.set('access_token', data.access_token)\r",
+									"\r",
+									"pm.test('New Token Is Set In The Environment'), () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.eql(data.access_token)\r",
+									"    pm.expect(pm.environment.get('token_type')).to.eql( data.token_type)\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Request method is POST', () => {\r",
+									"    pm.expect(pm.request.method).to.eql('POST')\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic xxxxxxxxxxxxxxxxxxx"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://oraclecloud.com",
+							"protocol": "https",
+							"host": [
+								"idcs-xxxxxxxxxxxx",
+								"identity",
+								"oraclecloud",
+								"com"
+							],
+							"port": "xxx",
+							"path": [
+								"oauth2",
+								"v1",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "❌ Get Materials Views From Fusion",
+			"item": [
+				{
+					"name": "Get Materials Views From Fusion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const requiredVars = ['base_url', 'access_token']\r",
+									"// const missingVars = requiredVars.filter(varName => !pm.environment.get(varName))\r",
+									"\r",
+									"// if (missingVars.length > 0) {\r",
+									"//     pm.error(`Missing environment variables: ${missingVars.join(', ')}`)\r",
+									"// } else {\r",
+									"//     pm.request.headers.add({\r",
+									"//         key: 'Authorization',\r",
+									"//         value: `Bearer ${pm.environment.get('access_token')}`\r",
+									"//     })\r",
+									"\r",
+									"//     const baseUrl = pm.environment.get('base_url')\r",
+									"//     if (baseUrl) {\r",
+									"//         const currentUrl = pm.request.url.toString()\r",
+									"//         if (!currentUrl.startsWith(baseUrl)) {\r",
+									"//             pm.request.url = baseUrl + pm.request.url.getPath()\r",
+									"//         }\r",
+									"//     }\r",
+									"// }\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic xxx",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project"
+							],
+							"query": [
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Taxi Approver List",
+			"item": [
+				{
+					"name": "Get Taxi Approver List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const G1Nodes = [].concat(result.reply.ROWS.G_1 || [])\r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"            pm.expect(G1Nodes).to.not.be.empty\r",
+									"        })\r",
+									"\r",
+									"        G1Nodes.forEach((G1, index) => {\r",
+									"            const nodes = ['PERSON', 'EMP_NAME', 'EMAIL_ADDRESS']\r",
+									"            pm.test(`<G_1> ${index + 1} of ${G1Nodes.length} Data -> PERSON: ${G1.PERSON}, EMP_NAME: ${G1.EMP_NAME}, EMAIL_ADDRESS: ${G1.EMAIL_ADDRESS}`, () => {\r",
+									"                nodes.forEach(field => pm.expect(G1[field]).to.not.be.empty)\r",
+									"                pm.expect(G1.PERSON).to.match(/^\\d+$/, 'person is numeric')\r",
+									"                pm.expect(/[\\u0590-\\u05FF]/.test(G1.EMP_NAME)).to.be.true\r",
+									"                pm.expect(G1.EMAIL_ADDRESS).to.match(/^[^@]+@[^@]+\\.[^@]+$/, 'email is valid')\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Tech Items List",
+			"item": [
+				{
+					"name": "Get Tech Items List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const params = pm.request.url.query.reduce((acc, param) => ({ ...acc, [param.key]: param.value }), {})\r",
+									"const { ItemNum } = params\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const rows = [].concat(result.reply.ROWS.ROW || []) \r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"            pm.expect(rows).to.not.be.empty\r",
+									"        })\r",
+									"\r",
+									"        console.log(rows)\r",
+									"\r",
+									"        rows.forEach((row, index) => {\r",
+									"            const nodes = Object.keys(row)\r",
+									"            pm.test(`Validate <ROW> ${index + 1} of ${rows.length} Data Is Valid`, () => {\r",
+									"                nodes.forEach(field => pm.expect(row[field]).to.not.be.empty)\r",
+									"                pm.expect(row.ITEM_NUM).to.eql(ItemNum)\r",
+									"                pm.expect(row.INVENTORY_ITEM_ID).to.match(/^\\d+$/)\r",
+									"                pm.expect(/[\\u0590-\\u05FF]/.test(row.DESCRIPTION)).to.be.true\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								},
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --location 'https://oraclecloud.com'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get‎ Last Move Order List",
+			"item": [
+				{
+					"name": "Get‎ Last Move Order List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"function xml2Json(xml) {\r",
+									"    let json\r",
+									"    require('xml2js').parseString(xml, { explicitArray: false }, (err, result) => {\r",
+									"        if (err) {\r",
+									"            console.error(err)\r",
+									"        } else {\r",
+									"            json = result\r",
+									"        }\r",
+									"    })\r",
+									"    return json\r",
+									"}\r",
+									"\r",
+									"const params = pm.request.url.query.reduce((acc, param) => ({ ...acc, [param.key]: param.value }), {})\r",
+									"const { WrsNumber } = params\r",
+									"const responseXml = pm.response.text()\r",
+									"const jsonResponse = xml2Json(responseXml)\r",
+									"const rows = [].concat(jsonResponse?.reply?.ROWS?.ROW || [])\r",
+									"\r",
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid WrsNumber, Status, and Message', () => {\r",
+									"    pm.expect(jsonResponse?.reply?.ReplyMessage?.Status).to.eql('0')\r",
+									"    pm.expect(jsonResponse?.reply?.ReplyMessage?.Message.toLowerCase()).to.eql('success')\r",
+									"    rows.forEach(row => pm.expect(row?.TO_SUBINVENTORY_CODE).to.eql(WrsNumber))\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid ITEM_NUM and ITEM_DESCRIPTION, and match ItemNum if specified', () => {\r",
+									"    rows.forEach(row => {\r",
+									"        pm.expect(row?.ITEM_NUM).to.match(/^\\d+$/)\r",
+									"        pm.expect(row?.ITEM_DESCRIPTION).to.be.a('string').and.not.to.be.empty\r",
+									"    })\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Item List",
+			"item": [
+				{
+					"name": "Get Item List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"function xml2Json(xml) {\r",
+									"    let json\r",
+									"    require('xml2js').parseString(xml, { explicitArray: false }, (err, result) => {\r",
+									"        if (err) {\r",
+									"            console.error(err)\r",
+									"        } else {\r",
+									"            json = result\r",
+									"        }\r",
+									"    })\r",
+									"    return json\r",
+									"}\r",
+									"\r",
+									"const params = pm.request.url.query.reduce((acc, param) => ({ ...acc, [param.key]: param.value }), {})\r",
+									"const { Inv_Item_Id } = params\r",
+									"const responseXml = pm.response.text()\r",
+									"const jsonResponse = xml2Json(responseXml)\r",
+									"const row = jsonResponse.reply.ROWS.ROW\r",
+									"const replyMessage = jsonResponse.reply.ReplyMessage\r",
+									"\r",
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid Status and Message', () => {\r",
+									"    pm.expect(replyMessage.Status).to.eql('0')\r",
+									"    pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid ITEM_NUM and ITEM_DESCRIPTION', () => {\r",
+									"    pm.expect(row.ITEM_NUM).to.eql(Inv_Item_Id)\r",
+									"    pm.expect(row.ITEM_DESCRIPTION).to.be.a('string').and.not.to.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								},
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Black List Items Per Tech",
+			"item": [
+				{
+					"name": "Get Black List Items Per Tech",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"function xml2Json(xml) {\r",
+									"    let json\r",
+									"    require('xml2js').parseString(xml, { explicitArray: false }, (err, result) => {\r",
+									"        if (err) {\r",
+									"            console.error(err)\r",
+									"        } else {\r",
+									"            json = result\r",
+									"        }\r",
+									"    })\r",
+									"    return json\r",
+									"}\r",
+									"\r",
+									"const params = pm.request.url.query.reduce((acc, param) => ({ ...acc, [param.key]: param.value }), {})\r",
+									"const { WrsNumber, ItemNum } = params\r",
+									"const responseXml = pm.response.text()\r",
+									"const jsonResponse = xml2Json(responseXml)\r",
+									"const row = jsonResponse.reply.ROWS.ROW\r",
+									"const replyMessage = jsonResponse.reply.ReplyMessage\r",
+									"\r",
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid Status and Message', () => {\r",
+									"    pm.expect(replyMessage.Status).to.eql('0')\r",
+									"    pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid ITEM_NUM, TECH_SUB_INV and ITEM_DESCRIPTION', () => {\r",
+									"    pm.expect(row.ITEM_NUM).to.eql(ItemNum)\r",
+									"    pm.expect(row.TECH_SUB_INV).to.eql(WrsNumber)\r",
+									"    pm.expect(row.ITEM_DESCRIPTION).to.be.a('string').and.not.to.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON",
+								"1.0",
+								"masofon"
+							],
+							"query": [
+								{
+									"key": "xxxxxx",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Lines Per Tech To Approve",
+			"item": [
+				{
+					"name": "Get Lines Per Tech To Approve",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const G1Nodes = [].concat(result.reply.ROWS.G_1 || []) \r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"            pm.expect(G1Nodes).to.not.be.empty\r",
+									"        })\r",
+									"\r",
+									"        G1Nodes.forEach((G1, index) => {\r",
+									"            const nodes = [\r",
+									"                'ITEM_NUM', 'INVENTORY_ITEM_ID', 'ITEM_DESCRIPTION', 'MFG_PART_NUM', \r",
+									"                'REQ_QTY', 'MOVE_ORDER_LINE_ID', 'TECH_FULL_NAME', 'TECH_SUB_INV'\r",
+									"            ]\r",
+									"            \r",
+									"            pm.test(`<G_1> ${index + 1} of ${G1Nodes.length} Data Is Valid`, () => {\r",
+									"                nodes.forEach(field => pm.expect(G1[field]).to.not.be.empty)\r",
+									"                pm.expect(G1.ITEM_NUM).to.match(/^\\d+$/, 'ITEM_NUM is numeric')\r",
+									"                pm.expect(G1.INVENTORY_ITEM_ID).to.match(/^\\d+$/, 'INVENTORY_ITEM_ID is numeric')\r",
+									"                pm.expect(G1.REQ_QTY).to.match(/^\\d+$/, 'REQ_QTY is numeric')\r",
+									"                pm.expect(G1.TECH_SUB_INV).to.match(/^\\d+$/, 'TECH_SUB_INV is numeric')\r",
+									"                pm.expect(/[\\u0590-\\u05FF]/.test(G1.TECH_FULL_NAME)).to.be.true\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Last Move Shipping Address",
+			"item": [
+				{
+					"name": "Get Last Move Shipping Address",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        pm.test('XML Parsed Successfully', () => pm.expect(error).to.be.null)\r",
+									"\r",
+									"        const status = result.reply.ReplyMessage.Status\r",
+									"        const message = result.reply.ReplyMessage.Message\r",
+									"\r",
+									"        pm.test('Response contains Status 0 and Success Message', () => {\r",
+									"            pm.expect(status).to.eql('0')\r",
+									"            pm.expect(message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        const G1 = result.reply.ROWS.G_1\r",
+									"        console.log('Shipping Address: ' + G1.SHIPPING_ADDRESS)\r",
+									"\r",
+									"        pm.test('SHIPPING_ADDRESS Is Valid', () => {\r",
+									"            pm.expect(/[\\u0590-\\u05FF]/.test(G1.SHIPPING_ADDRESS)).to.be.true\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Serials Per Item In Tech",
+			"item": [
+				{
+					"name": "Get Serials Per Item In Tech",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        pm.test('XML Parsed Successfully', () => pm.expect(error).to.be.null)\r",
+									"\r",
+									"        const status = result.reply.ReplyMessage.Status\r",
+									"        const message = result.reply.ReplyMessage.Message\r",
+									"\r",
+									"        console.log('Status: ' + status)\r",
+									"        console.log('Message: ' + message)\r",
+									"\r",
+									"        pm.test('Response contains Status 0 and Success Message', () => {\r",
+									"            pm.expect(status).to.eql('0')\r",
+									"            pm.expect(message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"    })\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								},
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Line Move Order List",
+			"item": [
+				{
+					"name": "Get Line Move Order List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"function xml2Json(xml) {\r",
+									"    let json\r",
+									"    require('xml2js').parseString(xml, { explicitArray: false }, (err, result) => {\r",
+									"        if (err) {\r",
+									"            console.error(err)\r",
+									"        } else {\r",
+									"            json = result\r",
+									"        }\r",
+									"    })\r",
+									"    return json\r",
+									"}\r",
+									"\r",
+									"const responseXml = pm.response.text()\r",
+									"const jsonResponse = xml2Json(responseXml)\r",
+									"const item = jsonResponse.reply.ROWS.ITEM\r",
+									"const replyMessage = jsonResponse.reply.ReplyMessage\r",
+									"\r",
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid Status and Message', () => {\r",
+									"    pm.expect(replyMessage.Status).to.eql('0')\r",
+									"    pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid ITEM_NUM, LINE_STATUS and ITEM_DESCRIPTION', () => {\r",
+									"    pm.expect(item.ITEM_NUM).to.match(/^\\d+$/, 'ITEM_NUM is numeric')\r",
+									"    pm.expect(/[\\u0590-\\u05FF]/.test(item.LINE_STATUS)).to.be.true\r",
+									"    pm.expect(item.ITEM_DESCRIPTION).to.be.a('string').and.not.to.be.empty\r",
+									"})\r",
+									"\r",
+									"pm.test('Valid ORDER_QTY and SHIP_QTY', () => {\r",
+									"    pm.expect(isNaN(Number(item.ORDER_QTY))).to.be.false\r",
+									"    pm.expect(isNaN(Number(item.SHIP_QTY))).to.be.false\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Ramzor List",
+			"item": [
+				{
+					"name": "Get Ramzor List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const items = [].concat(result.reply.ROWS.ITEM || []) \r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"        })\r",
+									"\r",
+									"        pm.test('Items Are Not Empty', () => {\r",
+									"            pm.expect(items).to.not.be.empty\r",
+									"            items.forEach(item => pm.expect(Object.keys(item).length !== 0).to.be.true)\r",
+									"        })\r",
+									"\r",
+									"        items.forEach((item, index) => {\r",
+									"            pm.test(`<ITEM> ${index + 1} -> MOVE_ORDER_NUMBER Is Valid: ${item.MOVE_ORDER_NUMBER} `, () => {\r",
+									"                pm.expect(item.MOVE_ORDER_NUMBER).to.match(/^\\d+$/)\r",
+									"            })\r",
+									"\r",
+									"            pm.test(`<ITEM> ${index + 1} -> MOVE_ORDER_STATUS Is Valid: ${item.MOVE_ORDER_STATUS} `, () => {\r",
+									"                pm.expect(/[\\u0590-\\u05FF]/.test(item.MOVE_ORDER_STATUS)).to.be.true\r",
+									"            })\r",
+									"\r",
+									"            pm.test(`<ITEM> ${index + 1} -> HEAD_LIGHT Is Valid: ${item.HEAD_LIGHT} `, () => {\r",
+									"                pm.expect(/[A-Z]/g.test(item.HEAD_LIGHT)).to.be.true\r",
+									"            })\r",
+									"\r",
+									"            pm.test(`<ITEM> ${index + 1} -> SSD Is Valid: ${item.SSD} `, () => {\r",
+									"                pm.expect(/\\d{4}-\\d{1,2}-\\d{1,2}/.test(item.SSD)).to.be.true\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							],
+							"query": [
+								{
+									"key": "XXXXX",
+									"value": "xxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Inventory Transaction Reasons",
+			"item": [
+				{
+					"name": "Get Inventory Transaction Reasons",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const G1Nodes = [].concat(result.reply.ROWS.G_1 || [])\r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"        })\r",
+									"\r",
+									"        pm.test('G1Nodes Are Not Empty', () => {\r",
+									"            pm.expect(G1Nodes).to.not.be.empty\r",
+									"            G1Nodes.forEach(G1 => pm.expect(Object.keys(G1).length !== 0).to.be.true)\r",
+									"        })\r",
+									"\r",
+									"        G1Nodes.forEach((G1, index) => {\r",
+									"            pm.test(`<G_1> ${index + 1} -> REASON_NAME Is Valid: ${G1.REASON_NAME} `, () => {\r",
+									"                pm.expect(G1.REASON_NAME).to.match(/[\\u0590-\\u05FF]/)\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Shipping Method List",
+			"item": [
+				{
+					"name": "Get Shipping Method List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.reply.ReplyMessage\r",
+									"        const G1Nodes = [].concat(result.reply.ROWS.G_1 || [])\r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"            pm.expect(G1Nodes).to.not.be.empty\r",
+									"        })\r",
+									"\r",
+									"        G1Nodes.forEach((G1, index) => {\r",
+									"            const nodes = ['ValueId', 'Value', 'Description']\r",
+									"            pm.test(`<G_1> ${index + 1} Data -> ValueId: ${G1.ValueId}, Value: ${G1.Value}, Description: ${G1.Description}`, () => {\r",
+									"                nodes.forEach(field => pm.expect(G1[field]).to.not.be.empty)\r",
+									"                pm.expect(G1.ValueId).to.match(/^\\d+$/)\r",
+									"                pm.expect(G1.Value).to.match(/^[a-zA-Z\\u0590-\\u05FF\\u200f\\u200e ]+$/)\r",
+									"                pm.expect(G1.Description).to.match(/^\\d+$/)\r",
+									"            })\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Create Move Order To Grinding",
+			"item": [
+				{
+					"name": "Post Create Move Order To Grinding",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"pm.test('Response contains Success Message', () => {\r",
+									"    pm.expect(data).to.include('<Status>0</Status>')\r",
+									"    pm.expect(data).to.include('<Message>Success</Message>')\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Request>\r\n    <AskedWrs>xxxx</AskedWrs>\r\n    <Lines>\r\n        <Line>\r\n            <ASKEDQTY>x</ASKEDQTY>\r\n            <MAKATBBL>xxxxx</MAKATBBL>\r\n        </Line>\r\n        <Line>\r\n            <ASKEDQTY>x</ASKEDQTY>\r\n            <MAKATBBL>xxx</MAKATBBL>\r\n        </Line>\r\n    </Lines>\r\n</Request>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Create Move Order Between Tech",
+			"item": [
+				{
+					"name": "Post Create Move Order Between Tech",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.Reply.ReplyMessage\r",
+									"        const data = result.Reply.Data\r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"        })\r",
+									"\r",
+									"        pm.test(`P_START_DATE Is Valid -> ${data.P_START_DATE}`, () => {\r",
+									"            pm.expect(/\\d{4}-\\d{1,2}-\\d{1,2}/.test(data.P_START_DATE)).to.be.true\r",
+									"        })\r",
+									"\r",
+									"        pm.test(`P_STATUS Is Valid -> ${data.P_STATUS}`, () => {\r",
+									"            pm.expect(data.P_STATUS).to.match(/^(?=.*\\d)[\\d ]+$/)\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Request>\r\n    <P_TO_TECH_SUB>xxx</P_TO_TECH_SUB>\r\n</Request>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Create Move Order Upsert",
+			"item": [
+				{
+					"name": "Post Create Move Order Upsert",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', () => { \r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type is XML', () => { \r",
+									"    pm.response.to.have.header('Content-Type', 'application/xml')\r",
+									"})\r",
+									"\r",
+									"const data = pm.response.text()\r",
+									"const xml = require('xml2js')\r",
+									"const parser = new xml.Parser({ explicitArray: false })\r",
+									"\r",
+									"if (data !== null) { \r",
+									"    parser.parseString(data, (error, result) => { \r",
+									"        const replyMessage = result.Reply.ReplyMessage\r",
+									"        const data = result.Reply.Data\r",
+									"\r",
+									"        pm.test('Response contains Success Message', () => {\r",
+									"            pm.expect(replyMessage.Status).to.eql('0')\r",
+									"            pm.expect(replyMessage.Message.toLowerCase()).to.eql('success')\r",
+									"        })\r",
+									"\r",
+									"        pm.test('XML Parsed Successfully', () => {\r",
+									"            pm.expect(error).to.be.null\r",
+									"        })\r",
+									"\r",
+									"        pm.test(`P_MOVE_ORDER_NUMBER Is Valid -> ${data.P_MOVE_ORDER_NUMBER}`, () => {\r",
+									"            pm.expect(/^[0-9\\s]*$/.test(data.P_MOVE_ORDER_NUMBER)).to.be.true\r",
+									"        })\r",
+									"    })\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"protocolVersion": "http1"
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Request>\r\n      <P_TO_SUB>xxxx</P_TO_SUB>\r\n</Request>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "❌ Post Approve Reject Mo Line",
+			"item": [
+				{
+					"name": "Post Approve Reject Mo Line",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.test('Access Token Is Set In The Environment', () => {\r",
+									"    pm.expect(pm.environment.get('access_token')).to.not.be.empty\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Request>\r\n      <P_TO_SUB>xxxx</P_TO_SUB>\r\n</Request>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ic/api/integration/v2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v2",
+								"flows",
+								"rest",
+								"project",
+								"MASOFON"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "https://oraclecloud.com",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Adf-Ads-Page-Id",
+								"value": "1"
+							},
+							{
+								"key": "Adf-Rich-Message",
+								"value": "true"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded; charset=UTF-8"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "jwt_token=xxxxx",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://oraclecloud.com",
+							"protocol": "https",
+							"host": [
+								"bpn-dev1",
+								"fa",
+								"ocs",
+								"oraclecloud",
+								"com"
+							],
+							"path": [
+								"fscmUI",
+								"faces",
+								"FuseWelcome"
+							],
+							"query": [
+								{
+									"key": "_adf.ctrl-state",
+									"value": "131aivbmza_93"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

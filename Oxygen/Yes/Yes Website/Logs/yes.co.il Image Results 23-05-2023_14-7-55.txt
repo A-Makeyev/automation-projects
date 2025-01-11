@@ -1,0 +1,268 @@
+~~~~~~~~~~~~~~~~~~~~~~~~ 
+yes.co.il Image Results 
+~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+~~~~~~~~~~~~~ 
+Valid Images: 
+~~~~~~~~~~~~~ 
+
+✔️ Locator: (//a//img[@alt])[1] -> alt: Yes - הסדרות והסרטים הטובים בעולם | src: /documents/35760/312024/logo_yes.png/87f42d6d-19cf-e204-b181-14f06c6b745d?t=1594748005910
+✔️ Locator: (//a//img[@alt])[2] -> alt: דיסני+ | src: /documents/35670/2441856/icon_Disney%2B_100x100.png/51903f8f-d414-1cb2-e843-10e1fbb3aafd?t=1655368139465
+✔️ Locator: (//a//img[@alt])[3] -> alt: תפעול שלט | src: /documents/35670/2441856/icon_remote_100x100.png/2052d5bf-9d17-53d9-b154-bd40419a8341?t=1615886447669
+✔️ Locator: (//a//img[@alt])[4] -> alt: הזמנת ערוצים | src: /documents/35670/2441856/icon_add_100x100.png/b337062c-1112-4ae6-e119-d522681b9c7c?t=1615799605731
+✔️ Locator: (//a//img[@alt])[6] -> alt: המנוי שלי yes | src: /documents/35670/2441856/icon_user_100x100.png/3d2a432a-24bc-bd53-0b9f-cd5bc6615bc1?t=1615799670773
+✔️ Locator: (//a//img[@alt])[7] -> alt: זימון טכנאי | src: /documents/35670/2441856/icon_technician_100x100.png/9e77e3c1-57b7-b15a-c2da-8a06d0722d65?t=1615799647662
+✔️ Locator: (//a//img[@alt])[8] -> alt: תיאום מעבר דירה | src: /documents/35670/2441856/icon_mooving_100x100.png/50307e4b-eab5-d8bf-dcb0-a755df74e717?t=1615799633196
+✔️ Locator: (//a//img[@alt])[9] -> alt: שיחה עם נציג yes | src: /documents/35670/2441856/icon_whatsapp3_100x100.png/d27f1978-8919-0887-e430-e2f50e3c2ed5?t=1616494310634
+✔️ Locator: (//a//img[@alt])[10] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/arrow-black.svg
+✔️ Locator: (//a//img[@alt])[11] -> alt: דנה קמה | src: /documents/35670/22759628/Trailer_DanaKama-_710x400.jpg/f0d3463b-2cad-0b02-278c-2376e373b45a?t=1679215227201
+✔️ Locator: (//a//img[@alt])[12] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[13] -> alt: לעוף על אנה | src: /documents/35670/23094486/Editor_Anna_710x400.jpg/2fae1f86-ef8b-c4d3-8b2f-7d6a1bae60d1?t=1683637848660
+✔️ Locator: (//a//img[@alt])[14] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[15] -> alt: שרברבי הבית הלבן | src: /documents/35670/23080958/Editor_whitehouseplumbers_710x400.jpg/58133c70-1a42-e612-c027-466df72bcbcb?t=1683457861033
+✔️ Locator: (//a//img[@alt])[16] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[17] -> alt: חנוקה | src: /o/com.yes.alpha.theme/images/yes/yes_pic_710X400.jpg
+✔️ Locator: (//a//img[@alt])[18] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[19] -> alt: צ'ארלס השלישי: נולד להיות מלך | src: /o/com.yes.alpha.theme/images/yes/yes_pic_710X400.jpg
+✔️ Locator: (//a//img[@alt])[20] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[21] -> alt: טרף | src: /o/com.yes.alpha.theme/images/yes/yes_pic_710X400.jpg
+✔️ Locator: (//a//img[@alt])[22] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[23] -> alt: יורשים | src: /o/com.yes.alpha.theme/images/yes/yes_pic_710X400.jpg
+✔️ Locator: (//a//img[@alt])[24] -> alt: info-icon | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[25] -> alt: דנה קמה - מאחורי הקלעים | src: /documents/35670/22759523/Original_DanaKama_460x690.jpg/d5e3d46e-2ce4-c2fa-6dce-838c8b765e68?t=1678278773540
+✔️ Locator: (//a//img[@alt])[26] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[27] -> alt: מי שמע על חווה ונאווה | src: /documents/35670/21490111/Original_mi-shama_460x690.jpg/b137ca2c-b62f-2d16-078c-bec6396c28b3?t=1665304839206
+✔️ Locator: (//a//img[@alt])[28] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[29] -> alt: בלאדי מורי | src: /documents/35670/17739271/Original_Bloody-Murray_460x690.jpg/6bef2467-2567-287e-33ca-b294429ec765?t=1653461842412
+✔️ Locator: (//a//img[@alt])[30] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[31] -> alt: ריקוד האש | src: /documents/35670/15992601/Original_RikudHaesh_460x690.jpg/f2df7fdd-872d-592d-24d2-6e45a5fb99e1?t=1650186146874
+✔️ Locator: (//a//img[@alt])[32] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[34] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[35] -> alt: פריפריה אימפריה | src: /documents/35670/13611092/Original_periferia_imperia_460x690.jpg/dd7efca1-a6ac-dea2-d351-d2ccd8555c41?t=1646297182643
+✔️ Locator: (//a//img[@alt])[36] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[37] -> alt: סקיי | src: /documents/35670/22251675/Original_skySE02_460x690.jpg/696c4a7d-1a60-0fbf-2a7d-fbed90bfbd27?t=1671721477417
+✔️ Locator: (//a//img[@alt])[38] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[40] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[42] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[44] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[46] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[48] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[50] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[52] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[54] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[56] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[58] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[60] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[62] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[64] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[66] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[68] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[70] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[72] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[74] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[76] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[78] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[80] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[82] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[84] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[86] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[88] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[90] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[92] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[94] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[96] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[98] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[100] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[102] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[104] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[106] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[108] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[110] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[112] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[114] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[116] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[118] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[120] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[122] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[124] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[126] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[128] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[130] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[132] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[134] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[136] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[138] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[140] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[142] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[144] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[145] -> alt: Jungle_(2017) | src: /o/s/35670/ibms/VP001203743.JPG?1607010632000
+✔️ Locator: (//a//img[@alt])[146] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[147] -> alt: Megan_Leavey | src: /o/s/35670/ibms/VP001203356.JPG?1607010628000
+✔️ Locator: (//a//img[@alt])[148] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[149] -> alt: Snake_Eyes:_G.I._Joe_Origins | src: /o/s/35670/ibms/VP002002899.JPG?1634028463000
+✔️ Locator: (//a//img[@alt])[150] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[152] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[154] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[156] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[158] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[160] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[162] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[164] -> alt:  | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[165] -> alt: Your_Honor | src: /o/s/35670/ibms/VP001555020.JPG?1614767004000
+✔️ Locator: (//a//img[@alt])[166] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[168] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[169] -> alt: So_Help_Me_Todd | src: /documents/35670/22164635/Editor_todd_710x400.jpg/52d2a6c7-5035-e479-f8bd-05c71f577700?t=1670749929723
+✔️ Locator: (//a//img[@alt])[170] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[171] -> alt: arrow | src: /o/com.yes.alpha.theme/images/yes/arrow-blue.svg
+✔️ Locator: (//a//img[@alt])[173] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[175] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[177] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[179] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[181] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[183] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[185] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[187] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[189] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[191] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[193] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[195] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[197] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[199] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[201] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[203] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[205] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[207] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[209] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[211] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[213] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[215] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[217] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[219] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[221] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[223] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[225] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[227] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[229] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[231] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[232] -> alt: arrow | src: /o/com.yes.alpha.theme/images/yes/arrow-blue.svg
+✔️ Locator: (//a//img[@alt])[234] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[236] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[238] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[240] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[242] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[244] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[246] -> alt: info | src: /o/com.yes.alpha.theme/images/yes/info-icon.svg
+✔️ Locator: (//a//img[@alt])[247] -> alt: Facebook_icon | src: /documents/35760/310623/icn_fbook_ftr.png/95f5a6ba-a628-3122-3bfd-d0b2ae9f509d?t=1594734311819
+✔️ Locator: (//a//img[@alt])[248] -> alt: instagram_icon | src: /documents/35760/310623/icn_instagram_ftr.png/5480c848-24c8-7178-fc7f-baa14a95a231?t=1594734311581
+✔️ Locator: (//a//img[@alt])[249] -> alt: youtube_icon | src: /documents/35760/310623/icn_youtube_ftr.png/a9ec6346-cd87-1c7d-f465-c67422629015?t=1594734311932
+
+~~~~~~~~~~~~~~~~~~~~~~ 
+Images With Empty Alt: 
+~~~~~~~~~~~~~~~~~~~~~~ 
+
+⚠️ Locator: (//a//img[@alt])[5] -> src: /documents/35670/2441856/icon_add_100x100.png/b337062c-1112-4ae6-e119-d522681b9c7c?t=1615799605731
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Images With Default Picture: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+❌ Locator: (//a//img[@alt])[33] -> alt: עד קצה הגוף | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[39] -> alt: בת השוטר | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[41] -> alt: החיים על פי הגשש החיוור | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[43] -> alt: האגרוף: סדרת הגמר | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[45] -> alt: דוגמנים | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[47] -> alt: דנה קמה | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[49] -> alt: אלף | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[51] -> alt: ילדים ביער | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[53] -> alt: המחתרת היהודית | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[55] -> alt: דיין: המשפחה הראשונה | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[57] -> alt: החיים הסודיים של בני 5 | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[59] -> alt: פאנץ' | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[61] -> alt: טרנסקידס | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[63] -> alt: המנצח | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[65] -> alt: מייקל | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[67] -> alt: בית. פזמון | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[69] -> alt: יומני אוסלו | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[71] -> alt: תום יער עושה בגרות | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[73] -> alt: תיק חיי | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[75] -> alt: הכל תום | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[77] -> alt: על הספקטרום | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[79] -> alt: ככה זה | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[81] -> alt: האזרח ק' | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[83] -> alt: הבוזגלוס | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[85] -> alt: Confess,_Fletch | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[87] -> alt: The_Good_House | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[89] -> alt: Monster_Family_2_(Hebrew) | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[91] -> alt: First_Love | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[93] -> alt: Orphan:_First_Kill | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[95] -> alt: Pil's_Adventures_(Hebrew) | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[97] -> alt: Everything_Went_Fine | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[99] -> alt: Spider-Man:_No_Way_Home_(Extended_Version) | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[101] -> alt: Tad,_The_Lost_Explorer_And_The_Emerald_T | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[103] -> alt: Six_Minutes_To_Midnight | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[105] -> alt: Smile | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[107] -> alt: Resurrection_(2022) | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[109] -> alt: Mr._Malcolm's_List | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[111] -> alt: Arthur_Rambo | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[113] -> alt: The_Hole_Aka_Il_Buco | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[115] -> alt: Crimes_Of_The_Future | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[117] -> alt: Persian_Lessons | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[119] -> alt: Hans_Zimmer:_Hollywood_Rebel | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[121] -> alt: Swan_Song | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[123] -> alt: Alex’s_Group | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[125] -> alt: Art_and_Krimes_By_Krimes | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[127] -> alt: Last_Flight_Home | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[129] -> alt: I_Love_My_Dad | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[131] -> alt: Mid-Century | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[133] -> alt: A_Man | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[135] -> alt: Weird:_The_Al_Yankovic_Story | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[137] -> alt: Vortex | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[139] -> alt: Floodlights | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[141] -> alt: Eight_Gifts_Of_Hanukkah | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[143] -> alt: Fit_For_Christmas | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[151] -> alt: Tokyo_Shaking | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[153] -> alt: Deadstream | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[155] -> alt: Beast_(2022) | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[157] -> alt: Emily_The_Criminal | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[159] -> alt: Panama | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[161] -> alt: Fit_For_Christmas | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[163] -> alt: Weird:_The_Al_Yankovic_Story | src: /o/com.yes.alpha.theme/images/yes/default2x3.jpg
+❌ Locator: (//a//img[@alt])[167] -> alt: Carnivale | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[172] -> alt: Conversations_With_Friends | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[174] -> alt: Gaslit | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[176] -> alt: Funny_Woman | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[178] -> alt: Icons_Unearthed | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[180] -> alt: Who_has_heard_of_Hava_and_Nava | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[182] -> alt: Bloody_Murray | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[184] -> alt: Hotel_Portofino | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[186] -> alt: The_Thing_About_Pam | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[188] -> alt: Fire_Dance | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[190] -> alt: The_Gilded_Age | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[192] -> alt: The_Great | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[194] -> alt: Yellowjackets | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[196] -> alt: Girls5eva | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[198] -> alt: Rookie_Blue | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[200] -> alt: HaGashash:_The_Tip_Of_The_Kettle | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[202] -> alt: Dave | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[204] -> alt: Mare_Of_Eastown | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[206] -> alt: Perry_Mason | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[208] -> alt: The_Captrue | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[210] -> alt: The_Deputy | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[212] -> alt: The_Plot_Against_America | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[214] -> alt: A_Million_Little_Things | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[216] -> alt: Succession | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[218] -> alt: The_Pacific | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[220] -> alt: Fauda | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[222] -> alt: Togetherness | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[224] -> alt: Shtissel | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[226] -> alt: Succession | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[228] -> alt: Station_19 | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[230] -> alt: Smother | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[233] -> alt: From | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[235] -> alt: Dana_Kama | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[237] -> alt: Dana_Kama_-_BTS | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[239] -> alt: Three_Pines | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[241] -> alt: It's_all_about_Anna | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[243] -> alt: Grey's_Anatomy | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+❌ Locator: (//a//img[@alt])[245] -> alt: F.B.I | src: /o/com.yes.alpha.theme/images/yes/default16x9.jpg
+

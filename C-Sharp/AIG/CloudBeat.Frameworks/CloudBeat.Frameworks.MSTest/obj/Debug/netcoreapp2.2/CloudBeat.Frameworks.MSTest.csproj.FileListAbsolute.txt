@@ -1,0 +1,12 @@
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.deps.json
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\bin\Debug\netcoreapp2.2\CloudBeat.Frameworks.Common.pdb
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.csprojAssemblyReference.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.AssemblyInfoInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.AssemblyInfo.cs
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.csproj.CoreCompileInputs.cache
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.csproj.CopyComplete
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.dll
+C:\Users\Makeyev\Desktop\test-automation\C#\AIG\CloudBeat.Frameworks\CloudBeat.Frameworks.MSTest\obj\Debug\netcoreapp2.2\CloudBeat.Frameworks.MSTest.pdb

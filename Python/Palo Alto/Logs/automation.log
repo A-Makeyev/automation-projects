@@ -1,0 +1,153 @@
+2023-06-18 00:43:25,808 - selenium.webdriver.common.selenium_manager - INFO - Applicable driver not found; attempting to install with Selenium Manager (Beta)
+06/18/2023 12:48:39 AM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+06/18/2023 11:51:06 AM: INFO: ====== WebDriver manager ======
+06/18/2023 11:51:07 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "114.0.5735" in cache
+06/18/2023 11:51:07 AM: INFO: Get LATEST chromedriver version for google-chrome
+06/18/2023 11:51:08 AM: INFO: About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_win32.zip
+06/18/2023 11:51:08 AM: INFO: Driver has been saved in cache [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90]
+06/18/2023 11:51:12 AM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+
+06/25/2023 11:18:40 PM: INFO: ====== WebDriver manager ======
+06/25/2023 11:18:40 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90\chromedriver.exe] found in cache
+06/25/2023 11:18:41 PM: INFO: 🛈 Verifying Contact Us Page Title
+06/25/2023 11:18:46 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+06/25/2023 11:18:46 PM: INFO: ====== WebDriver manager ======
+06/25/2023 11:18:46 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\114.0.5735.90\chromedriver.exe] found in cache
+06/25/2023 11:18:47 PM: INFO: 🛈 Verifying Contact Us Form
+06/25/2023 11:18:57 PM: INFO: ✔️ Form Filled Successfully - reCAPTCHA is present
+
+====================================================================================================================================
+
+08/08/2023 11:36:00 AM: INFO: ====== WebDriver manager ======
+08/08/2023 11:36:01 AM: INFO: There is no [win32] chromedriver "latest" for browser google-chrome "115.0.5790" in cache
+08/08/2023 11:36:01 AM: INFO: Get LATEST chromedriver version for google-chrome
+
+====================================================================================================================================
+
+08/27/2023 01:48:25 PM: INFO: 🛈 Verifying Contact Us Page Title
+08/27/2023 01:48:27 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+08/27/2023 01:48:28 PM: INFO: 🛈 Verifying Contact Us Form
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 1 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 2 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Iteration 3 Passed
+08/27/2023 01:48:38 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+
+====================================================================================================================================
+
+10/18/2023 02:53:23 PM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 118. Retrying with chromedriver 117 (attempt 1/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 117. Retrying with chromedriver 116 (attempt 2/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 116. Retrying with chromedriver 115 (attempt 3/5)
+10/18/2023 02:53:25 PM: WARNING: Error getting version of chromedriver 115. Retrying with chromedriver 114 (attempt 4/5)
+10/18/2023 02:53:28 PM: INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)a
+
+====================================================================================================================================
+
+11/12/2023 04:41:34 PM: INFO: ====== WebDriver manager ======
+11/12/2023 04:41:35 PM: INFO: Get LATEST chromedriver version for google-chrome
+11/12/2023 04:41:35 PM: INFO: Get LATEST chromedriver version for google-chrome
+11/12/2023 04:41:35 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\119.0.6045.105\chromedriver-win32/chromedriver.exe] found in cache
+11/12/2023 04:41:43 PM: INFO: 🛈 Verifying Sign Up Page Title
+11/12/2023 04:41:43 PM: INFO: ✔️ Contact Us Page Title Equals to Login - Palo Alto Networks
+11/12/2023 04:41:43 PM: INFO: 🛈 Verifying Sign Up Form
+11/12/2023 04:41:47 PM: INFO: ✔️ Sign Up Form Success - reCAPTCHA is present after trying to send form
+
+====================================================================================================================================
+
+01/24/2024 05:23:20 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:23:20 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:23:21 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:21 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:21 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:21 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:22 PM: INFO: There is no [win64] chromedriver "120.0.6099.109" for browser google-chrome "120.0.6099" in cache
+01/24/2024 05:23:22 PM: INFO: There is no [win64] chromedriver "120.0.6099.109" for browser google-chrome "120.0.6099" in cache
+01/24/2024 05:23:22 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:22 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:22 PM: INFO: WebDriver version 120.0.6099.109 selected
+01/24/2024 05:23:22 PM: INFO: WebDriver version 120.0.6099.109 selected
+01/24/2024 05:23:22 PM: INFO: Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
+01/24/2024 05:23:22 PM: INFO: Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
+01/24/2024 05:23:22 PM: INFO: About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
+01/24/2024 05:23:22 PM: INFO: About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
+01/24/2024 05:23:23 PM: INFO: Driver downloading response is 200
+01/24/2024 05:23:23 PM: INFO: Driver downloading response is 200
+01/24/2024 05:23:24 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:24 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:24 PM: INFO: Driver has been saved in cache [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109]
+01/24/2024 05:23:24 PM: INFO: Driver has been saved in cache [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109]
+01/24/2024 05:23:27 PM: INFO: 🛈 Verifying Contact Us Page Title
+01/24/2024 05:23:27 PM: INFO: 🛈 Verifying Contact Us Page Title
+01/24/2024 05:23:27 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+01/24/2024 05:23:27 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+01/24/2024 05:23:27 PM: INFO: 🛈 Verifying Contact Us Form
+01/24/2024 05:23:27 PM: INFO: 🛈 Verifying Contact Us Form
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 1 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 1 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 2 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 2 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 3 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Iteration 3 Passed
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+01/24/2024 05:23:35 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+01/24/2024 05:23:35 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:23:35 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:23:36 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:36 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:36 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:36 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:23:37 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:23:37 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:23:42 PM: INFO: 🛈 Verifying Sign Up Page Title
+01/24/2024 05:23:42 PM: INFO: 🛈 Verifying Sign Up Page Title
+01/24/2024 05:23:42 PM: INFO: ✔️ Contact Us Page Title Equals to Login - Palo Alto Networks
+01/24/2024 05:23:42 PM: INFO: ✔️ Contact Us Page Title Equals to Login - Palo Alto Networks
+01/24/2024 05:23:42 PM: INFO: 🛈 Verifying Sign Up Form
+01/24/2024 05:23:42 PM: INFO: 🛈 Verifying Sign Up Form
+01/24/2024 05:23:47 PM: INFO: ✔️ Sign Up Form Success - reCAPTCHA is present after trying to send form
+01/24/2024 05:23:47 PM: INFO: ✔️ Sign Up Form Success - reCAPTCHA is present after trying to send form
+01/24/2024 05:25:22 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:25:23 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:25:23 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:25:23 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:25:25 PM: INFO: 🛈 Verifying Contact Us Page Title
+01/24/2024 05:25:26 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+01/24/2024 05:25:26 PM: INFO: 🛈 Verifying Contact Us Form
+01/24/2024 05:25:34 PM: INFO: ✔️ Send Form Iteration 1 Passed
+01/24/2024 05:25:34 PM: INFO: ✔️ Send Form Iteration 2 Passed
+01/24/2024 05:25:34 PM: INFO: ✔️ Send Form Iteration 3 Passed
+01/24/2024 05:25:34 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+01/24/2024 05:30:10 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:30:10 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:30:11 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:11 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:12 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:12 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:12 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:30:12 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:30:14 PM: INFO: 🛈 Verifying Contact Us Page Title
+01/24/2024 05:30:14 PM: INFO: 🛈 Verifying Contact Us Page Title
+01/24/2024 05:30:14 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+01/24/2024 05:30:14 PM: INFO: ✔️ Contact Us Page Title Equals to Contact Us - Palo Alto Networks
+01/24/2024 05:30:14 PM: INFO: 🛈 Verifying Contact Us Form
+01/24/2024 05:30:14 PM: INFO: 🛈 Verifying Contact Us Form
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 1 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 1 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 2 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 2 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 3 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Iteration 3 Passed
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+01/24/2024 05:30:22 PM: INFO: ✔️ Send Form Passed - reCAPTCHA is NOT present after submitting
+01/24/2024 05:30:22 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:30:22 PM: INFO: ====== WebDriver manager ======
+01/24/2024 05:30:23 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:23 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:24 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:24 PM: INFO: Get LATEST chromedriver version for google-chrome
+01/24/2024 05:30:24 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:30:24 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+01/24/2024 05:30:27 PM: INFO: 🛈 Verifying Sign Up Page Title
+01/24/2024 05:30:27 PM: INFO: 🛈 Verifying Sign Up Page Title
+01/24/2024 05:30:27 PM: ERROR: ✖️ Expected Sign Up Page Title To Equal to "Login - Palo Alto Networks" Instead Got: www.paloaltonetworks.com
+01/24/2024 05:30:27 PM: ERROR: ✖️ Expected Sign Up Page Title To Equal to "Login - Palo Alto Networks" Instead Got: www.paloaltonetworks.com

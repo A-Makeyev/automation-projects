@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">Clear -&gt; CRTL+E           Run -&gt; CTRL+R</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Current Date" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="currentDate" elementType="Argument">
+            <stringProp name="Argument.name">currentDate</stringProp>
+            <stringProp name="Argument.value">${__time(yyyyMMdd)}000000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html, image/gif, image/jpeg, */*; q=.2</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults - QA" enabled="false">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">10.23.10.126</stringProp>
+        <stringProp name="HTTPSampler.port">7010</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults - CT2" enabled="false">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">10.23.10.124</stringProp>
+        <stringProp name="HTTPSampler.port">7010</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults - PREP" enabled="false">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">10.10.100.40</stringProp>
+        <stringProp name="HTTPSampler.port">7023</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="YesXML - WOTask" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1375525852000</longProp>
+        <longProp name="ThreadGroup.end_time">1375525852000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Parameters - Wo Task" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">C:\Desktop\amakeiv\LoadTest\Netcracker\Data\לקוחות WO_TASK.csv</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">WOTASK_ACCOUNT_NUMBER, WORK_ORDER_NUMBER, WO_TYPE</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/WOTask" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLWOTask.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;WOTask&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;EmployeeCode&gt;WIZ&lt;/EmployeeCode&gt;&#xd;
+      &lt;SerialNumber /&gt;&#xd;
+      &lt;AccountNumber&gt;${WOTASK_ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;WorkOrderNumber&gt;${WORK_ORDER_NUMBER}&lt;/WorkOrderNumber&gt;&#xd;
+      &lt;WoType&gt;${WO_TYPE}&lt;/WoType&gt;&#xd;
+      &lt;ComplaintCode /&gt;&#xd;
+      &lt;CallerType /&gt;&#xd;
+      &lt;StatusField&gt;E&lt;/StatusField&gt;&#xd;
+      &lt;SfOrderId&gt;&lt;/SfOrderId&gt;&#xd;
+      &lt;SfCaseId&gt;&lt;/SfCaseId&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+      &lt;Tasks&gt;&#xd;
+         &lt;Task&gt;&#xd;
+            &lt;CalendarId /&gt;&#xd;
+            &lt;TaskDescr /&gt;&#xd;
+            &lt;CurrSchedDate /&gt;&#xd;
+            &lt;CurrSchedTimeBeg /&gt;&#xd;
+            &lt;CurrSchedReason /&gt;&#xd;
+            &lt;AssignedTechnician /&gt;&#xd;
+            &lt;TaskComments /&gt;&#xd;
+            &lt;MustDoReason /&gt;&#xd;
+            &lt;DeliveryType&gt;UT&lt;/DeliveryType&gt;&#xd;
+            &lt;IsSapOrder&gt;UN&lt;/IsSapOrder&gt;&#xd;
+            &lt;ScheduleSeqId&gt;0&lt;/ScheduleSeqId&gt;&#xd;
+            &lt;ConfirmFlag&gt;N&lt;/ConfirmFlag&gt;&#xd;
+            &lt;Jobs&gt;&#xd;
+               &lt;Job&gt;&#xd;
+                  &lt;JobCode&gt;343&lt;/JobCode&gt;&#xd;
+                  &lt;Quantity&gt;1&lt;/Quantity&gt;&#xd;
+                  &lt;JobRate /&gt;&#xd;
+               &lt;/Job&gt;&#xd;
+               &lt;Job&gt;&#xd;
+                  &lt;JobCode&gt;35Z&lt;/JobCode&gt;&#xd;
+                  &lt;Quantity&gt;1&lt;/Quantity&gt;&#xd;
+                  &lt;JobRate /&gt;&#xd;
+               &lt;/Job&gt;&#xd;
+               &lt;Job&gt;&#xd;
+                  &lt;JobCode&gt;AAA&lt;/JobCode&gt;&#xd;
+                  &lt;Quantity&gt;1&lt;/Quantity&gt;&#xd;
+                  &lt;JobRate /&gt;&#xd;
+               &lt;/Job&gt;&#xd;
+            &lt;/Jobs&gt;&#xd;
+         &lt;/Task&gt;&#xd;
+      &lt;/Tasks&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLWOTask.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1001747800">&lt;!DOCTYPE WOTaskInfo SYSTEM &quot;YesWOTaskSuccess.dtd&quot; &gt;</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="YesXML - MaintainOffer" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">25</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">300</stringProp>
+        <longProp name="ThreadGroup.start_time">1375525852000</longProp>
+        <longProp name="ThreadGroup.end_time">1375525852000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Parameters - Maintain Offer - CT2" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">//yesdbs.co.il/Env/Users/Folders/Desktop/Amakeiv/LoadTest/Netcracker/Data/CT2_maintain.csv</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">ACCOUNT_NUMBER, SERVICE_ADDRESS_ID </stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Parameters - Maintain Offer - PREP" enabled="false">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">//yesdbs.co.il/Env/Users/Folders/Desktop/Amakeiv/LoadTest/Netcracker/Data/PREP_maintain.csv</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">ACCOUNT_NUMBER, SERVICE_ADDRESS_ID </stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01. /MaintainOffer - QA" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLMaintainOffer.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;MaintainOffer&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;AccountNumber&gt;${ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;ServiceAddressId&gt;${SERVICE_ADDRESS_ID}&lt;/ServiceAddressId&gt;&#xd;
+      &lt;EmployeeCode&gt;YE1&lt;/EmployeeCode&gt;&#xd;
+      &lt;CustomerType /&gt;&#xd;
+      &lt;MDUSubDivision /&gt;&#xd;
+      &lt;NumOfOffers&gt;1&lt;/NumOfOffers&gt;&#xd;
+      &lt;Offers&gt;&#xd;
+         &lt;Offer&gt;&#xd;
+            &lt;OfferId&gt;200445&lt;/OfferId&gt;&#xd;
+            &lt;OfferType&gt;12&lt;/OfferType&gt;&#xd;
+            &lt;OutletCode&gt;ALL&lt;/OutletCode&gt;&#xd;
+            &lt;Action&gt;A&lt;/Action&gt;&#xd;
+            &lt;ReasonCode /&gt;&#xd;
+            &lt;ApplyPenaltyFlag /&gt;&#xd;
+            &lt;NumOfProducts&gt;0&lt;/NumOfProducts&gt;&#xd;
+            &lt;Products&gt;&#xd;
+               &lt;Product&gt;&#xd;
+                  &lt;ProductCode /&gt;&#xd;
+                  &lt;PromotionCode /&gt;&#xd;
+                  &lt;ProductRate /&gt;&#xd;
+                  &lt;CampaignCode /&gt;&#xd;
+                  &lt;GroupId /&gt;&#xd;
+                  &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+                  &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+                  &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+                  &lt;SalespersonCode /&gt;&#xd;
+                  &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+                  &lt;NumOfComponents&gt;0&lt;/NumOfComponents&gt;&#xd;
+                  &lt;Components /&gt;&#xd;
+               &lt;/Product&gt;&#xd;
+            &lt;/Products&gt;&#xd;
+            &lt;EffectiveDate&gt;${currentDate}&lt;/EffectiveDate&gt;&#xd;
+         &lt;/Offer&gt;&#xd;
+      &lt;/Offers&gt;&#xd;
+      &lt;Salesperson&gt;YE1&lt;/Salesperson&gt;&#xd;
+      &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+      &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+      &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+      &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.23.10.126</stringProp>
+          <stringProp name="HTTPSampler.port">7010</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLMaintainOffer.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1154502482">&lt;!DOCTYPE ExceptionData SYSTEM &quot;YesWAPExceptionMaintainOffer.dtd&quot; &gt;</stringProp>
+              <stringProp name="-413407662">&lt;Message&gt;Self Care system internal error&lt;/Message&gt;</stringProp>
+              <stringProp name="-415833567">&lt;ReturnStatusDesc&gt;General Error</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">20</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01. /MaintainOffer - CT2" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLMaintainOffer.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;MaintainOffer&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;AccountNumber&gt;${ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;ServiceAddressId&gt;${SERVICE_ADDRESS_ID}&lt;/ServiceAddressId&gt;&#xd;
+      &lt;EmployeeCode&gt;YE1&lt;/EmployeeCode&gt;&#xd;
+      &lt;CustomerType /&gt;&#xd;
+      &lt;MDUSubDivision /&gt;&#xd;
+      &lt;NumOfOffers&gt;1&lt;/NumOfOffers&gt;&#xd;
+      &lt;Offers&gt;&#xd;
+         &lt;Offer&gt;&#xd;
+            &lt;OfferId&gt;200445&lt;/OfferId&gt;&#xd;
+            &lt;OfferType&gt;12&lt;/OfferType&gt;&#xd;
+            &lt;OutletCode&gt;ALL&lt;/OutletCode&gt;&#xd;
+            &lt;Action&gt;A&lt;/Action&gt;&#xd;
+            &lt;ReasonCode /&gt;&#xd;
+            &lt;ApplyPenaltyFlag /&gt;&#xd;
+            &lt;NumOfProducts&gt;0&lt;/NumOfProducts&gt;&#xd;
+            &lt;Products&gt;&#xd;
+               &lt;Product&gt;&#xd;
+                  &lt;ProductCode /&gt;&#xd;
+                  &lt;PromotionCode /&gt;&#xd;
+                  &lt;ProductRate /&gt;&#xd;
+                  &lt;CampaignCode /&gt;&#xd;
+                  &lt;GroupId /&gt;&#xd;
+                  &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+                  &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+                  &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+                  &lt;SalespersonCode /&gt;&#xd;
+                  &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+                  &lt;NumOfComponents&gt;0&lt;/NumOfComponents&gt;&#xd;
+                  &lt;Components /&gt;&#xd;
+               &lt;/Product&gt;&#xd;
+            &lt;/Products&gt;&#xd;
+            &lt;EffectiveDate&gt;${currentDate}&lt;/EffectiveDate&gt;&#xd;
+         &lt;/Offer&gt;&#xd;
+      &lt;/Offers&gt;&#xd;
+      &lt;Salesperson&gt;YE1&lt;/Salesperson&gt;&#xd;
+      &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+      &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+      &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+      &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.23.10.124</stringProp>
+          <stringProp name="HTTPSampler.port">7010</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLMaintainOffer.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1154502482">&lt;!DOCTYPE ExceptionData SYSTEM &quot;YesWAPExceptionMaintainOffer.dtd&quot; &gt;</stringProp>
+              <stringProp name="-413407662">&lt;Message&gt;Self Care system internal error&lt;/Message&gt;</stringProp>
+              <stringProp name="-415833567">&lt;ReturnStatusDesc&gt;General Error</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">20</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02. /MaintainOffer - CPL - CT2" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLMaintainOffer.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;MaintainOffer&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;AccountNumber&gt;${ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;ServiceAddressId&gt;${SERVICE_ADDRESS_ID}&lt;/ServiceAddressId&gt;&#xd;
+      &lt;EmployeeCode&gt;YE1&lt;/EmployeeCode&gt;&#xd;
+      &lt;CustomerType&gt;BLE&lt;/CustomerType&gt;&#xd;
+      &lt;MDUSubDivision&gt;BLE&lt;/MDUSubDivision&gt;&#xd;
+      &lt;NumOfOffers&gt;1&lt;/NumOfOffers&gt;&#xd;
+      &lt;Offers&gt;&#xd;
+         &lt;Offer&gt;&#xd;
+            &lt;OfferId&gt;200631&lt;/OfferId&gt;&#xd;
+            &lt;OfferType&gt;10&lt;/OfferType&gt;&#xd;
+            &lt;OutletCode&gt;ALL&lt;/OutletCode&gt;&#xd;
+            &lt;Action&gt;A&lt;/Action&gt;&#xd;
+            &lt;ReasonCode /&gt;&#xd;
+            &lt;ApplyPenaltyFlag /&gt;&#xd;
+            &lt;NumOfProducts&gt;0&lt;/NumOfProducts&gt;&#xd;
+            &lt;Products&gt;&#xd;
+               &lt;Product&gt;&#xd;
+                  &lt;ProductCode /&gt;&#xd;
+                  &lt;PromotionCode /&gt;&#xd;
+                  &lt;ProductRate /&gt;&#xd;
+                  &lt;CampaignCode /&gt;&#xd;
+                  &lt;GroupId /&gt;&#xd;
+                  &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+                  &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+                  &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+                  &lt;SalespersonCode /&gt;&#xd;
+                  &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+                  &lt;NumOfComponents&gt;0&lt;/NumOfComponents&gt;&#xd;
+                  &lt;Components /&gt;&#xd;
+               &lt;/Product&gt;&#xd;
+            &lt;/Products&gt;&#xd;
+            &lt;EffectiveDate&gt;${currentDate}&lt;/EffectiveDate&gt;&#xd;
+         &lt;/Offer&gt;&#xd;
+      &lt;/Offers&gt;&#xd;
+      &lt;Salesperson&gt;YE1&lt;/Salesperson&gt;&#xd;
+      &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+      &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+      &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+      &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.23.10.124</stringProp>
+          <stringProp name="HTTPSampler.port">7010</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLMaintainOffer.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1154502482">&lt;!DOCTYPE ExceptionData SYSTEM &quot;YesWAPExceptionMaintainOffer.dtd&quot; &gt;</stringProp>
+              <stringProp name="-413407662">&lt;Message&gt;Self Care system internal error&lt;/Message&gt;</stringProp>
+              <stringProp name="-307437169">&lt;ReturnStatusDesc&gt;Prd Prerequisites Are Unmatched</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">20</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01. /MaintainOffer - PREP" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLMaintainOffer.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;MaintainOffer&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;AccountNumber&gt;${ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;ServiceAddressId&gt;${SERVICE_ADDRESS_ID}&lt;/ServiceAddressId&gt;&#xd;
+      &lt;EmployeeCode&gt;YE1&lt;/EmployeeCode&gt;&#xd;
+      &lt;CustomerType /&gt;&#xd;
+      &lt;MDUSubDivision /&gt;&#xd;
+      &lt;NumOfOffers&gt;1&lt;/NumOfOffers&gt;&#xd;
+      &lt;Offers&gt;&#xd;
+         &lt;Offer&gt;&#xd;
+            &lt;OfferId&gt;200445&lt;/OfferId&gt;&#xd;
+            &lt;OfferType&gt;12&lt;/OfferType&gt;&#xd;
+            &lt;OutletCode&gt;ALL&lt;/OutletCode&gt;&#xd;
+            &lt;Action&gt;A&lt;/Action&gt;&#xd;
+            &lt;ReasonCode /&gt;&#xd;
+            &lt;ApplyPenaltyFlag /&gt;&#xd;
+            &lt;NumOfProducts&gt;0&lt;/NumOfProducts&gt;&#xd;
+            &lt;Products&gt;&#xd;
+               &lt;Product&gt;&#xd;
+                  &lt;ProductCode /&gt;&#xd;
+                  &lt;PromotionCode /&gt;&#xd;
+                  &lt;ProductRate /&gt;&#xd;
+                  &lt;CampaignCode /&gt;&#xd;
+                  &lt;GroupId /&gt;&#xd;
+                  &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+                  &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+                  &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+                  &lt;SalespersonCode /&gt;&#xd;
+                  &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+                  &lt;NumOfComponents&gt;0&lt;/NumOfComponents&gt;&#xd;
+                  &lt;Components /&gt;&#xd;
+               &lt;/Product&gt;&#xd;
+            &lt;/Products&gt;&#xd;
+            &lt;EffectiveDate&gt;${currentDate}&lt;/EffectiveDate&gt;&#xd;
+         &lt;/Offer&gt;&#xd;
+      &lt;/Offers&gt;&#xd;
+      &lt;Salesperson&gt;YE1&lt;/Salesperson&gt;&#xd;
+      &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+      &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+      &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+      &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.10.100.40</stringProp>
+          <stringProp name="HTTPSampler.port">7023</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLMaintainOffer.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1154502482">&lt;!DOCTYPE ExceptionData SYSTEM &quot;YesWAPExceptionMaintainOffer.dtd&quot; &gt;</stringProp>
+              <stringProp name="-413407662">&lt;Message&gt;Self Care system internal error&lt;/Message&gt;</stringProp>
+              <stringProp name="-415833567">&lt;ReturnStatusDesc&gt;General Error</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">20</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02. /MaintainOffer - CPL - PREP" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">XMLMessage=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE WizXML SYSTEM &quot;YesXMLMaintainOffer.dtd&quot;&gt;&#xd;
+&lt;WizXML&gt;&#xd;
+   &lt;Header&gt;&#xd;
+      &lt;ApiName&gt;MaintainOffer&lt;/ApiName&gt;&#xd;
+      &lt;Version&gt;1&lt;/Version&gt;&#xd;
+   &lt;/Header&gt;&#xd;
+   &lt;Data&gt;&#xd;
+      &lt;AccountNumber&gt;${ACCOUNT_NUMBER}&lt;/AccountNumber&gt;&#xd;
+      &lt;ServiceAddressId&gt;${SERVICE_ADDRESS_ID}&lt;/ServiceAddressId&gt;&#xd;
+      &lt;EmployeeCode&gt;YE1&lt;/EmployeeCode&gt;&#xd;
+      &lt;CustomerType&gt;BLE&lt;/CustomerType&gt;&#xd;
+      &lt;MDUSubDivision&gt;BLE&lt;/MDUSubDivision&gt;&#xd;
+      &lt;NumOfOffers&gt;1&lt;/NumOfOffers&gt;&#xd;
+      &lt;Offers&gt;&#xd;
+         &lt;Offer&gt;&#xd;
+            &lt;OfferId&gt;200631&lt;/OfferId&gt;&#xd;
+            &lt;OfferType&gt;10&lt;/OfferType&gt;&#xd;
+            &lt;OutletCode&gt;ALL&lt;/OutletCode&gt;&#xd;
+            &lt;Action&gt;A&lt;/Action&gt;&#xd;
+            &lt;ReasonCode /&gt;&#xd;
+            &lt;ApplyPenaltyFlag /&gt;&#xd;
+            &lt;NumOfProducts&gt;0&lt;/NumOfProducts&gt;&#xd;
+            &lt;Products&gt;&#xd;
+               &lt;Product&gt;&#xd;
+                  &lt;ProductCode /&gt;&#xd;
+                  &lt;PromotionCode /&gt;&#xd;
+                  &lt;ProductRate /&gt;&#xd;
+                  &lt;CampaignCode /&gt;&#xd;
+                  &lt;GroupId /&gt;&#xd;
+                  &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+                  &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+                  &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+                  &lt;SalespersonCode /&gt;&#xd;
+                  &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+                  &lt;NumOfComponents&gt;0&lt;/NumOfComponents&gt;&#xd;
+                  &lt;Components /&gt;&#xd;
+               &lt;/Product&gt;&#xd;
+            &lt;/Products&gt;&#xd;
+            &lt;EffectiveDate&gt;${currentDate}&lt;/EffectiveDate&gt;&#xd;
+         &lt;/Offer&gt;&#xd;
+      &lt;/Offers&gt;&#xd;
+      &lt;Salesperson&gt;YE1&lt;/Salesperson&gt;&#xd;
+      &lt;SalesCode&gt;YE1&lt;/SalesCode&gt;&#xd;
+      &lt;AdvertisingCode&gt;250&lt;/AdvertisingCode&gt;&#xd;
+      &lt;MarketingCode&gt;080&lt;/MarketingCode&gt;&#xd;
+      &lt;SalesAgentCode&gt;080&lt;/SalesAgentCode&gt;&#xd;
+      &lt;DebugFlag&gt;Y&lt;/DebugFlag&gt;&#xd;
+   &lt;/Data&gt;&#xd;
+&lt;/WizXML&gt;&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.10.100.40</stringProp>
+          <stringProp name="HTTPSampler.port">7023</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/webApp/html/YesXMLMaintainOffer.jsp</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1154502482">&lt;!DOCTYPE ExceptionData SYSTEM &quot;YesWAPExceptionMaintainOffer.dtd&quot; &gt;</stringProp>
+              <stringProp name="-413407662">&lt;Message&gt;Self Care system internal error&lt;/Message&gt;</stringProp>
+              <stringProp name="-307437169">&lt;ReturnStatusDesc&gt;Prd Prerequisites Are Unmatched</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Verify content in response</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">20</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer (raw.csv)" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>false</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\Desktop\amakeiv\LoadTest\Netcracker\Results\raw-${__time()}.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer (errors.xml)" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>true</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\Desktop\amakeiv\LoadTest\Netcracker\Results\errors-${__time()}.xml</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Results Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>false</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>false</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>false</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>false</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

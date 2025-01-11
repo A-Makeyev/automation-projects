@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Soap Action" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">text/xml; charset=utf-8</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">SOAPAction</stringProp>
+            <stringProp name="Header.value">&quot;http://www.informatica.com/wsdl/&quot;</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">&quot;http://informitapptst:7333/wsh/services/RealTime/ws_Digital_paka_DBG?WSDL&quot;</stringProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="users" elementType="Argument">
+            <stringProp name="Argument.name">users</stringProp>
+            <stringProp name="Argument.value">20</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampup" elementType="Argument">
+            <stringProp name="Argument.name">rampup</stringProp>
+            <stringProp name="Argument.value">60</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="duration" elementType="Argument">
+            <stringProp name="Argument.name">duration</stringProp>
+            <stringProp name="Argument.value">900</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">in seconds</stringProp>
+          </elementProp>
+          <elementProp name="delay" elementType="Argument">
+            <stringProp name="Argument.name">delay</stringProp>
+            <stringProp name="Argument.value">100</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">informitapptst</stringProp>
+        <stringProp name="HTTPSampler.port">7333</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+        <collectionProp name="Asserion.test_strings">
+          <stringProp name="49586">200</stringProp>
+        </collectionProp>
+        <stringProp name="Assertion.custom_message"></stringProp>
+        <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+        <boolProp name="Assertion.assume_success">false</boolProp>
+        <intProp name="Assertion.test_type">8</intProp>
+      </ResponseAssertion>
+      <hashTree/>
+      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Main" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">100 - 3600</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NEW_CUSTOMER_MAIN" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:WS_NEW_CUST_MAINRequest&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:WS_NEW_CUST_MAINRequestElement&gt;&#xd;
+&#xd;
+&lt;ns0:CUST_ID&gt;1001405561&lt;/ns0:CUST_ID&gt;&#xd;
+&#xd;
+&lt;ns0:CHANNEL&gt;EMAIL&lt;/ns0:CHANNEL&gt;&#xd;
+&#xd;
+&lt;ns0:EMAIL&gt;alginzburg@yes.co.il&lt;/ns0:EMAIL&gt;&#xd;
+&#xd;
+&lt;ns0:PHONE_NUMBER/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:DOC_DATA&gt;&#xd;
+&#xd;
+&lt;![CDATA[	&lt;DOCUMENT&gt; &lt;Tag TagName=&quot;header&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;title&quot;&gt;הגיע הזמן להנות מחווית צפייה יוצאת דופן&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;subtitle&quot;&gt;להלן סיכום פרטי העסקה&lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;image&quot;&gt;&lt;/Cell&gt; &lt;/Tag&gt; &lt;Tag TagName=&quot;reserve&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;DOC_TYPE&quot;&gt;2&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;PRICE_LIST_LINK&quot;&gt;https://www.yes.co.il/SalesPDF/price_list.pdf&lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;DOC_ID&quot;&gt;1006305041&lt;/Cell&gt; &lt;Cell ord_no=&quot;4&quot; name=&quot;PAKA_NUM&quot;&gt;48545241&lt;/Cell&gt; &lt;Cell ord_no=&quot;5&quot; name=&quot;AGENT_CODE&quot;&gt;NIG&lt;/Cell&gt; &lt;Cell ord_no=&quot;6&quot; name=&quot;CHANELS&quot;&gt;https://www.yes.co.il/sales/Documents/ch-details.pdf&lt;/Cell&gt; &lt;Cell ord_no=&quot;6&quot; name=&quot;VOD_STATUS&quot;&gt;לא&lt;/Cell&gt; &lt;/Tag&gt; &lt;Tag TagName=&quot;New_address&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;M_CITY&quot;&gt;בת ים&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;M_ STREET_NAME&quot;&gt;החשמונים&lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;STREET_NUMBER_M&quot;&gt;46&lt;/Cell&gt; &lt;Cell ord_no=&quot;4&quot; name=&quot;UNIT_NUMBER_M&quot;&gt;10&lt;/Cell&gt; &lt;Cell ord_no=&quot;5&quot; name=&quot;ZIP_M&quot;&gt;1234567&lt;/Cell&gt; &lt;/Tag&gt; &lt;Tag TagName=&quot;Subscriber_info_part1&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;cust_first_name&quot;&gt; גלית&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;cust_last_name&quot;&gt;בדיקה&lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;customer_id&quot;&gt;021478730&lt;/Cell&gt; &lt;Cell ord_no=&quot;4&quot; name=&quot;date_of_call&quot;&gt;27/03/2019&lt;/Cell&gt; &lt;Cell ord_no=&quot;5&quot; name=&quot;yes_cust_number_winner&quot;&gt;1000496849&lt;/Cell&gt;&lt;!-- for winner--&gt; &lt;Cell ord_no=&quot;6&quot; name=&quot;yes_cust_number&quot;&gt;2227551&lt;/Cell&gt; &lt;!-- for billing--&gt; &lt;Cell ord_no=&quot;7&quot; name=&quot;customer_darkon&quot;&gt; &lt;/Cell&gt; &lt;/Tag&gt; &lt;Tag TagName=&quot;Subscriber_info_part2&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;cust_phone_prefix&quot;&gt;054&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;cust_phone_number&quot;&gt;4845225&lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;cust_phone_nosaf_prefix&quot;&gt; &lt;/Cell&gt; &lt;Cell ord_no=&quot;4&quot; name=&quot;cust_phone_nosaf_number&quot;&gt; &lt;/Cell&gt; &lt;Cell ord_no=&quot;5&quot; name=&quot;cust_email&quot;&gt;gissakov@Yes.co.il&lt;/Cell&gt; &lt;Cell ord_no=&quot;6&quot; name=&quot;cust_street&quot;&gt;הוברמן&lt;/Cell&gt; &lt;Cell ord_no=&quot;7&quot; name=&quot;cust_number&quot;&gt;6 13&lt;/Cell&gt; &lt;Cell ord_no=&quot;8&quot; name=&quot;cust_city&quot;&gt;פתח תקווה&lt;/Cell&gt; &lt;Cell ord_no=&quot;9&quot; name=&quot;cust_unit&quot;&gt;13&lt;/Cell&gt; &lt;Cell ord_no=&quot;10&quot; name=&quot;cust_phone_bait_prefix&quot;&gt; &lt;/Cell&gt; &lt;Cell ord_no=&quot;11&quot; name=&quot;cust_phone_bait_number&quot;&gt; &lt;/Cell&gt; &lt;/Tag&gt; &lt;Tag TagName=&quot;Pratim_Nosafim&quot; multiline=&quot;0&quot;&gt; &lt;Cell ord_no=&quot;1&quot; name=&quot;INSTALL_PRICE&quot;&gt;99 ש&quot;ח&lt;/Cell&gt; &lt;Cell ord_no=&quot;2&quot; name=&quot;INSTALL_PAYMENT_CARD&quot;&gt;1 &lt;/Cell&gt; &lt;Cell ord_no=&quot;3&quot; name=&quot;INSTALL_PAYMENT_DEBIT&quot;&gt;1 &lt;/Cell&gt; &lt;Cell ord_no=&quot;4&quot; name=&quot;MARKET_OFFER&quot;&gt;אישרת לקבל הצעות לשירותים, הטבות ומבצעים מ yes על סמך המידע הקיים ושיהיה קיים ב yes כולל מידע לגבי צפייה בפועל, בדרך של e-mail, IVR, SMS ופקס בתקופת ההתקשרות ולאחריה וכן אישרת כי הפרטים שמסרת [מייל / טלפון] ישמשו את yes למשלוח הודעות שירותיות (כמו נספחי מבצע והודעות חוב) בכל אמצעי ההתקשרות האמורים&lt;/Cell&gt; &lt;Cell ord_no=&quot;5&quot; name=&quot;Mailing_language&quot;&gt;.&lt;/Cell&gt; &lt;Cell ord_no=&quot;6&quot; name=&quot;STATMENT_TYPE&quot;&gt;דואר&lt;/Cell&gt; &lt;Cell ord_no=&quot;7&quot; name=&quot;TASTIT&quot;&gt;לבקשתך, נעשה שימוש בתשתית הטלויזיה שבביתך. לידעתך, לא תתאפשר קבלת שירותים אחרים על התשתית. ככל שהינך מחובר להוט עליך לדאוג לביצוע הניתוק.&lt;/Cell&gt; &lt;Cell ord_no=&quot;8&quot; name=&quot;DATE_INST&quot;&gt;28/03/2019&lt;/Cell&gt; &lt;Cell ord_no=&quot;9&quot; name=&quot;TIME_INSTL&quot;&gt;12:0010:00&lt;/Cell&gt; &lt;Cell ord_no=&quot;10&quot; name=&quot;SIDE_3&quot;&gt;אישרתי כי לצורך קבלת פרסומים דיגיטליים המותאמים לי אישית כגון: המלצות לסדרות, מוצרים, שירותים, מבצעים, הטבות ועוד בפלטפורמות שונות כמו גוגל ופייסבוק, yes יהיו רשאים להעביר באופן מוצפן מידע אודותיי לגופים אלה ובתנאי שלא יעשו כל שימוש אחר במידע מלבד פרסום מטעם yes. &lt;/Cell&gt; &lt;Cell ord_no=&quot;11&quot; name=&quot;bilding&quot;&gt;BIL&lt;/Cell&gt; &lt;Cell ord_no=&quot;12&quot; name=&quot;market _offer_code&quot;&gt;1&lt;/Cell&gt; &lt;Cell ord_no=&quot;13&quot; name=&quot;OFFER?_COSTUMER_TYPE&quot;&gt;P10&lt;/Cell&gt; &lt;/Tag&gt; &lt;/DOCUMENT&gt; ]]&gt;&#xd;
+&#xd;
+&lt;/ns0:DOC_DATA&gt;&#xd;
+&#xd;
+&lt;/ns0:WS_NEW_CUST_MAINRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:WS_NEW_CUST_MAINRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/WS_NEW_CUST_MAIN?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Button" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">100 - 60</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="new_customer_button" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xd;
+   &lt;soap:Header/&gt;&#xd;
+   &lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+      &lt;ns0:ws_new_cust_buttonRequest&gt;&#xd;
+         &lt;ns0:ws_new_cust_buttonRequestElement&gt;&#xd;
+            &lt;ns0:GUID&gt;25FFE0F4940D80C5D606D881559C6D68&lt;/ns0:GUID&gt;&#xd;
+         &lt;/ns0:ws_new_cust_buttonRequestElement&gt;&#xd;
+      &lt;/ns0:ws_new_cust_buttonRequest&gt;&#xd;
+   &lt;/soap:Body&gt;&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/ws_new_cust_button?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Link" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">100 - 60</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="new_customer_link" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xd;
+   &lt;soap:Header/&gt;&#xd;
+   &lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+      &lt;ns0:ws_new_cust_linkRequest&gt;&#xd;
+         &lt;ns0:ws_new_cust_linkRequestElement&gt;&#xd;
+            &lt;ns0:ACCOUNT_NUMBER&gt;&lt;/ns0:ACCOUNT_NUMBER&gt;&#xd;
+            &lt;ns0:GUID&gt;25FFE0F4940D80C5D606D881559C6D68&lt;/ns0:GUID&gt;&#xd;
+            &lt;ns0:REQUEST_TYPE&gt;link&lt;/ns0:REQUEST_TYPE&gt;&#xd;
+            &lt;ns0:RESERVE1&gt;&lt;/ns0:RESERVE1&gt;&#xd;
+            &lt;ns0:RESERVE2&gt;&lt;/ns0:RESERVE2&gt;&#xd;
+            &lt;ns0:RESERVE3&gt;&lt;/ns0:RESERVE3&gt;&#xd;
+         &lt;/ns0:ws_new_cust_linkRequestElement&gt;&#xd;
+      &lt;/ns0:ws_new_cust_linkRequest&gt;&#xd;
+   &lt;/soap:Body&gt;&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/ws_new_cust_link?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Digital Paka " enabled="true">
+        <stringProp name="TestPlan.comments">450 - 60</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ws_Digital_paka" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&lt;ns0:ws_create_Form_BRequest&gt;&#xd;
+&#xd;
+&lt;ns0:ws_create_Form_BRequestElement&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_number&gt;13&lt;/ns0:Customer_number&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_name/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_phon/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_email/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_city/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_Street_name/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_Street_num/&gt;&#xd;
+&#xd;
+&lt;ns0:Customer_Apartment_num/&gt;&#xd;
+&#xd;
+&lt;ns0:Work_order_number&gt;321646&lt;/ns0:Work_order_number&gt;&#xd;
+&#xd;
+&lt;ns0:Task_id&gt;1&lt;/ns0:Task_id&gt;&#xd;
+&#xd;
+&lt;ns0:Date/&gt;&#xd;
+&#xd;
+&lt;ns0:Work_order_type&gt;SC&lt;/ns0:Work_order_type&gt;&#xd;
+&#xd;
+&lt;ns0:Transfer/&gt;&#xd;
+&#xd;
+&lt;ns0:Technician_code/&gt;&#xd;
+&#xd;
+&lt;ns0:Technician_name/&gt;&#xd;
+&#xd;
+&lt;ns0:Jobs/&gt;&#xd;
+&#xd;
+&lt;ns0:Changes_in_equip/&gt;&#xd;
+&#xd;
+&lt;ns0:Service_call/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve1/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve2/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve3/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve4/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve5/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve7/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve8/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve9/&gt;&#xd;
+&#xd;
+&lt;ns0:Reserve10/&gt;&#xd;
+&#xd;
+&lt;/ns0:ws_create_Form_BRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:ws_create_Form_BRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/ws_Digital_paka_DBG?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Dynamic Invoice" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">200 - 3600</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ws_Dynamic_Invoice" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xd;
+   &lt;soap:Header/&gt;&#xd;
+   &lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+      &lt;ns0:ws_Dynamic_InvoiceRequest&gt;&#xd;
+         &lt;ns0:ws_Dynamic_InvoiceRequestElement&gt;&#xd;
+            &lt;ns0:Customer_id&gt;13&lt;/ns0:Customer_id&gt;&#xd;
+            &lt;ns0:Year&gt;&lt;/ns0:Year&gt;&#xd;
+            &lt;ns0:Month&gt;&lt;/ns0:Month&gt;&#xd;
+         &lt;/ns0:ws_Dynamic_InvoiceRequestElement&gt;&#xd;
+      &lt;/ns0:ws_Dynamic_InvoiceRequest&gt;&#xd;
+   &lt;/soap:Body&gt;&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/ws_Dynamic_Invoice?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Memir Dynamic Invoice" enabled="true">
+        <stringProp name="TestPlan.comments">100 - 3600</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ws_memir_Dynamic_Invoice" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xd;
+   &lt;soap:Header/&gt;&#xd;
+   &lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+      &lt;ns0:wf_ws_memir_Dynamic_InvoiceRequest&gt;&#xd;
+         &lt;ns0:wf_ws_memir_Dynamic_InvoiceRequestElement&gt;&#xd;
+            &lt;ns0:cutomer_id&gt;13&lt;/ns0:cutomer_id&gt;&#xd;
+            &lt;ns0:yearMonth&gt;&lt;/ns0:yearMonth&gt;&#xd;
+            &lt;ns0:category&gt;&lt;/ns0:category&gt;&#xd;
+            &lt;ns0:ReserveField1&gt;&lt;/ns0:ReserveField1&gt;&#xd;
+            &lt;ns0:ReserveField2&gt;&lt;/ns0:ReserveField2&gt;&#xd;
+            &lt;ns0:ReserveField3&gt;&lt;/ns0:ReserveField3&gt;&#xd;
+            &lt;ns0:ReserveField4&gt;&lt;/ns0:ReserveField4&gt;&#xd;
+         &lt;/ns0:wf_ws_memir_Dynamic_InvoiceRequestElement&gt;&#xd;
+      &lt;/ns0:wf_ws_memir_Dynamic_InvoiceRequest&gt;&#xd;
+   &lt;/soap:Body&gt;&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/ws_memir_Dynamic_Invoice?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Document Simple 62" enabled="true">
+        <stringProp name="TestPlan.comments">100 - 3600</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="document_simple_62" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequest&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_params&gt;&#xd;
+&#xd;
+&lt;![CDATA[&lt;GetParams&gt;&lt;QueryName&gt;INDEX_ID&lt;/QueryName&gt;&lt;Condition&gt;&lt;FieldName&gt;PF_ARC_INDEX_ID&lt;/FieldName&gt;&lt;Operator&gt;Equal&lt;/Operator&gt;&lt;FieldVal&gt;4315761&lt;/FieldVal&gt;&lt;/Condition&gt;&lt;/GetParams&gt;]]&gt;&#xd;
+&#xd;
+&lt;/ns0:get_params&gt;&#xd;
+&#xd;
+&lt;ns0:style_name&gt;Popup_HTML&lt;/ns0:style_name&gt;&#xd;
+&#xd;
+&lt;ns0:action_type&gt;GET&lt;/ns0:action_type&gt;&#xd;
+&#xd;
+&lt;ns0:insertion_param&gt;COPY&lt;/ns0:insertion_param&gt;&#xd;
+&#xd;
+&lt;ns0:external_reference/&gt;&#xd;
+&#xd;
+&lt;ns0:connection_name&gt;FORMIT_ARC&lt;/ns0:connection_name&gt;&#xd;
+&#xd;
+&lt;ns0:doc_status/&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/pf_get_document_simple?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Document Simple 63" enabled="true">
+        <stringProp name="TestPlan.comments">400 - 3600</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="document_simple_63" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequest&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_params&gt;&#xd;
+&#xd;
+&lt;![CDATA[&lt;GetParams&gt;&lt;QueryName&gt;INDEX_ID&lt;/QueryName&gt;&lt;Condition&gt;&lt;FieldName&gt;PF_ARC_INDEX_ID&lt;/FieldName&gt;&lt;Operator&gt;Equal&lt;/Operator&gt;&lt;FieldVal&gt;252792417&lt;/FieldVal&gt;&lt;/Condition&gt;&lt;/GetParams&gt;]]&gt;&#xd;
+&#xd;
+&lt;/ns0:get_params&gt;&#xd;
+&#xd;
+&lt;ns0:style_name&gt;Popup_HTML&lt;/ns0:style_name&gt;&#xd;
+&#xd;
+&lt;ns0:action_type&gt;GET&lt;/ns0:action_type&gt;&#xd;
+&#xd;
+&lt;ns0:insertion_param&gt;COPY&lt;/ns0:insertion_param&gt;&#xd;
+&#xd;
+&lt;ns0:external_reference/&gt;&#xd;
+&#xd;
+&lt;ns0:connection_name&gt;FORMIT_ARC&lt;/ns0:connection_name&gt;&#xd;
+&#xd;
+&lt;ns0:doc_status/&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/pf_get_document_simple?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Document Simple PDF 62" enabled="true">
+        <stringProp name="TestPlan.comments">50 - 3600</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="document_simple_pdf_62" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequest&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_params&gt;&#xd;
+&#xd;
+&lt;![CDATA[&lt;GetParams&gt;&lt;QueryName&gt;INDEX_ID&lt;/QueryName&gt;&lt;Condition&gt;&lt;FieldName&gt;PF_ARC_INDEX_ID&lt;/FieldName&gt;&lt;Operator&gt;Equal&lt;/Operator&gt;&lt;FieldVal&gt;4315761&lt;/FieldVal&gt;&lt;/Condition&gt;&lt;/GetParams&gt;]]&gt;&#xd;
+&#xd;
+&lt;/ns0:get_params&gt;&#xd;
+&#xd;
+&lt;ns0:style_name&gt;PDF&lt;/ns0:style_name&gt;&#xd;
+&#xd;
+&lt;ns0:action_type&gt;GET&lt;/ns0:action_type&gt;&#xd;
+&#xd;
+&lt;ns0:insertion_param&gt;COPY&lt;/ns0:insertion_param&gt;&#xd;
+&#xd;
+&lt;ns0:external_reference/&gt;&#xd;
+&#xd;
+&lt;ns0:connection_name&gt;FORMIT_ARC&lt;/ns0:connection_name&gt;&#xd;
+&#xd;
+&lt;ns0:doc_status/&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/pf_get_document_simple_PDF?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Document Simple PDF 63" enabled="true">
+        <stringProp name="TestPlan.comments">150 - 3600</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${duration}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Delay" enabled="true">
+          <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="document_simple_pdf_63" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;
+&#xd;
+&lt;soap:Envelope xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&#xd;
+&lt;soap:Header/&gt;&#xd;
+&#xd;
+&#xd;
+&lt;soap:Body xmlns:ns0=&quot;http://www.informatica.com/wsdl/&quot;&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequest&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&#xd;
+&lt;ns0:get_params&gt;&#xd;
+&#xd;
+&lt;![CDATA[&lt;GetParams&gt;&lt;QueryName&gt;INDEX_ID&lt;/QueryName&gt;&lt;Condition&gt;&lt;FieldName&gt;PF_ARC_INDEX_ID&lt;/FieldName&gt;&lt;Operator&gt;Equal&lt;/Operator&gt;&lt;FieldVal&gt;252792417&lt;/FieldVal&gt;&lt;/Condition&gt;&lt;/GetParams&gt;]]&gt;&#xd;
+&#xd;
+&lt;/ns0:get_params&gt;&#xd;
+&#xd;
+&lt;ns0:style_name&gt;PDF&lt;/ns0:style_name&gt;&#xd;
+&#xd;
+&lt;ns0:action_type&gt;GET&lt;/ns0:action_type&gt;&#xd;
+&#xd;
+&lt;ns0:insertion_param&gt;COPY&lt;/ns0:insertion_param&gt;&#xd;
+&#xd;
+&lt;ns0:external_reference/&gt;&#xd;
+&#xd;
+&lt;ns0:connection_name&gt;FORMIT_ARC&lt;/ns0:connection_name&gt;&#xd;
+&#xd;
+&lt;ns0:doc_status/&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequestElement&gt;&#xd;
+&#xd;
+&lt;/ns0:get_docRequest&gt;&#xd;
+&#xd;
+&lt;/soap:Body&gt;&#xd;
+&#xd;
+&lt;/soap:Envelope&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/wsh/services/RealTime/pf_get_document_simple_PDF?WSDL</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
