@@ -63,18 +63,21 @@ class metamask_page:
         self.wait_for_element(*self.MAIN_PAGE)
 
     def focus_window(self, timeout=10):
-        target_title = self.WINDOW_TITLE
+        if self.driver.title == self.WINDOW_TITLE:
+            return
+        
         start_time = time.time()
         while time.time() - start_time < timeout:  
             handles = self.driver.window_handles
             
             for handle in handles:
                 self.driver.switch_to.window(handle)
-                if self.driver.title == target_title:
-                    print(f'\n✔️  Selected window -> {target_title}')
+                if self.driver.title == self.WINDOW_TITLE:
+                    print(f'\n✔️  Selected window -> {self.WINDOW_TITLE}')
+                    self.driver.maximize_window()
                     return
             time.sleep(1)
-        raise TimeoutError(f'\n❌  Window {target_title} was not found')
+        raise TimeoutError(f'\n❌  Window {self.WINDOW_TITLE} was not found')
 
     def onbording_check_agreement_terms(self):
         self.click(*self.AGREEMENT_TERMS_CHECKBOX)

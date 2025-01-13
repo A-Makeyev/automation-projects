@@ -36,7 +36,7 @@ def setup(browser, keep_open):
         driver.maximize_window()
     return driver
 
-# get values from CLI / hooks
+# get values from CLI
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='chrome', help='Browser to use for tests')
     parser.addoption('--keep-open', action='store_true', help='Enable debug mode to keep browser window open')
