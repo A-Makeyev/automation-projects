@@ -1,7 +1,6 @@
 import pytest
 from utils.logger import CreateLog
 from utils.readProps import ReadConfig
-from selenium.webdriver.common.by import By
 from Pages.Treasury import treasury_page
 from Pages.MetaMask import metamask_page
 

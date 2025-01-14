@@ -1,6 +1,5 @@
 import openpyxl
 
-
 def get_count(file, sheet_name, count_type):
     workbook = openpyxl.load_workbook(file)
     sheet = workbook[sheet_name]
