@@ -19,7 +19,7 @@ def setup(browser, keep_open):
             executable_path = Service(ChromeDriverManager().install())
     except Exception as e: 
         # options = webdriver.ChromeOptions()
-        options = webdriver.ChromeOptions() 
+        options = uc.ChromeOptions() 
         options.add_argument(f'--load-extension={os.path.abspath(META_MASK_EXTENSION_PATH)}')
         executable_path = Service(BACKUP_DRIVER_PATH)
         print(f'⚠️ Used backup driver from: {BACKUP_DRIVER_PATH}. Error -> {e}')

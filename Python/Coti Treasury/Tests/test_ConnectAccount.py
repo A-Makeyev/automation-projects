@@ -19,6 +19,7 @@ class Test_Connect_Metamask_Account:
 
         self.log.info(f'01. Open {self.baseURL}')
         self.driver.get(self.baseURL)
+        treasury.focus_window()
         treasury.load_page()
         
         self.log.info('02. Create MetaMask Account')
