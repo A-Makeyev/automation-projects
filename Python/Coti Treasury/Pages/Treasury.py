@@ -1,4 +1,5 @@
 import time
+import requests
 from datetime import datetime
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,6 +14,9 @@ class treasury_page:
     CONFIRM_BUTTON = (By.XPATH, '//button[text()="Confirm"]')
     MODAL_ERROR_TEXT = (By.XPATH, '//div[contains(@class, "UnauthorizedCountryModal")]//*[contains(text(), "This service is unavailable in your jurisdiction")]')
     CLOSE_MODAL_BUTTON = (By.XPATH, '//div[contains(@class, "UnauthorizedCountryModal")]//*[text()="Close"]')
+    DEPOSIT_BUTTON = (By.XPATH, '//a[@href="/deposits"]')
+    DEPOSIT_NOW_BUTTON = (By.XPATH, '//div[text()="Deposit Now"]')
+    AMOUNT_INPUT = (By.XPATH, '//span[text()="Amount"]//..//..//..//input[@type="text"]')
     
     def __init__(self, driver):
         self.driver = driver
@@ -99,3 +103,25 @@ class treasury_page:
             error_message = self.get_text(*self.MODAL_ERROR_TEXT)
             print(f'\n🛈  Modal error is displayed -> {error_message}')
             self.click(*self.CLOSE_MODAL_BUTTON)
+
+    def open_deposits(self):
+        self.click(*self.DEPOSIT_BUTTON)
+        
+    def deposit_now(self):
+        self.click(*self.DEPOSIT_NOW_BUTTON)
+        
+    def enter_amount(self, amount): 
+        self.type(*self.AMOUNT_INPUT, amount)
+        
+    def send_deposits(self):
+        url = 'https://treasury-proxy-api.coti.io/api/estimation/deposit-preview'
+        data = {
+            "lock": 0,
+            "amount": 5000,
+            "leverage": 1,
+            "currency": "COTI"
+        }
+        
+        res = requests.post(url, json = data)
+        print(res)
+        

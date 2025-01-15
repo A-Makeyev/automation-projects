@@ -39,20 +39,35 @@ class metamask_page:
         element = self.wait_for_element(by, locator)
         element.click()
 
-    def get_text(self, by, locator):
-        element = self.wait_for_element(by, locator)
-        end_time = time.time() + 10
+    # def get_text(self, by, locator):
+    #     element = self.wait_for_element(by, locator)
+    #     end_time = time.time() + 10
 
-        while time.time() < end_time:
+    #     while time.time() < end_time:
+    #         try:
+    #             text = element.text.strip()
+    #             if text:
+    #                 return text
+    #         except Exception as e:
+    #             print(f'\n❌  Unable to get text from element located by {by}, "{locator}". Error -> {e}')
+    #             break
+    #         time.sleep(1)
+    #     return ''
+
+    def get_text(self, by, locator):
+        retries = 5
+        for _ in range(retries):
             try:
+                element = self.wait_for_element(by, locator)
                 text = element.text.strip()
                 if text:
                     return text
-            except Exception as e:
-                print(f'\n❌  Unable to get text from element located by {by}, "{locator}". Error -> {e}')
-                break
-            time.sleep(1)
-        return ''
+            except Exception:
+                # If element is not found, continue to the next try
+                continue
+        # Return None if text wasn't found after 5 tries
+        return None
+
 
     def type(self, by, locator, value):
         element = self.wait_for_element(by, locator)

@@ -56,3 +56,10 @@ class Test_Connect_Metamask_Account:
         treasury.focus_window()
         treasury.assert_error_modal()
         self.driver.quit()
+        
+        # Requires VPN
+        # self.log.info('06. Enter Deposit')
+        # treasury.open_deposits()
+        # treasury.deposit_now()
+        # treasury.enter_amount(5000)
+        # treasury.send_deposits()

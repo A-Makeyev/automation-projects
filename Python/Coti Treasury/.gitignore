@@ -1,2 +1,5 @@
 env/
 /Data/
+/Pages/__pycache__/
+/Tests/__pycache__/
+# Configuration/

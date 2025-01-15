@@ -1,8 +1,6 @@
 import os
 import pytest
 import undetected_chromedriver as uc
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,20 +11,17 @@ META_MASK_EXTENSION_PATH = os.path.join(os.path.dirname(script_dir), 'Data', 'me
 def setup(browser, keep_open):
     try:
         if browser == 'chrome' or browser is None:
-            # options = webdriver.ChromeOptions()
             options = uc.ChromeOptions() 
-            options.add_argument(f'--load-extension={os.path.abspath(META_MASK_EXTENSION_PATH)}') 
-            executable_path = Service(ChromeDriverManager().install())
+            options.add_argument(f'--load-extension={os.path.abspath(META_MASK_EXTENSION_PATH)}')
+            latest_chromedriver = ChromeDriverManager().install()
+            driver = uc.Chrome(driver_executable_path=latest_chromedriver, options=options, enable_cdp_events=True if keep_open else False)
     except Exception as e: 
-        # options = webdriver.ChromeOptions()
-        options = webdriver.ChromeOptions() 
+        options = uc.ChromeOptions() 
         options.add_argument(f'--load-extension={os.path.abspath(META_MASK_EXTENSION_PATH)}')
-        executable_path = Service(BACKUP_DRIVER_PATH)
-        print(f'⚠️ Used backup driver from: {BACKUP_DRIVER_PATH}. Error -> {e}')
-    
-    # driver = webdriver.Chrome(service=executable_path, options=options)
-    driver = uc.Chrome(service=executable_path, options=options, enable_cdp_events=True if keep_open else False)
-    driver.set_page_load_timeout(10)
+        driver = uc.Chrome(driver_executable_path=BACKUP_DRIVER_PATH, options=options, enable_cdp_events=True if keep_open else False)
+        print(f'\n⚠️ Used backup driver from: {BACKUP_DRIVER_PATH}. Error -> {e}')
+
+    driver.set_page_load_timeout(15)
     driver.implicitly_wait(30)
     
     window_width = driver.execute_script('return window.innerWidth')
