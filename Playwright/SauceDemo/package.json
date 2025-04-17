@@ -12,6 +12,6 @@
     "@types/node": "^22.13.10"
   },
   "dependencies": {
-    "@cloudbeat/playwright": "^1.0.6"
+    "@cloudbeat/playwright": "latest"
   }
 }

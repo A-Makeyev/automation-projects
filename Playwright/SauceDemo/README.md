@@ -7,7 +7,7 @@ A Playwright project for testing the Sauce Demo website, with adjusted reporting
 ## Setup
 1. Clone or download this project.
 2. Navigate to the project directory: `cd cb-playwright`
-3. Run `npm i` to install dependencies.
+3. Run `npm i` to install dependencies. (Make sure package.json has "@cloudbeat/playwright": "latest")
 
 ## Cloudbeat Reporter
 At playwright.config.ts update: 
