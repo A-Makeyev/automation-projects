@@ -13,12 +13,17 @@ export default defineConfig({
   //   ['allure-playwright']
   // ],
   use: {
-    trace: 'on-first-retry',
+    trace: "on",
+    video: "on",
+    screenshot: "on",
+    headless: !!process.env.CI
   },
-
   projects: [
     {
       name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },    {
+      name: 'firefox',
       use: { ...devices['Desktop Chrome'] },
     },
   ],
