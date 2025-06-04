@@ -9,7 +9,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
+import io.cloudbeat.common.annotation.CbStep;
 import io.cloudbeat.junit.CbJunitExtension;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.io.IOException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 @ExtendWith({CbJunitExtension.class}) 
 public class ProductsTest {
@@ -17,6 +25,29 @@ public class ProductsTest {
     private LoginPage loginPage;
     private ProductsPage productsPage;
 
+    public void takeScreenshot(String stepName) {
+        CbJunitExtension.step("Take Screenshot", () -> {
+            byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            CbJunitExtension.attachScreenshot(screenshotData, true);
+
+            try {
+                Path screenshotDir = Path.of("screenshots");
+                if (!Files.exists(screenshotDir)) {
+                    Files.createDirectories(screenshotDir);
+                }
+
+                String timestamp = new SimpleDateFormat("d.M.yy~HH_mm_ss").format(new Date());
+                Path screenshotPath = screenshotDir.resolve(stepName + "_" + timestamp + ".png");
+                Files.write(screenshotPath, screenshotData);
+
+                System.out.println("Screenshot saved to file: " + screenshotPath.toAbsolutePath());
+            } catch (IOException e) {
+                System.err.println("Failed to save screenshot: " + e.getMessage());
+            }
+        });
+    }
+
+    @CbStep
     @BeforeEach
     public void setUp() {
         driver = DriverManager.getDriver();
@@ -46,8 +77,11 @@ public class ProductsTest {
         productsPage.clickRemoveButton(0);
         productsPage.assertPriceBarButtonText(0, "Add to cart");
         CbJunitExtension.endLastStep();
+
+        takeScreenshot("Add to cart");
     }
 
+    @CbStep
     @AfterEach
     public void tearDown() {
         CbJunitExtension.startStep("Close Browser");

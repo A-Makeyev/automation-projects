@@ -1,10 +1,10 @@
 package com.saucedemo.utils;
 
+import org.openqa.selenium.WebDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
 import io.cloudbeat.junit.CbJunitExtension;
 import io.cloudbeat.selenium.CbWebDriverListener;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 
 public class DriverManager {

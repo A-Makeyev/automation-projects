@@ -8,6 +8,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
+
+import io.cloudbeat.common.annotation.CbStep;
 import io.cloudbeat.junit.CbJunitExtension;
 
 @ExtendWith({ CbJunitExtension.class })
@@ -15,6 +17,7 @@ public class LoginTest {
     private WebDriver driver;
     private LoginPage loginPage;
 
+    @CbStep
     @BeforeEach
     public void setUp() {
         driver = DriverManager.getDriver();
@@ -69,6 +72,7 @@ public class LoginTest {
         CbJunitExtension.endLastStep();
     }
 
+    @CbStep
     @AfterEach
     public void tearDown() {
         CbJunitExtension.startStep("Close Browser");

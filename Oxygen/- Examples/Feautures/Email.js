@@ -19,7 +19,7 @@ email.send('anatoly.makeyev@gmail.com', 'subject', 'asd')
 //     'Your verification code',            // retrieve email containing "Your verification code" in its subject
 //     9000                                 // fail if email if matching email is not found within 10,000 milliseconds
 // )                                        // for example, our body will be: "Your OTP is: 123"
-             
+   
 
 // log.info(mail);
 
