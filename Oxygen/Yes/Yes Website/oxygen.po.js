@@ -2,27 +2,9 @@ module.exports = {
     longWait: 15000,
     shortWait: 5000,
     waitASecond: 1000,
-
-    init: (caseName) => {
-        web.transaction('01. Init')
-        web.init({
-            browserName: 'chrome',
-            'goog:chromeOptions': {
-                args: [
-                    '--disable-notifications',
-                    '--enable-strict-powerful-feature-restrictions'
-                ]
-            }
-        })
-
-        web.transaction(`02. Open ${env.url}`)
-        web.open(env.url)
-        if (web.isVisible('id=main-content')) {
-            po.log('info', `${caseName} (${env.name} סביבת)`)
-        } else {
-            po.log('error', `Failed to load main content at (${env.name} סביבת)`)
-        }
-    },
+    loginPage: require('./Pages/LoginPage'),
+    mainPage: require('./Pages/MainPage'),
+    accountPage: require('./Pages/AccountPage'),
 
     getCurrentDateAndTime: (type) => {
         let today = new Date()
@@ -65,11 +47,6 @@ module.exports = {
         hidden ? web.clickHidden(element) : web.click(element)
     },
 
-    type: (element, str) => {
-        po.click(element)
-        web.type(element, str)
-    },
-
     log: (type, message) => { 
         if (type == 'success') log.info(`✔️ ${message}`)
         if (type == 'warning') log.info(`⚠️ ${message}`)
@@ -100,45 +77,4 @@ module.exports = {
         web.sendKeys('\uE015')
         web.pause(po.waitASecond)
     },
-
-    loginWithExistingCustomer: () => {
-        if (web.isVisible('id=login-frame', po.shortWait)) web.selectFrame('id=login-frame')
-        if (web.isVisible('(//iframe[contains(@src, "Login")])[1]', po.shortWait)) web.selectFrame('(//iframe[contains(@src, "Login")])[1]')
-        if (web.isVisible('//div[contains(@class, "logInValidationGroup")]//h3', po.shortWait)) {
-            let msg = po.getText('//div[contains(@class, "logInValidationGroup")]//h3')
-            if (msg.includes('התחברות באמצעות שם משתמש וסיסמה אינה זמינה')) {
-                po.log('warning', 'התחברות באמצעות שם משתמש וסיסמה אינה זמינה')
-                assert.pass()
-            }
-        }
-
-        if (web.isVisible('//div[@class="signInPopup content"]', po.shortWait)) {
-            if (web.isVisible('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//input[@placeholder="שם משתמש"]', po.shortWait)) {
-                let user = web.getValue('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//input[@placeholder="שם משתמש"]')
-                if (!user.trim()) web.type('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//input[@placeholder="שם משתמש"]', env.username)
-                web.type('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//input[@placeholder="סיסמא"]', env.password)
-                po.click('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//input[@title="כניסה"]')
-            }
-
-            po.click('//div[@class="signInPopup content"]//..//input[@title="כניסה"]')
-            if (web.isVisible('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//*[@class="error"]', po.shortWait)) {
-                assert.fail(po.getText('//div[normalize-space()="כניסה ללקוחות רשומים"]//..//*[@class="error"]'))
-            }
-        }
-    },
-    
-    mainPage: {
-        signInButton: 'id=sign-in',
-    },
-
-    footer: {
-        content: '//footer[@class="yes-footer"]',
-        logoImage: '//div[@class="footer_logo"]//img',
-        links: '//div[@class="footer-links"]//a',
-        socialLinks: '//div[@class="footer_net"]//a',
-        socialImages: '//div[@class="footer_net"]//img',
-    }
-
-    
-
 }

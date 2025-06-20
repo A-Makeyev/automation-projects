@@ -679,30 +679,3 @@ const objects = {
 }
 
 module.exports = objects
-
-
-/* 
-
-const obj = po
-const nav = obj.nav
-const cases = obj.cases
-const utils = obj.utils
-const fun = obj.functions
-const manager = obj.ribbonManager
-
-web.transaction('Login With Moked Rep & Open Main Page')
-startTime = fun.getTime()
-obj.login(
-    env.users.moked_rep.username,
-    env.users.moked_rep.password,
-    env.url,
-    30
-)
-
-web.transaction('Create First Case')
-fun.navigateToCases()
-
-endTime = fun.getTime()
-log.info(`Test finished in: ${parseFloat((endTime - startTime) / 1000).toFixed(1)} seconds.`)
-
-*/

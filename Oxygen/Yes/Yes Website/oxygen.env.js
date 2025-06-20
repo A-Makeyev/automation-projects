@@ -1,17 +1,18 @@
 module.exports = {
+    default: {
+        name: 'PROD',
+        url: 'https://www.yes.co.il',
+        userAccount: 'xxxxx',
+        userId: 'xxxxx',
+        userPhone: 'xxxxx'
+    },
 
     prep: {
         name: 'PREP',
-        url: 'https://pre.yes.co.il',
-        username: 'xxxxx',
-        password: 'xxxxx', 
-    },
-
-    prod: {
-        name: 'PROD',
-        url: 'https://www.yes.co.il',
-        username: 'xxxxx',
-        password: 'xxxxx', 
+        url: 'https://prep.yes.co.il',
+        userAccount: 'xxxxx',
+        userId: 'xxxxx',
+        userPhone: 'xxxxx'
     },
 
 }
