@@ -31,3 +31,29 @@
 01/06/2025 02:02:21 AM: INFO: 04. Login To MetaMask
 01/06/2025 02:02:26 AM: INFO: 05. Assert Connection Status
 01/15/2025 11:55:00 AM: INFO: ====== WebDriver manager ======
+07/14/2025 04:41:45 PM: INFO: ====== WebDriver manager ======
+07/14/2025 04:41:46 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 04:41:47 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 04:41:47 PM: INFO: There is no [win64] chromedriver "138.0.7204.94" for browser google-chrome "138.0.7204" in cache
+07/14/2025 04:41:47 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 04:41:47 PM: INFO: WebDriver version 138.0.7204.94 selected
+07/14/2025 04:41:47 PM: INFO: Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.94/win32/chromedriver-win32.zip
+07/14/2025 04:41:47 PM: INFO: About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.94/win32/chromedriver-win32.zip
+07/14/2025 04:41:47 PM: INFO: Driver downloading response is 200
+07/14/2025 04:41:49 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 04:41:50 PM: INFO: Driver has been saved in cache [C:\Users\anato\.wdm\drivers\chromedriver\win64\138.0.7204.94]
+07/14/2025 04:41:50 PM: INFO: patching driver executable C:\Users\anato\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe
+07/14/2025 04:41:51 PM: INFO: 01. Open https://treasury.coti.io
+07/14/2025 04:41:53 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+07/14/2025 04:41:53 PM: INFO: 02. Create MetaMask Account
+07/14/2025 04:41:54 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+07/14/2025 04:41:55 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+07/14/2025 04:41:56 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+07/14/2025 05:08:56 PM: INFO: ====== WebDriver manager ======
+07/14/2025 05:08:56 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 05:08:57 PM: INFO: Get LATEST chromedriver version for google-chrome
+07/14/2025 05:08:57 PM: INFO: Driver [C:\Users\anato\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe] found in cache
+07/14/2025 05:08:57 PM: INFO: 01. Open https://treasury.coti.io
+07/14/2025 05:09:01 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1
+07/14/2025 05:09:01 PM: INFO: 02. Create MetaMask Account
+07/14/2025 05:09:02 PM: WARNING: Connection pool is full, discarding connection: localhost. Connection pool size: 1

@@ -20,13 +20,13 @@ run sanity tests: pytest -v -s -m "sanity" Tests/ --browser chrome
 Chromedriver
 ~~~~~~~~~~~~
 For a backup driver, download the current chromedriver from: https://googlechromelabs.github.io/chrome-for-testing
-Unzip and place inside TestData folder
+Unzip and place inside Data folder
 
 
 MetaMask Extension
 ~~~~~~~~~~~~~~~~~~
 Download the extension from: https://github.com/metamask/metamask-extension/releases
-Unzip and place inside TestData folder
+Unzip and place inside Data folder
 
 
 Notes:

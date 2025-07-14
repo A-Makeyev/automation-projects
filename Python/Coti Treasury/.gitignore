@@ -1,6 +1,7 @@
 # Configuration/
 env/
-/Data/
+/Data/metamask_12.9.3_0
+/Data/chromedriver.exe
 /Pages/__pycache__/
 /Tests/__pycache__/
 # Configuration/
