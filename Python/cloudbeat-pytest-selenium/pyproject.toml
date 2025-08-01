@@ -1,0 +1,55 @@
+[build-system]
+requires = [
+  "setuptools>=61.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-selenium"
+description = "CloudBeat Python Kit usage example for Pytest and Selenium"
+version = "0.1.0"
+readme = "README.rst"
+requires-python = ">=3.8"
+authors = [
+    { name = "CloudBeat", email = "os@cloudbeat.io" },
+]
+maintainers = [
+    { name = "CloudBeat", email = "os@cloudbeat.io" },
+]
+license = {file = "LICENSE"}
+
+classifiers = [
+    "Framework :: Pytest",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+
+dependencies = [
+    "pytest>=8.3.5",
+    "selenium",
+    "uuid"
+]
+
+
+[tool.isort]
+profile = "black"
+skip = ["env", "venv"]
+
+[tool.pytest.ini_options]
+env = [
+    "PYTHONPATH=src"
+]
+addopts = [
+]
+base_url = 'https://www.saucedemo.com/'
+log_cli = true
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_level = "INFO"
+testpaths = [
+  "tests"
+]
+markers = [
+  "devRun: marks tests that run before merge to the main branch"
+]

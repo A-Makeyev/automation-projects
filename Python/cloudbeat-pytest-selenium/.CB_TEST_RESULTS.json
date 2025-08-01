@@ -1,0 +1,440 @@
+{
+    "runId": null,
+    "instanceId": null,
+    "startTime": 1751885915380,
+    "endTime": 1751885932546,
+    "duration": 17166,
+    "capabilities": {},
+    "options": {},
+    "metaData": {},
+    "environmentVariables": {},
+    "testAttributes": {
+        "agent.hostname": "DESKTOP-0C36N6H",
+        "agent.os.name": "Windows",
+        "agent.os.version": "10.0.22621"
+    },
+    "suites": [
+        {
+            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+            "name": "test_login",
+            "fqn": "tests.test_login",
+            "startTime": 1751885915460,
+            "endTime": 1751885932540,
+            "duration": 17080,
+            "status": "passed",
+            "cases": [
+                {
+                    "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                    "name": "test_standard_user_login",
+                    "display_name": null,
+                    "description": null,
+                    "fqn": "tests/test_login.py::TestLoginSauceDemo::test_standard_user_login",
+                    "startTime": 1751885915460,
+                    "endTime": 1751885923281,
+                    "duration": 7821,
+                    "status": "passed",
+                    "context": {},
+                    "arguments": [],
+                    "steps": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Navigate to \"https://www.saucedemo.com\"",
+                            "fqn": null,
+                            "startTime": 1751885919310,
+                            "endTime": 1751885920353,
+                            "duration": 1043,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"user-name\"",
+                            "fqn": null,
+                            "startTime": 1751885920354,
+                            "endTime": 1751885920370,
+                            "duration": 16,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885920530,
+                            "endTime": 1751885920600,
+                            "duration": 70,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885920629,
+                            "endTime": 1751885920729,
+                            "duration": 100,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"password\"",
+                            "fqn": null,
+                            "startTime": 1751885920729,
+                            "endTime": 1751885920740,
+                            "duration": 11,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885920762,
+                            "endTime": 1751885920796,
+                            "duration": 34,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885920815,
+                            "endTime": 1751885920882,
+                            "duration": 67,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"login-button\"",
+                            "fqn": null,
+                            "startTime": 1751885920882,
+                            "endTime": 1751885920896,
+                            "duration": 14,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Click on button  <input>",
+                            "fqn": null,
+                            "startTime": 1751885920924,
+                            "endTime": 1751885921035,
+                            "duration": 111,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"login-button\"",
+                            "fqn": null,
+                            "startTime": 1751885921035,
+                            "endTime": 1751885921050,
+                            "duration": 15,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ],
+                    "hooks": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "setup",
+                            "fqn": null,
+                            "startTime": 1751885915463,
+                            "endTime": 1751885919310,
+                            "duration": 3847,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "teardown",
+                            "fqn": null,
+                            "startTime": 1751885921050,
+                            "endTime": 1751885923281,
+                            "duration": 2231,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ]
+                },
+                {
+                    "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                    "name": "test_locked_out_user_login",
+                    "display_name": null,
+                    "description": null,
+                    "fqn": "tests/test_login.py::TestLoginSauceDemo::test_locked_out_user_login",
+                    "startTime": 1751885923281,
+                    "endTime": 1751885927914,
+                    "duration": 4633,
+                    "status": "passed",
+                    "context": {},
+                    "arguments": [],
+                    "steps": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Navigate to \"https://www.saucedemo.com\"",
+                            "fqn": null,
+                            "startTime": 1751885924644,
+                            "endTime": 1751885925247,
+                            "duration": 603,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"user-name\"",
+                            "fqn": null,
+                            "startTime": 1751885925247,
+                            "endTime": 1751885925264,
+                            "duration": 17,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885925290,
+                            "endTime": 1751885925333,
+                            "duration": 43,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885925359,
+                            "endTime": 1751885925450,
+                            "duration": 91,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"password\"",
+                            "fqn": null,
+                            "startTime": 1751885925450,
+                            "endTime": 1751885925471,
+                            "duration": 21,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885925500,
+                            "endTime": 1751885925530,
+                            "duration": 30,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885925552,
+                            "endTime": 1751885925620,
+                            "duration": 68,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"login-button\"",
+                            "fqn": null,
+                            "startTime": 1751885925620,
+                            "endTime": 1751885925636,
+                            "duration": 16,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Click on button  <input>",
+                            "fqn": null,
+                            "startTime": 1751885925653,
+                            "endTime": 1751885925735,
+                            "duration": 82,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by CSS SELECTOR \"[data-test=\"error\"]\"",
+                            "fqn": null,
+                            "startTime": 1751885925735,
+                            "endTime": 1751885925750,
+                            "duration": 15,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ],
+                    "hooks": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "setup",
+                            "fqn": null,
+                            "startTime": 1751885923281,
+                            "endTime": 1751885924641,
+                            "duration": 1360,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "teardown",
+                            "fqn": null,
+                            "startTime": 1751885925762,
+                            "endTime": 1751885927913,
+                            "duration": 2151,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ]
+                },
+                {
+                    "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                    "name": "test_invalid_user_login",
+                    "display_name": null,
+                    "description": null,
+                    "fqn": "tests/test_login.py::TestLoginSauceDemo::test_invalid_user_login",
+                    "startTime": 1751885927914,
+                    "endTime": 1751885932540,
+                    "duration": 4626,
+                    "status": "passed",
+                    "context": {},
+                    "arguments": [],
+                    "steps": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Navigate to \"https://www.saucedemo.com\"",
+                            "fqn": null,
+                            "startTime": 1751885929250,
+                            "endTime": 1751885929860,
+                            "duration": 610,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"user-name\"",
+                            "fqn": null,
+                            "startTime": 1751885929860,
+                            "endTime": 1751885929870,
+                            "duration": 10,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885929900,
+                            "endTime": 1751885929942,
+                            "duration": 42,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885929960,
+                            "endTime": 1751885930055,
+                            "duration": 95,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"password\"",
+                            "fqn": null,
+                            "startTime": 1751885930055,
+                            "endTime": 1751885930071,
+                            "duration": 16,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885930100,
+                            "endTime": 1751885930131,
+                            "duration": 31,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Set value of  <input>",
+                            "fqn": null,
+                            "startTime": 1751885930151,
+                            "endTime": 1751885930222,
+                            "duration": 71,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by ID \"login-button\"",
+                            "fqn": null,
+                            "startTime": 1751885930222,
+                            "endTime": 1751885930230,
+                            "duration": 8,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Click on button  <input>",
+                            "fqn": null,
+                            "startTime": 1751885930250,
+                            "endTime": 1751885930342,
+                            "duration": 92,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "Find element by CSS SELECTOR \"[data-test=\"error\"]\"",
+                            "fqn": null,
+                            "startTime": 1751885930342,
+                            "endTime": 1751885930352,
+                            "duration": 10,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ],
+                    "hooks": [
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "setup",
+                            "fqn": null,
+                            "startTime": 1751885927914,
+                            "endTime": 1751885929250,
+                            "duration": 1336,
+                            "status": "passed",
+                            "steps": []
+                        },
+                        {
+                            "id": "cab022c4-7513-48b4-abdd-6566fbeb5068",
+                            "name": "teardown",
+                            "fqn": null,
+                            "startTime": 1751885930370,
+                            "endTime": 1751885932540,
+                            "duration": 2170,
+                            "status": "passed",
+                            "steps": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
