@@ -22,3 +22,18 @@ while(index < tries) {
 	index++
 	tries--
 }
+
+
+const xpath = '//div[contains(@style, "circle__outline")]'
+// const xpath = '//div[contains(@style, "circle-check__filled")]'
+
+const result = document.evaluate(
+  xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
+)
+
+for (let i = 0; i < result.snapshotLength; i++) {
+  const el = result.snapshotItem(i)
+  if (el) {
+    el.click()
+  }
+}
