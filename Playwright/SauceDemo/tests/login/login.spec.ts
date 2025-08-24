@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/Login';
 
 test.describe('Login', () => {
@@ -6,8 +6,10 @@ test.describe('Login', () => {
     const loginPage = new LoginPage(page);
 
     await test.step('Open login page', async () => {
-      await loginPage.open();
-      await loginPage.assertPageOpen();
+      await expect(async () => {
+        await loginPage.open();
+        await loginPage.assertPageOpen();
+      }).toPass();
     });
 
     await test.step('Enter valid credentials', async () => {

@@ -13,9 +13,9 @@ export default defineConfig({
   //   ['allure-playwright']
   // ],
   use: {
-    trace: "on",
-    video: "on",
-    screenshot: "on",
+    trace: "on-all-retries",
+    video: "on-first-retry",
+    screenshot: "only-on-failure",
     headless: !!process.env.CI
   },
   projects: [

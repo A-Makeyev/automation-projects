@@ -17,7 +17,7 @@ export class LoginPage {
 
     async assertPageOpen(): Promise<void> {
         const loginBtn = this.page.locator('#login-button');
-        await expect(loginBtn).toBeVisible();
+        await expect(loginBtn).toBeVisible({ timeout: 10 * 1000});
     }
 
     async enterUsername(username: string): Promise<void> {

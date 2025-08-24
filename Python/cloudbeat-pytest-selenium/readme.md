@@ -1,26 +1,41 @@
-## Installation
+## Standard Installation
 cd pytest-selenium
 python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
 
-## Cloudbeat modules installation
-pip install -e C:\Users\User\Desktop\Code\examples-pytest-main\cb-kit-python-main\cb-kit-common
-pip install -e C:\Users\User\Desktop\Code\examples-pytest-main\cb-kit-python-main\cb-kit-selenium
-pip install -e C:\Users\User\Desktop\Code\examples-pytest-main\cb-kit-python-main\cb-kit-pytest
-
 ### Activate env
 cd pytest-selenium
 env\Scripts\activate
 
+## Installation using UV
+uv venv
+uv pip install -r requirements.txt
+
 ### Set path
 set PYTHONPATH=src
 
+## Run your tests
 ### run everything
+```sh
 pytest 
 
+# using UV
+uv run pytest 
+```
+
 ### run parallel tests
+```sh
 pytest -n 4
 
+# using UV
+uv run pytest -n 4
+```
+
 ### run a single test
-pytest -v -s tests/test_login.py 
+```sh
+pytest -v -s Tests/test_login.py 
+
+# using UV
+uv run pytest -v -s Tests/test_login.py 
+```
