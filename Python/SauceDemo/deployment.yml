@@ -1,0 +1,86 @@
+# =========================
+# Persistent Volumes
+# =========================
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+
+---
+
+# =========================
+# Jenkins Deployment
+# =========================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          image: amakeyev/jenkins-docker:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: agent
+              containerPort: 50000
+          env:
+            - name: DOCKER_HOST
+              value: unix:///var/run/docker.sock
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
+          # The privileged flag is essential to allow the container to access
+          # and execute commands on the host's Docker daemon.
+          securityContext:
+            privileged: true
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+            claimName: jenkins-data
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+
+---
+
+# =========================
+# Jenkins Service
+# =========================
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-service
+spec:
+  selector:
+    app: jenkins
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30080
+    - name: agent
+      protocol: TCP
+      port: 50000
+      targetPort: 50000
+      nodePort: 30050
